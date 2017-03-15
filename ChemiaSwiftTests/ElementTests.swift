@@ -1,15 +1,15 @@
 //
-//  ChemiaSwiftTests.swift
-//  ChemiaSwiftTests
+//  ElementTests.swift
+//  ChemiaSwift
 //
-//  Created by Jonah Austin on 3/14/17.
+//  Created by Jonah Austin on 3/15/17.
 //  Copyright © 2017 edu.bsu. All rights reserved.
 //
 
 import XCTest
 @testable import ChemiaSwift
 
-class ChemiaSwiftTests: XCTestCase {
+class ElementTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,18 @@ class ChemiaSwiftTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testHydrogen() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let hydrogen = ElementList.hydrogen
+        XCTAssertEqual(hydrogen.getSymbol(), "H")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
