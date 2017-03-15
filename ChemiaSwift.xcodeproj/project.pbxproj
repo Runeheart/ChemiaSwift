@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */; };
-		3F43DAC01E78E88C00AAD144 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DABF1E78E88C00AAD144 /* ViewController.swift */; };
 		3F43DAC31E78E88C00AAD144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC11E78E88C00AAD144 /* Main.storyboard */; };
 		3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC41E78E88C00AAD144 /* Assets.xcassets */; };
 		3F43DAC81E78E88C00AAD144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC61E78E88C00AAD144 /* LaunchScreen.storyboard */; };
 		3F43DAD31E78E88D00AAD144 /* ChemiaSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAD21E78E88D00AAD144 /* ChemiaSwiftTests.swift */; };
 		3F43DADE1E78E88D00AAD144 /* ChemiaSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DADD1E78E88D00AAD144 /* ChemiaSwiftUITests.swift */; };
+		3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
+		3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
+		3F43DAF11E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
+		3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */; };
+		3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */; };
+		3F43DAF51E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */; };
+		3F43DAF71E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */; };
+		3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */; };
+		3F43DAF91E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */; };
+		3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */; };
+		3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,6 @@
 /* Begin PBXFileReference section */
 		3F43DABA1E78E88C00AAD144 /* ChemiaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemiaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F43DABF1E78E88C00AAD144 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F43DAC21E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F43DAC41E78E88C00AAD144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F43DAC71E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,10 @@
 		3F43DAD91E78E88D00AAD144 /* ChemiaSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemiaSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DADD1E78E88D00AAD144 /* ChemiaSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemiaSwiftUITests.swift; sourceTree = "<group>"; };
 		3F43DADF1E78E88D00AAD144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceTableViewController.swift; sourceTree = "<group>"; };
+		3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonTableViewController.swift; sourceTree = "<group>"; };
+		3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +110,10 @@
 		3F43DABC1E78E88C00AAD144 /* ChemiaSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3F43DAEB1E78F23100AAD144 /* View */,
+				3F43DAED1E78F24F00AAD144 /* ViewModel */,
+				3F43DAEC1E78F23D00AAD144 /* Model */,
 				3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */,
-				3F43DABF1E78E88C00AAD144 /* ViewController.swift */,
 				3F43DAC11E78E88C00AAD144 /* Main.storyboard */,
 				3F43DAC41E78E88C00AAD144 /* Assets.xcassets */,
 				3F43DAC61E78E88C00AAD144 /* LaunchScreen.storyboard */,
@@ -123,6 +138,31 @@
 				3F43DADF1E78E88D00AAD144 /* Info.plist */,
 			);
 			path = ChemiaSwiftUITests;
+			sourceTree = "<group>";
+		};
+		3F43DAEB1E78F23100AAD144 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */,
+				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
+				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
+				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F43DAEC1E78F23D00AAD144 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F43DAED1E78F24F00AAD144 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F43DAC01E78E88C00AAD144 /* ViewController.swift in Sources */,
+				3F43DAF71E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
+				3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
+				3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
+				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DAD31E78E88D00AAD144 /* ChemiaSwiftTests.swift in Sources */,
+				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
+				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
+				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F43DAF91E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DADE1E78E88D00AAD144 /* ChemiaSwiftUITests.swift in Sources */,
+				3F43DAF51E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
+				3F43DAF11E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
