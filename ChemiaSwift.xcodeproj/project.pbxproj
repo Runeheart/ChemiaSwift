@@ -27,6 +27,7 @@
 		3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */; };
 		3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
 		3F43DB151E79EB3300AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
+		3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementTests.swift; sourceTree = "<group>"; };
 		3F43DB121E79E8C600AAD144 /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
 		3F43DB141E79EB3300AAD144 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		3F43DB161E7A11ED00AAD144 /* Formula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				3F43DB121E79E8C600AAD144 /* ElementList.swift */,
 				3F43DB141E79EB3300AAD144 /* Element.swift */,
+				3F43DB161E7A11ED00AAD144 /* Formula.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
 				3F43DB151E79EB3300AAD144 /* Element.swift in Sources */,
+				3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
