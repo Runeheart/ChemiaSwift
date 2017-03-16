@@ -51,6 +51,26 @@ class Formula {
         return result
     }
     
+    func numberOfAtoms() -> Int {
+        var result = 0
+        for val in elements.values {
+            result += val
+        }
+        return result
+    }
+    
+    func valenceBreakdown() -> [(Int,Int)] {
+        var result: [(Int,Int)] = []
+        for (_, val) in elements.enumerated() {
+            let sym = val.key
+            let sub = val.value
+            let contents = ElementList.contents
+            let el = contents[contents.index(where: {$0.getSymbol() == sym})!]
+            result.append((sub, el.numValElectrons()))
+        }
+        return result
+    }
+    
 }
 
 enum FormulaConstants {

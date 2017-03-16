@@ -59,6 +59,29 @@ class FormulaTests: XCTestCase {
         XCTAssertEqual(testValenceTotal, 8)
     }
     
+    func testNumberOfAtoms() {
+        
+        formula.add(element: ElementList.carbon)
+        formula.add(element: ElementList.hydrogen)
+        formula.updateElement(element: ElementList.hydrogen, value: 4)
+        
+        let testAtomTotal = formula.numberOfAtoms()
+        XCTAssertEqual(testAtomTotal, 5)
+    }
+    
+    func testValenceBreakdown() {
+        
+        formula.add(element: ElementList.carbon)
+        formula.add(element: ElementList.hydrogen)
+        formula.updateElement(element: ElementList.hydrogen, value: 4)
+        
+        let testValenceCoefficients = formula.valenceBreakdown()
+        XCTAssertEqual(testValenceCoefficients[0].0, 1)
+        XCTAssertEqual(testValenceCoefficients[0].1, 4)
+        XCTAssertEqual(testValenceCoefficients[1].0, 4)
+        XCTAssertEqual(testValenceCoefficients[1].1, 1)
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {

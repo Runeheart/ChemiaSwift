@@ -30,17 +30,73 @@ class ValenceRule: LewisRule {
     }
     
     private func generateWrongValue() -> Int {
-        return 1
+        var generated = 0
+        if unlikely() {
+            generated = generateRandomIncorrect()
+        } else {
+            generated = generateSmartIncorrect()
+        }
+        return generated
+    }
+    
+    private func unlikely() -> Bool {
+        let successChance = Double(arc4random_uniform(UInt32(50))+1)/Double(arc4random_uniform(UInt32(100))+1)
+        return successChance >= 1.0
+    }
+    
+    private func generateRandomIncorrect() -> Int {
+        var attempt = 0
+        if reallyUnlikely() {
+            attempt = sumOfAtoms()
+        } else {
+            attempt = generateValidNumInRange()
+        }
+        return attempt
+    }
+    
+    private func reallyUnlikely() -> Bool {
+        return unlikely() && unlikely()
+    }
+    
+    private func sumOfAtoms() -> Int {
+        return formula.numberOfAtoms()
+    }
+    
+    private func generateValidNumInRange() -> Int {
+        var num = 0
+        repeat {
+            num = Int(2*(arc4random_uniform(UInt32(25))+1))
+        } while(num == correctValence)
+        return num
+    }
+    
+    private func generateSmartIncorrect() -> Int {
+        var attempts: [Int] = []
+        var attempt = 0
+        let valenceCoefficients: [(Int,Int)] = formula.valenceBreakdown()
+        for (coeff, valence) in valenceCoefficients {
+            attempt = correctValence
+            let randomCoeff = Int(arc4random_uniform(UInt32(coeff)+1))
+            if fiftyFifty() {
+                attempt += (randomCoeff * valence)
+            } else {
+                attempt -= (randomCoeff * valence)
+            }
+            attempts.append(attempt)
+        }
+        let chosenAttemptIndex = Int(arc4random_uniform(UInt32(attempts.count)))
+        return attempts[chosenAttemptIndex]
+    }
+    
+    private func fiftyFifty() -> Bool {
+        return Int(arc4random_uniform(UInt32(2)+1)) == 1
     }
     
     private func assemble(_ values: [Int]) -> [Answer] {
         var result: [Answer] = [Answer]()
-        for num in values {
-            if num == correctValence {
-                result.append(Answer(choice: num, parity: .correct))
-            } else {
-                result.append(Answer(choice: num, parity: .incorrect))
-            }
+        result.append(Answer(choice: values.first!, parity: .correct))
+        for num in values.dropFirst() {
+            result.append(Answer(choice: num, parity: .incorrect))
         }
         return result
     }
