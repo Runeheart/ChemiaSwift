@@ -12,13 +12,12 @@ struct Answer {
     var content: Any
     var isCorrect: Bool
     
-    init(choice: Any, parity: Bool) {
+    init(choice: Any, parity: AnswerParity) {
         self.content = choice
-        self.isCorrect = parity
+        self.isCorrect = parity == .correct ? true : false
     }
 }
 
 enum AnswerParity {
-    static let Correct = true
-    static let Incorrect = false
+    case correct, incorrect
 }

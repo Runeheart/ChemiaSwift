@@ -49,6 +49,16 @@ class FormulaTests: XCTestCase {
         XCTAssertEqual(formula.simpleForm(), "O2")
     }
     
+    func testValenceCalculation() {
+        
+        formula.add(element: ElementList.carbon)
+        formula.add(element: ElementList.hydrogen)
+        formula.updateElement(element: ElementList.hydrogen, value: 4)
+        
+        let testValenceTotal = formula.calculateValence()
+        XCTAssertEqual(testValenceTotal, 8)
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {

@@ -24,7 +24,7 @@ class ElementTests: XCTestCase {
     func testHydrogen() {
         let hydrogen = ElementList.hydrogen
         XCTAssertEqual(hydrogen.getSymbol(), "H")
-        XCTAssertEqual(hydrogen.numValElectrons(), 2)
+        XCTAssertEqual(hydrogen.numValElectrons(), 1)
     }
     
     func testBoron() {

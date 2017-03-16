@@ -39,6 +39,18 @@ class Formula {
         return result
     }
     
+    func calculateValence() -> Int {
+        var result = 0
+        for (_, val) in elements.enumerated() {
+            let sym = val.key
+            let sub = val.value
+            let contents = ElementList.contents
+            let el = contents[contents.index(where: {$0.getSymbol() == sym})!]
+            result += (el.numValElectrons() * sub)
+        }
+        return result
+    }
+    
 }
 
 enum FormulaConstants {

@@ -25,10 +25,7 @@ class Element {
     }
     
     func numValElectrons() -> Int {
-        switch group {
-        case 1: return 2
-        default: return group
-        }
+        return group
     }
     
 }

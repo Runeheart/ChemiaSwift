@@ -27,4 +27,8 @@ enum ElementList {
     static let iodine = Element(chemSymbol: .I, group: .seven, period: .fifth)
     static let xenon = Element(chemSymbol: .Xe, group: .eight, period: .fifth)
     static let astatine = Element(chemSymbol: .At, group: .seven, period: .sixth)
+    
+    static let contents: [Element] = {
+        return [hydrogen, boron, carbon, nitrogen, oxygen, fluorine, silicon, phosphorous, sulfur, chlorine, arsenic, selenium, bromine, krypton, tellurium, iodine, xenon, astatine]
+    }()
 }
