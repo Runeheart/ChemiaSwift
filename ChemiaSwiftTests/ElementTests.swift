@@ -22,11 +22,47 @@ class ElementTests: XCTestCase {
     }
     
     func testHydrogen() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
         let hydrogen = ElementList.hydrogen
         XCTAssertEqual(hydrogen.getSymbol(), "H")
+        XCTAssertEqual(hydrogen.numValElectrons(), 2)
     }
+    
+    func testBoron() {
+        let boron = ElementList.boron
+        XCTAssertEqual(boron.getSymbol(), "B")
+        XCTAssertEqual(boron.numValElectrons(), 3)
+    }
+    
+    func testCarbon() {
+        let carbon = ElementList.carbon
+        XCTAssertEqual(carbon.getSymbol(), "C")
+        XCTAssertEqual(carbon.numValElectrons(), 4)
+    }
+    
+    func testNitrogen() {
+        let nitrogen = ElementList.nitrogen
+        XCTAssertEqual(nitrogen.getSymbol(), "N")
+        XCTAssertEqual(nitrogen.numValElectrons(), 5)
+    }
+    
+    func testOxygen() {
+        let oxygen = ElementList.oxygen
+        XCTAssertEqual(oxygen.getSymbol(), "O")
+        XCTAssertEqual(oxygen.numValElectrons(), 6)
+    }
+    
+    func testFluorine() {
+        let fluorine = ElementList.fluorine
+        XCTAssertEqual(fluorine.getSymbol(), "F")
+        XCTAssertEqual(fluorine.numValElectrons(), 7)
+    }
+    
+    func testXenon() {
+        let xenon = ElementList.xenon
+        XCTAssertEqual(xenon.getSymbol(), "Xe")
+        XCTAssertEqual(xenon.numValElectrons(), 8)
+    }
+    
     
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.

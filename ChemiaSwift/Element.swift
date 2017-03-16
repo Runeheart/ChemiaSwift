@@ -24,6 +24,13 @@ class Element {
         return chemSymbol.rawValue
     }
     
+    func numValElectrons() -> Int {
+        switch group {
+        case 1: return 2
+        default: return group
+        }
+    }
+    
 }
 
 enum ChemSymbol: String {
@@ -48,6 +55,6 @@ enum PTableGroup {
 }
 
 enum PTablePeriod: Int {
-    case one = 1, two, three, four, five, six
+    case first = 1, second, third, fourth, fifth, sixth
 }
 
