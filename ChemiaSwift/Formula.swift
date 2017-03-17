@@ -77,3 +77,5 @@ enum FormulaConstants {
     static let MostDistinctElementsPossible = 3
     static let MaxAtomsAllowed = 7
 }
+
+

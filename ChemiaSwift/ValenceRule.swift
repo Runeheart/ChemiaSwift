@@ -8,10 +8,12 @@
 
 import Foundation
 
-class ValenceRule: LewisRule {
+class ValenceRule {
     
     var formula: Formula = Formula()
     var correctValence: Int = 0
+    
+    required init() {}
     
     init(withFormula form:Formula) {
         self.formula = form
@@ -31,11 +33,13 @@ class ValenceRule: LewisRule {
     
     private func generateWrongValue() -> Int {
         var generated = 0
-        if unlikely() {
-            generated = generateRandomIncorrect()
-        } else {
-            generated = generateSmartIncorrect()
-        }
+        repeat {
+            if unlikely() {
+                generated = generateRandomIncorrect()
+            } else {
+                generated = generateSmartIncorrect()
+            }
+        } while(generated == correctValence)
         return generated
     }
     
@@ -102,7 +106,13 @@ class ValenceRule: LewisRule {
     }
     
     func description() -> String {
-        return ""
+        return "Remember: the group number of an atom determines its number of valence electrons, and you want the sum of all the atoms in your formula."
     }
+    
+    func subscriptedStringFrom(_ formula: Formula) -> NSAttributedString {
+        let formatter = FormulaFormatter()
+        return formatter.subscriptedFormulaFrom(inputString: formula.simpleForm())
+    }
+
     
 }

@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-protocol RulesView {
+protocol RuleView {
     
-    var ruleViewModel: LewisRule { get }
     var answerButtons: [UIButton] {get set}
     
     

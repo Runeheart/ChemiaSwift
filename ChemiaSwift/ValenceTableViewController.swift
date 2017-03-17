@@ -8,9 +8,14 @@
 
 import UIKit
 
-class ValenceTableViewController: UITableViewController {
+class ValenceTableViewController: UITableViewController, RuleView {
+    
+    var ruleViewModel = ValenceRule()
+    var answerButtons: [UIButton] = []
 
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var formulaLBL: UILabel!
+    @IBOutlet weak var questionLBL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,33 @@ class ValenceTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        setupTableView()
+        initializeFormula()
+        setQuestion()
+    }
+    
+    private func setupTableView() {
+        tableView.estimatedRowHeight = 50.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func initializeFormula() {
+        let sampleFormula = Formula()
+        sampleFormula.add(element: ElementList.carbon)
+        sampleFormula.add(element: ElementList.hydrogen)
+        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
+        ruleViewModel = ValenceRule(withFormula: sampleFormula)
+        setFormulaLabel(sampleFormula)
+    }
+    
+    private func setFormulaLabel(_ formula: Formula) {
+        let subscriptedFormula: NSAttributedString = ruleViewModel.subscriptedStringFrom(formula)
+        formulaLBL.attributedText = subscriptedFormula
+    }
+    
+    private func setQuestion() {
+        questionLBL.text = "How many valence electrons are there?"
     }
 
     override func didReceiveMemoryWarning() {
