@@ -81,6 +81,8 @@ class ValenceTableViewController: UITableViewController, RuleView {
         parent.valenceComplete()
     }
     
+    @IBAction func close(segue:UIStoryboardSegue) {}
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -127,14 +129,20 @@ class ValenceTableViewController: UITableViewController, RuleView {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "valenceRule" {
+            let destination = segue.destination as! RulePopupViewController
+            destination.ruleToDisplay = ruleViewModel
+            
+        }
     }
-    */
+    
 
 }

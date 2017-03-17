@@ -40,6 +40,8 @@
 		3F43DB281E7B688600AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
 		3F43DB291E7B688600AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
 		3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
+		3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
+		3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,7 @@
 		3F43DB1E1E7A2AF600AAD144 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceRule.swift; sourceTree = "<group>"; };
 		3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFormatter.swift; sourceTree = "<group>"; };
+		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,7 @@
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
 				3F43DB181E7A223400AAD144 /* RuleView.swift */,
+				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -339,6 +343,7 @@
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
 				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
 				3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */,
+				3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */,
 				3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */,
 				3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
@@ -357,6 +362,7 @@
 				3F43DB281E7B688600AAD144 /* Element.swift in Sources */,
 				3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */,
 				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,
+				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */,
