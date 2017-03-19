@@ -28,12 +28,10 @@
 		3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
 		3F43DB151E79EB3300AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
 		3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
-		3F43DB191E7A223400AAD144 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB181E7A223400AAD144 /* RuleView.swift */; };
 		3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */; };
 		3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1E1E7A2AF600AAD144 /* Answer.swift */; };
 		3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */; };
 		3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
-		3F43DB241E7B687800AAD144 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB181E7A223400AAD144 /* RuleView.swift */; };
 		3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1E1E7A2AF600AAD144 /* Answer.swift */; };
 		3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */; };
 		3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
@@ -82,7 +80,6 @@
 		3F43DB121E79E8C600AAD144 /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
 		3F43DB141E79EB3300AAD144 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		3F43DB161E7A11ED00AAD144 /* Formula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
-		3F43DB181E7A223400AAD144 /* RuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceViewModelTests.swift; sourceTree = "<group>"; };
 		3F43DB1E1E7A2AF600AAD144 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceRule.swift; sourceTree = "<group>"; };
@@ -177,7 +174,6 @@
 				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
-				3F43DB181E7A223400AAD144 /* RuleView.swift */,
 				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
 			);
 			name = View;
@@ -337,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F43DB191E7A223400AAD144 /* RuleView.swift in Sources */,
 				3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */,
 				3F43DAF71E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
@@ -367,7 +362,6 @@
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */,
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
-				3F43DB241E7B687800AAD144 /* RuleView.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
 				3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */,
 				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,

@@ -17,16 +17,19 @@ class ValenceRule {
     
     init(withFormula form:Formula) {
         self.formula = form
+        self.correctValence = formula.calculateValence()
     }
     
     func getPossibleAnswers() -> [Answer] {
         var possibleValues: [Int] = Array(repeating: 0, count: 5)
-        correctValence = formula.calculateValence()
         possibleValues[0] = correctValence // correct answer
+        var wrongValueAttempt = 0
         for index in 1...4 {
-            possibleValues[index] = generateWrongValue()
+            repeat {
+                wrongValueAttempt = generateWrongValue()
+            } while(possibleValues.contains(wrongValueAttempt))
+            possibleValues[index] = wrongValueAttempt
         }
-        
         let assembledAnswers: [Answer] = assemble(possibleValues)
         return assembledAnswers
     }
@@ -50,7 +53,7 @@ class ValenceRule {
     
     private func generateRandomIncorrect() -> Int {
         var attempt = 0
-        if reallyUnlikely() {
+        if fiftyFifty() {
             attempt = sumOfAtoms()
         } else {
             attempt = generateValidNumInRange()
@@ -58,8 +61,8 @@ class ValenceRule {
         return attempt
     }
     
-    private func reallyUnlikely() -> Bool {
-        return unlikely() && unlikely()
+    private func fiftyFifty() -> Bool {
+        return Int(arc4random_uniform(UInt32(2)+1)) == 1
     }
     
     private func sumOfAtoms() -> Int {
@@ -90,10 +93,6 @@ class ValenceRule {
         }
         let chosenAttemptIndex = Int(arc4random_uniform(UInt32(attempts.count)))
         return attempts[chosenAttemptIndex]
-    }
-    
-    private func fiftyFifty() -> Bool {
-        return Int(arc4random_uniform(UInt32(2)+1)) == 1
     }
     
     private func assemble(_ values: [Int]) -> [Answer] {
