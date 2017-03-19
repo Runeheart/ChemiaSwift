@@ -11,17 +11,16 @@ import UIKit
 
 final class RulesViewManager {
     
+    var enteredFormula: Formula = Formula()
+    var studentStruct: LewisStructure = LewisStructure()
+    
     private lazy var valenceViewController: ValenceTableViewController = {
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "ValenceTableViewController") as! ValenceTableViewController
         
-        let sampleFormula = Formula()
-        sampleFormula.add(element: ElementList.carbon)
-        sampleFormula.add(element: ElementList.hydrogen)
-        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
-        viewController.ruleViewModel = ValenceRule(withFormula: sampleFormula)
+        viewController.ruleViewModel = ValenceRule(withFormula: self.enteredFormula)
         
         return viewController
     }()
@@ -35,6 +34,12 @@ final class RulesViewManager {
         return viewController
     }()
     
+    init() {}
+    
+    init(withFormula form: Formula) {
+        self.enteredFormula = form
+    }
+    
     func makeViewForRule(rule: RuleName) -> UITableViewController {
         switch rule {
         case .valence:
@@ -46,6 +51,10 @@ final class RulesViewManager {
         }
         
         return UITableViewController()
+    }
+    
+    func setStructure(_ struc: LewisStructure) {
+        self.studentStruct = struc
     }
     
 }

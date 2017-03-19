@@ -10,7 +10,9 @@ import UIKit
 
 final class EditorViewController: UIViewController {
     
-    let manager = RulesViewManager()
+    var enteredFormula: Formula = Formula()
+    
+    var manager = RulesViewManager()
     var studentStructure: LewisStructure = LewisStructure()
 
     @IBOutlet weak var ruleSC: UISegmentedControl!
@@ -24,8 +26,17 @@ final class EditorViewController: UIViewController {
     
     private func setupView() {
         setupSegmentedControl()
-        
+        setupManager()
         updateView()
+    }
+    
+    private func setupManager() {
+        let sampleFormula = Formula()
+        sampleFormula.add(element: ElementList.carbon)
+        sampleFormula.add(element: ElementList.hydrogen)
+        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
+        enteredFormula = sampleFormula
+        manager = RulesViewManager(withFormula: enteredFormula)
     }
     
     private func setupSegmentedControl() {
@@ -43,12 +54,18 @@ final class EditorViewController: UIViewController {
     }
     
     private func updateView() {
-        if ruleSC.selectedSegmentIndex == 0 {
-            remove(asChildViewController: manager.makeViewForRule(rule: .skeleton))
+        switch ruleSC.selectedSegmentIndex {
+        case 0:
+            if let currentChild = self.childViewControllers.last {
+                remove(asChildViewController: currentChild)
+            }
             add(asChildViewController: manager.makeViewForRule(rule: .valence))
-        } else {
-            remove(asChildViewController: manager.makeViewForRule(rule: .valence))
+        case 1:
+            remove(asChildViewController: self.childViewControllers.last!)
             add(asChildViewController: manager.makeViewForRule(rule: .skeleton))
+            addSegmentForRule(.octets)
+        default:
+            break
         }
     }
     
@@ -73,9 +90,23 @@ final class EditorViewController: UIViewController {
         viewController.didMove(toParentViewController: self)
     }
     
+    private func addSegmentForRule( _ rule: RuleName) {
+        switch rule {
+        case .octets:
+            if ruleSC.numberOfSegments == 2 {
+                ruleSC.insertSegment(withTitle: "Octets", at: 2, animated: true)
+                ruleSC.setEnabled(false, forSegmentAt: 2)
+                // ruleSC.sizeToFit()   // might be necessary later if the segments look off
+            }
+        default:
+            break
+        }
+    }
+    
     func valenceComplete(_ enteredFormula: Formula) {
         ruleSC.setEnabled(true, forSegmentAt: 1)
         studentStructure = LewisStructure(withFormula: enteredFormula)
+        manager.setStructure(studentStructure)
     }
 
     override func didReceiveMemoryWarning() {
