@@ -11,6 +11,7 @@ import UIKit
 final class EditorViewController: UIViewController {
     
     let manager = RulesViewManager()
+    var studentStructure: LewisStructure = LewisStructure()
 
     @IBOutlet weak var ruleSC: UISegmentedControl!
     
@@ -72,8 +73,9 @@ final class EditorViewController: UIViewController {
         viewController.didMove(toParentViewController: self)
     }
     
-    func valenceComplete() {
+    func valenceComplete(_ enteredFormula: Formula) {
         ruleSC.setEnabled(true, forSegmentAt: 1)
+        studentStructure = LewisStructure(withFormula: enteredFormula)
     }
 
     override func didReceiveMemoryWarning() {

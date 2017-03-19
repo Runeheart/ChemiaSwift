@@ -40,12 +40,7 @@ class ValenceTableViewController: UITableViewController {
     }
     
     private func initializeFormula() {
-        let sampleFormula = Formula()
-        sampleFormula.add(element: ElementList.carbon)
-        sampleFormula.add(element: ElementList.hydrogen)
-        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
-        ruleViewModel = ValenceRule(withFormula: sampleFormula)
-        setFormulaLabel(sampleFormula)
+        setFormulaLabel(ruleViewModel.formula)
     }
     
     private func setFormulaLabel(_ formula: Formula) {
@@ -96,7 +91,7 @@ class ValenceTableViewController: UITableViewController {
     @IBAction func enableContinue(_ sender: UIButton) {
         let parent = self.parent as! EditorViewController
         
-        parent.valenceComplete()
+        parent.valenceComplete(ruleViewModel.formula)
     }
     
     @IBAction func close(segue:UIStoryboardSegue) {}

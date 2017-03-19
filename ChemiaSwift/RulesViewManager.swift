@@ -17,6 +17,12 @@ final class RulesViewManager {
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "ValenceTableViewController") as! ValenceTableViewController
         
+        let sampleFormula = Formula()
+        sampleFormula.add(element: ElementList.carbon)
+        sampleFormula.add(element: ElementList.hydrogen)
+        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
+        viewController.ruleViewModel = ValenceRule(withFormula: sampleFormula)
+        
         return viewController
     }()
     
