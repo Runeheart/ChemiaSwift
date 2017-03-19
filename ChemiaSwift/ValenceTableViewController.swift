@@ -9,8 +9,15 @@
 import UIKit
 
 class ValenceTableViewController: UITableViewController {
+    
+    var ruleViewModel = ValenceRule()
+    var buttonAnswers = [UIButton : Answer]()
+    
+    @IBOutlet var answerButtons: [UIButton]!
 
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var formulaLBL: UILabel!
+    @IBOutlet weak var questionLBL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,44 @@ class ValenceTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        setupTableView()
+        initializeFormula()
+        setQuestion()
+        defineChoices()
+    }
+    
+    private func setupTableView() {
+        tableView.estimatedRowHeight = 50.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func initializeFormula() {
+        setFormulaLabel(ruleViewModel.formula)
+    }
+    
+    private func setFormulaLabel(_ formula: Formula) {
+        let subscriptedFormula: NSAttributedString = ruleViewModel.subscriptedStringFrom(formula)
+        formulaLBL.attributedText = subscriptedFormula
+    }
+    
+    private func setQuestion() {
+        questionLBL.text = "How many valence electrons are there?"
+        submitButton.isEnabled = false
+    }
+    
+    private func defineChoices() {
+        var choices: [Answer] = ruleViewModel.getPossibleAnswers()
+        for button in answerButtons {
+            let choice: Answer = chooseRandomAnswerFrom(&choices)
+            buttonAnswers[button] = choice
+            button.setTitle(String(choice.content as! Int), for: .normal)
+        }
+    }
+    
+    private func chooseRandomAnswerFrom(_ answers: inout [Answer]) -> Answer {
+        let randomValidIndex = Int(arc4random_uniform(UInt32(answers.count)))
+        return answers.remove(at: randomValidIndex)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,9 +91,23 @@ class ValenceTableViewController: UITableViewController {
     @IBAction func enableContinue(_ sender: UIButton) {
         let parent = self.parent as! EditorViewController
         
-        parent.valenceComplete()
+        parent.valenceComplete(ruleViewModel.formula)
     }
     
+    @IBAction func close(segue:UIStoryboardSegue) {}
+    
+    @IBAction func answerChosen(_ sender: UIButton) {
+        guard let chosenAnswer = buttonAnswers[sender] else { fatalError("Selected answer not wire correctly") }
+        
+        switch chosenAnswer.isCorrect {
+        case true:
+            sender.setTitleColor(UIColor.yellow, for: .normal)
+            submitButton.isEnabled = true
+        case false:
+            sender.setTitleColor(UIColor.red, for: .normal)
+            submitButton.isEnabled = false
+        }
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -95,14 +154,20 @@ class ValenceTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "valenceRule" {
+            let destination = segue.destination as! RulePopupViewController
+            destination.ruleToDisplay = ruleViewModel
+            
+        }
     }
-    */
+    
 
 }

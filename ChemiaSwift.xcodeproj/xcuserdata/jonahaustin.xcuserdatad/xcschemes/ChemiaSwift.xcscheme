@@ -38,16 +38,6 @@
                ReferencedContainer = "container:ChemiaSwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F43DAD81E78E88D00AAD144"
-               BuildableName = "ChemiaSwiftUITests.xctest"
-               BlueprintName = "ChemiaSwiftUITests"
-               ReferencedContainer = "container:ChemiaSwift.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

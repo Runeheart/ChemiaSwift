@@ -11,7 +11,6 @@
 		3F43DAC31E78E88C00AAD144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC11E78E88C00AAD144 /* Main.storyboard */; };
 		3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC41E78E88C00AAD144 /* Assets.xcassets */; };
 		3F43DAC81E78E88C00AAD144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC61E78E88C00AAD144 /* LaunchScreen.storyboard */; };
-		3F43DAD31E78E88D00AAD144 /* ChemiaSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAD21E78E88D00AAD144 /* ChemiaSwiftTests.swift */; };
 		3F43DADE1E78E88D00AAD144 /* ChemiaSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DADD1E78E88D00AAD144 /* ChemiaSwiftUITests.swift */; };
 		3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
 		3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
@@ -24,6 +23,25 @@
 		3F43DAF91E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */; };
 		3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */; };
 		3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */; };
+		3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */; };
+		3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */; };
+		3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
+		3F43DB151E79EB3300AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
+		3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
+		3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */; };
+		3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1E1E7A2AF600AAD144 /* Answer.swift */; };
+		3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */; };
+		3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
+		3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1E1E7A2AF600AAD144 /* Answer.swift */; };
+		3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */; };
+		3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
+		3F43DB281E7B688600AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
+		3F43DB291E7B688600AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
+		3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
+		3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
+		3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
+		3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC708281E7E0B7700407A83 /* LewisStructure.swift */; };
+		3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC708281E7E0B7700407A83 /* LewisStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +69,6 @@
 		3F43DAC71E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F43DAC91E78E88C00AAD144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F43DACE1E78E88D00AAD144 /* ChemiaSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemiaSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F43DAD21E78E88D00AAD144 /* ChemiaSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemiaSwiftTests.swift; sourceTree = "<group>"; };
 		3F43DAD41E78E88D00AAD144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F43DAD91E78E88D00AAD144 /* ChemiaSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemiaSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DADD1E78E88D00AAD144 /* ChemiaSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemiaSwiftUITests.swift; sourceTree = "<group>"; };
@@ -60,6 +77,17 @@
 		3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceTableViewController.swift; sourceTree = "<group>"; };
 		3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonTableViewController.swift; sourceTree = "<group>"; };
 		3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewManager.swift; sourceTree = "<group>"; };
+		3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaTests.swift; sourceTree = "<group>"; };
+		3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementTests.swift; sourceTree = "<group>"; };
+		3F43DB121E79E8C600AAD144 /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
+		3F43DB141E79EB3300AAD144 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		3F43DB161E7A11ED00AAD144 /* Formula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
+		3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceViewModelTests.swift; sourceTree = "<group>"; };
+		3F43DB1E1E7A2AF600AAD144 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceRule.swift; sourceTree = "<group>"; };
+		3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFormatter.swift; sourceTree = "<group>"; };
+		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
+		3FC708281E7E0B7700407A83 /* LewisStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LewisStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +153,9 @@
 		3F43DAD11E78E88D00AAD144 /* ChemiaSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F43DAD21E78E88D00AAD144 /* ChemiaSwiftTests.swift */,
+				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
+				3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */,
+				3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */,
 				3F43DAD41E78E88D00AAD144 /* Info.plist */,
 			);
 			path = ChemiaSwiftTests;
@@ -147,6 +177,7 @@
 				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
+				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -154,6 +185,11 @@
 		3F43DAEC1E78F23D00AAD144 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F43DB121E79E8C600AAD144 /* ElementList.swift */,
+				3F43DB141E79EB3300AAD144 /* Element.swift */,
+				3F43DB161E7A11ED00AAD144 /* Formula.swift */,
+				3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */,
+				3FC708281E7E0B7700407A83 /* LewisStructure.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,6 +197,8 @@
 		3F43DAED1E78F24F00AAD144 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3F43DB1E1E7A2AF600AAD144 /* Answer.swift */,
+				3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -299,10 +337,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */,
 				3F43DAF71E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
+				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
+				3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */,
+				3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */,
+				3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */,
+				3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */,
 				3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
+				3F43DB151E79EB3300AAD144 /* Element.swift in Sources */,
+				3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,11 +357,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */,
+				3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */,
+				3F43DB281E7B688600AAD144 /* Element.swift in Sources */,
+				3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */,
+				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,
+				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
+				3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */,
+				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
-				3F43DAD31E78E88D00AAD144 /* ChemiaSwiftTests.swift in Sources */,
+				3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */,
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
+				3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */,
 				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,
+				3F43DB291E7B688600AAD144 /* Formula.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +609,7 @@
 				3F43DAE41E78E88D00AAD144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F43DAE51E78E88D00AAD144 /* Build configuration list for PBXNativeTarget "ChemiaSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +618,7 @@
 				3F43DAE71E78E88D00AAD144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F43DAE81E78E88D00AAD144 /* Build configuration list for PBXNativeTarget "ChemiaSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +627,7 @@
 				3F43DAEA1E78E88D00AAD144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
