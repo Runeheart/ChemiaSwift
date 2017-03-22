@@ -12,6 +12,7 @@
 		3F306DE61E8208920051AACB /* BondManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE41E8208920051AACB /* BondManager.swift */; };
 		3F306DE81E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
 		3F306DE91E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
+		3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DEA1E822ED50051AACB /* BondTests.swift */; };
 		3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */; };
 		3F43DAC31E78E88C00AAD144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC11E78E88C00AAD144 /* Main.storyboard */; };
 		3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC41E78E88C00AAD144 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		3F306DE21E8204590051AACB /* BondManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondManagerTests.swift; sourceTree = "<group>"; };
 		3F306DE41E8208920051AACB /* BondManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondManager.swift; sourceTree = "<group>"; };
 		3F306DE71E8209BE0051AACB /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
+		3F306DEA1E822ED50051AACB /* BondTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondTests.swift; sourceTree = "<group>"; };
 		3F43DABA1E78E88C00AAD144 /* ChemiaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemiaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F43DAC21E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		3F43DAD11E78E88D00AAD144 /* ChemiaSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				3F306DEA1E822ED50051AACB /* BondTests.swift */,
 				3F306DE21E8204590051AACB /* BondManagerTests.swift */,
 				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
 				3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */,
@@ -373,6 +376,7 @@
 				3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */,
 				3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */,
 				3F306DE31E8204590051AACB /* BondManagerTests.swift in Sources */,
+				3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */,
 				3F43DB281E7B688600AAD144 /* Element.swift in Sources */,
 				3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */,
 				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,

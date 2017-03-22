@@ -12,6 +12,7 @@ import XCTest
 class BondManagerTests: XCTestCase {
     
     var formula: Formula = Formula()
+    var testBondManager: BondManager = BondManager()
     
     override func setUp() {
         super.setUp()
@@ -19,6 +20,8 @@ class BondManagerTests: XCTestCase {
         formula = Formula()
         formula.add(element: ElementList.carbon)
         formula.add(element: ElementList.oxygen)
+        testBondManager = BondManager(withFormula: formula)
+        
     }
     
     override func tearDown() {
@@ -29,13 +32,23 @@ class BondManagerTests: XCTestCase {
     func testAddingSingleBond() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let testBondManager = BondManager(withFormula: formula)
         let testSingleBond = Bond.between(ElementList.carbon).and(ElementList.oxygen)
         
+        testBondManager.addBond(testSingleBond)
+        
+        XCTAssertEqual(testBondManager.numBonds, 1)
+        XCTAssertEqual(testBondManager.typeOf(bond: testSingleBond), .single)
+    }
+    
+    func testUpgradingSingleBond() {
+        
+        let testSingleBond = Bond.between(ElementList.carbon).and(ElementList.oxygen)
         
         testBondManager.addBond(testSingleBond)
-        XCTAssertEqual(testBondManager.numBonds, 1)
+        testBondManager.addBond(testSingleBond)
         
+        XCTAssertEqual(testBondManager.numBonds, 1)
+        XCTAssertEqual(testBondManager.typeOf(bond: testSingleBond), .double)
     }
     /*
     func testPerformanceExample() {
