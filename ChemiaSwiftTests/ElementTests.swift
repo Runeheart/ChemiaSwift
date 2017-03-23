@@ -63,6 +63,13 @@ class ElementTests: XCTestCase {
         XCTAssertEqual(xenon.numValElectrons(), 8)
     }
     
+    func testElementInstancesUnique() {
+        let carbon1 = ElementFactory.create(withSymbol: .C)
+        let carbon2 = ElementFactory.create(withSymbol: .C)
+        
+        XCTAssertFalse(carbon1 === carbon2)
+    }
+    
     
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.

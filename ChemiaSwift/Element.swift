@@ -48,26 +48,6 @@ class Element : CustomStringConvertible {
     enum PTableGroup: Int {
         case one = 1
         case three = 3, four, five, six, seven, eight
-        
-//        subscript(symbol: String) -> Int {
-//            switch ChemSymbol(rawValue: symbol)! {
-//            case .H: return 1
-//            case .B: return 3
-//            case .C: return 4
-//            case .N: return 5
-//            case .O: return 6
-//            case .F: return 7
-//            case .Si: return 4
-//            case .P: return 5
-//            case .S: return 6
-//            case .Cl: return 7
-//            case .As: return 5
-//            case .Se: return 6
-//            case .Br: return 7
-//                
-//            }
-//        }
-        
     }
     
     enum PTablePeriod: Int {
