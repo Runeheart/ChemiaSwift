@@ -32,9 +32,9 @@ final class EditorViewController: UIViewController {
     
     private func setupManager() {
         let sampleFormula = Formula()
-        sampleFormula.add(element: ElementList.carbon)
-        sampleFormula.add(element: ElementList.hydrogen)
-        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
+        sampleFormula.add(element: ElementFactory.create(withSymbol: .C))
+        sampleFormula.add(element: ElementFactory.create(withSymbol: .H))
+        sampleFormula.updateElement(element: ElementFactory.create(withSymbol: .H), value: 4)
         enteredFormula = sampleFormula
         manager = RulesViewManager(withFormula: enteredFormula)
     }

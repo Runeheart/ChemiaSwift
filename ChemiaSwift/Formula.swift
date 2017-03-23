@@ -76,8 +76,7 @@ class Formula {
         for (_, val) in elements.enumerated() {
             let sym = val.key
             let sub = val.value
-            let contents = ElementList.contents
-            let el = contents[contents.index(where: {$0.getSymbol() == sym})!]
+            let el = ElementFactory.create(withSymbol: Element.ChemSymbol(rawValue: sym)!)
             for _ in 1...sub {
                 results.append(el)
             }

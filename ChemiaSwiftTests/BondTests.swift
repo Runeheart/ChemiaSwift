@@ -11,9 +11,14 @@ import XCTest
 
 class BondTests: XCTestCase {
     
+    var A: Element = Element()
+    var B: Element = Element()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        A = ElementFactory.create(withSymbol: .C)
+        B = ElementFactory.create(withSymbol: .O)
     }
     
     override func tearDown() {
@@ -24,16 +29,17 @@ class BondTests: XCTestCase {
     func testBondEqualsExact() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let AtoB = Bond.between(ElementList.carbon).and(ElementList.oxygen)
-        let AtoB2 = Bond.between(ElementList.carbon).and(ElementList.oxygen)
+        
+        let AtoB = Bond.between(A).and(B)
+        let AtoB2 = Bond.between(A).and(B)
         
         XCTAssertEqual(AtoB, AtoB2)
     }
     
     func testBondEqualsEquivalent() {
         
-        let AtoB = Bond.between(ElementList.carbon).and(ElementList.oxygen)
-        let BtoA = Bond.between(ElementList.oxygen).and(ElementList.carbon)
+        let AtoB = Bond.between(A).and(B)
+        let BtoA = Bond.between(B).and(A)
         
         XCTAssertEqual(AtoB, BtoA)
     }

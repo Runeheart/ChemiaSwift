@@ -16,7 +16,7 @@ class Bond {
     
     class BondBuilder {
         var source: Element
-        var dest: Element = ElementList.hydrogen
+        var dest: Element = ElementFactory.create(withSymbol: .H)
         
         init(_ source: Element) {
             self.source = source

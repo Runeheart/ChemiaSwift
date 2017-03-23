@@ -18,8 +18,8 @@ class BondManagerTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         formula = Formula()
-        formula.add(element: ElementList.carbon)
-        formula.add(element: ElementList.oxygen)
+        formula.add(element: ElementFactory.create(withSymbol: .C))
+        formula.add(element: ElementFactory.create(withSymbol: .O))
         testBondManager = BondManager(withFormula: formula)
         
     }
@@ -32,7 +32,7 @@ class BondManagerTests: XCTestCase {
     func testAddingSingleBond() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let testSingleBond = Bond.between(ElementList.carbon).and(ElementList.oxygen)
+        let testSingleBond = Bond.between(ElementFactory.create(withSymbol: .C)).and(ElementFactory.create(withSymbol: .O))
         
         testBondManager.addBond(testSingleBond)
         
@@ -42,7 +42,7 @@ class BondManagerTests: XCTestCase {
     
     func testUpgradingSingleBond() {
         
-        let testSingleBond = Bond.between(ElementList.carbon).and(ElementList.oxygen)
+        let testSingleBond = Bond.between(ElementFactory.create(withSymbol: .C)).and(ElementFactory.create(withSymbol: .O))
         
         testBondManager.addBond(testSingleBond)
         testBondManager.addBond(testSingleBond)
