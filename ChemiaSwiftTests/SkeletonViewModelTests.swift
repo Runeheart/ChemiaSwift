@@ -22,7 +22,7 @@ class SkeletonViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCenterElementButton() {
+    func testNextDisplayTitle() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
@@ -33,13 +33,12 @@ class SkeletonViewModelTests: XCTestCase {
         testFormula.add(element: centerAtom)
         testFormula.add(element: attachedAtom)
         testFormula.updateElement(element: attachedAtom, value: 4)
-        let testStructure = LewisStructure(withFormula: testFormula)
         let testBondManager = BondManager(withFormula: testFormula)
-        testStructure.setBondManagerTo(testBondManager)
+        
         
         // Primary setup
         let rule = SkeletonRule(withManager: testBondManager)
-        let elementButtons: [ElementButton] = rule.generateElementButtons()
+        let symbols: [String] = rule.getPossibleAnswers()
         
         // Execution
         

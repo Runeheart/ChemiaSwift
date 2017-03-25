@@ -11,6 +11,7 @@ import Foundation
 class SkeletonRule {
     
     let currentStructure: BondManager
+    var symbols: [String] = []
     
     init(withManager manager: BondManager) {
         currentStructure = manager
@@ -20,16 +21,29 @@ class SkeletonRule {
         self.init(withManager: BondManager())
     }
     
-    func generateElementButtons() -> [ElementButton] {
-        var results: [ElementButton] = []
+    func getPossibleAnswers() -> [String] {
+        let results: [String] = []
+        defer {
+            symbols = results
+        }
+        
         let numButtonsToGenerate = currentStructure.designatedFormula.numberOfAtoms()
-//        let formulaElements = currentStructure.designatedFormula.elementsArray()
-        results.append(ElementButton())
+        var formulaElements = currentStructure.designatedFormula.elementsArray()
+        
+        let centerElement = formulaElements.removeFirst()
+        
         for _ in 2...numButtonsToGenerate {
-            results.append(ElementButton(type: .custom))
+
         }
         
         return results
+    }
+    
+    func nextDisplayTitle (from sym: String) -> String {
+        
+        
+        
+        return ""
     }
     
     

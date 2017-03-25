@@ -49,8 +49,6 @@
 		3FD57D7F1E836C7000332369 /* SkeletonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */; };
 		3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D801E8370CF00332369 /* SkeletonRule.swift */; };
 		3FD57D821E8370CF00332369 /* SkeletonRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D801E8370CF00332369 /* SkeletonRule.swift */; };
-		3FD57D841E8378CC00332369 /* ElementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D831E8378CC00332369 /* ElementButton.swift */; };
-		3FD57D851E8378CC00332369 /* ElementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D831E8378CC00332369 /* ElementButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +98,8 @@
 		3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFormatter.swift; sourceTree = "<group>"; };
 		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
 		3FC708281E7E0B7700407A83 /* LewisStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LewisStructure.swift; sourceTree = "<group>"; };
-		3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonViewModelTests.swift; sourceTree = "<group>"; };
-		3FD57D801E8370CF00332369 /* SkeletonRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonRule.swift; sourceTree = "<group>"; };
-		3FD57D831E8378CC00332369 /* ElementButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementButton.swift; sourceTree = "<group>"; };
+		3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SkeletonViewModelTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3FD57D801E8370CF00332369 /* SkeletonRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SkeletonRule.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,13 +165,13 @@
 		3F43DAD11E78E88D00AAD144 /* ChemiaSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */,
-				3F306DEA1E822ED50051AACB /* BondTests.swift */,
 				3F306DE21E8204590051AACB /* BondManagerTests.swift */,
-				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
+				3F306DEA1E822ED50051AACB /* BondTests.swift */,
 				3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */,
 				3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */,
 				3F43DAD41E78E88D00AAD144 /* Info.plist */,
+				3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */,
+				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
 			);
 			path = ChemiaSwiftTests;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
 				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
-				3FD57D831E8378CC00332369 /* ElementButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -362,7 +358,6 @@
 				3F306DE51E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
 				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
-				3FD57D841E8378CC00332369 /* ElementButton.swift in Sources */,
 				3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */,
 				3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */,
@@ -390,7 +385,6 @@
 				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,
 				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
 				3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */,
-				3FD57D851E8378CC00332369 /* ElementButton.swift in Sources */,
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
 				3F306DE61E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
