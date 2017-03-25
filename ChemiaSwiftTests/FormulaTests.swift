@@ -28,36 +28,37 @@ class FormulaTests: XCTestCase {
         super.tearDown()
     }
     
-    func testAddsInitialElement() {
+    func testAddingCenterElement() {
         
-        formula.add(element: hydrogen)
+        formula.setCenter(element: carbon)
         
-        XCTAssertEqual(formula.simpleForm(), "H")
+        XCTAssertEqual(formula.simpleForm(), "C")
         
     }
     
-    func testAddingSecondUniqueElement() {
+    func testAddingAttachedElement() {
         
-        formula.add(element: carbon)
-        formula.add(element: hydrogen)
+        formula.setCenter(element: carbon)
+        formula.addAttached(element: hydrogen)
         
         XCTAssertEqual(formula.simpleForm(), "CH")
         
     }
     
-    func testAddingSecondOfPresentElement() {
+    func testAddingSecondAttachedElement() {
         
-        formula.add(element: hydrogen)
-        formula.updateElement(element: hydrogen, value: 2)
+        formula.setCenter(element: carbon)
+        formula.addAttached(element: hydrogen)
+        formula.updateAttached(element: hydrogen, value: 2)
         
-        XCTAssertEqual(formula.simpleForm(), "H2")
+        XCTAssertEqual(formula.simpleForm(), "CH2")
     }
     
     func testValenceCalculation() {
         
-        formula.add(element: carbon)
-        formula.add(element: hydrogen)
-        formula.updateElement(element: hydrogen, value: 4)
+        formula.setCenter(element: carbon)
+        formula.addAttached(element: hydrogen)
+        formula.updateAttached(element: hydrogen, value: 4)
         
         let testValenceTotal = formula.calculateValence()
         XCTAssertEqual(testValenceTotal, 8)
@@ -65,9 +66,9 @@ class FormulaTests: XCTestCase {
     
     func testNumberOfAtoms() {
         
-        formula.add(element: carbon)
-        formula.add(element: hydrogen)
-        formula.updateElement(element: hydrogen, value: 4)
+        formula.setCenter(element: carbon)
+        formula.addAttached(element: hydrogen)
+        formula.updateAttached(element: hydrogen, value: 4)
         
         let testAtomTotal = formula.numberOfAtoms()
         XCTAssertEqual(testAtomTotal, 5)
@@ -75,9 +76,9 @@ class FormulaTests: XCTestCase {
     
     func testValenceBreakdown() {
         
-        formula.add(element: carbon)
-        formula.add(element: hydrogen)
-        formula.updateElement(element: hydrogen, value: 4)
+        formula.setCenter(element: carbon)
+        formula.addAttached(element: hydrogen)
+        formula.updateAttached(element: hydrogen, value: 4)
         
         let testValenceCoefficients = formula.valenceBreakdown()
         XCTAssertEqual(testValenceCoefficients[0].0, 1)
@@ -88,9 +89,9 @@ class FormulaTests: XCTestCase {
     
     func testElementsArray() {
         
-        formula.add(element: carbon)
-        formula.add(element: hydrogen)
-        formula.updateElement(element: hydrogen, value: 4)
+        formula.setCenter(element: carbon)
+        formula.addAttached(element: hydrogen)
+        formula.updateAttached(element: hydrogen, value: 4)
         
         let testElementArray = formula.elementsArray()
         XCTAssertEqual(testElementArray.count, formula.numberOfAtoms())

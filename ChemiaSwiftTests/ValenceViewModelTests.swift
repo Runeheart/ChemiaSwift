@@ -19,8 +19,8 @@ class ValenceViewModelTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         formula = Formula()
-        formula.add(element: ElementFactory.create(withSymbol: .C))
-        formula.add(element: ElementFactory.create(withSymbol: .O))
+        formula.setCenter(element: ElementFactory.create(withSymbol: .C))
+        formula.addAttached(element: ElementFactory.create(withSymbol: .O))
         
         rule = ValenceRule(withFormula: formula)
         answers = rule.getPossibleAnswers()

@@ -10,26 +10,37 @@ import Foundation
 
 class Formula {
     
-    private var elements = [String : Int]()
+    private var centerElement: Element = ElementFactory.create(withSymbol: .H)
+    private var attachedElements = [String : Int]()
     private var formulaOrder: [String] = Array(repeating: "", count: FormulaConstants.MostDistinctElementsPossible)
     private var formulaIndex = 0
     
     
-    func add(element: Element) {
+    func setCenter(element el: Element) {
+        centerElement = el
+        let givenSymbol = el.getSymbol()
+        formulaOrder[0] = givenSymbol
+        if formulaIndex == 0 {
+            formulaIndex += 1
+        }
+    }
+    
+    func addAttached(element: Element) {
         let givenSymbol = element.getSymbol()
-        elements[givenSymbol] = 1
+        attachedElements[givenSymbol] = 1
         formulaOrder[formulaIndex] = givenSymbol
         formulaIndex += 1
     }
     
-    func updateElement(element: Element, value: Int) {
-        elements.updateValue(value, forKey: element.getSymbol())
+    func updateAttached(element: Element, value: Int) {
+        attachedElements.updateValue(value, forKey: element.getSymbol())
     }
     
     func simpleForm() -> String {
-        var result = ""
-        for element in formulaOrder where element != "" {
-            let sub = elements[element] ?? 0
+        var result = centerElement.getSymbol()
+        var sub = 0
+        for element in formulaOrder.suffix(from: 1) where element != "" {
+            sub = attachedElements[element] ?? 0
             if sub == 1 {
                 result.append("\(element)")
             } else if sub > 1 {
@@ -40,11 +51,11 @@ class Formula {
     }
     
     func calculateValence() -> Int {
-        var result = 0
-        for (_, val) in elements.enumerated() {
+        var result = centerElement.numValElectrons()
+        let contents = ElementList.contents
+        for (_, val) in attachedElements.enumerated() {
             let sym = val.key
             let sub = val.value
-            let contents = ElementList.contents
             let el = contents[contents.index(where: {$0.getSymbol() == sym})!]
             result += (el.numValElectrons() * sub)
         }
@@ -52,16 +63,16 @@ class Formula {
     }
     
     func numberOfAtoms() -> Int {
-        var result = 0
-        for val in elements.values {
+        var result = 1
+        for val in attachedElements.values {
             result += val
         }
         return result
     }
     
     func valenceBreakdown() -> [(Int,Int)] {
-        var result: [(Int,Int)] = []
-        for (_, val) in elements.enumerated() {
+        var result: [(Int,Int)] = [(1, centerElement.numValElectrons())]
+        for (_, val) in attachedElements.enumerated() {
             let sym = val.key
             let sub = val.value
             let contents = ElementList.contents
@@ -72,8 +83,8 @@ class Formula {
     }
     
     func elementsArray() -> [Element] {
-        var results: [Element] = []
-        for (_, val) in elements.enumerated() {
+        var results: [Element] = [centerElement]
+        for (_, val) in attachedElements.enumerated() {
             let sym = val.key
             let sub = val.value
             let el = ElementFactory.create(withSymbol: Element.ChemSymbol(rawValue: sym)!)

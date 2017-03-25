@@ -32,9 +32,11 @@ final class EditorViewController: UIViewController {
     
     private func setupManager() {
         let sampleFormula = Formula()
-        sampleFormula.add(element: ElementFactory.create(withSymbol: .C))
-        sampleFormula.add(element: ElementFactory.create(withSymbol: .H))
-        sampleFormula.updateElement(element: ElementFactory.create(withSymbol: .H), value: 4)
+        let sampleCenter = ElementFactory.create(withSymbol: .C)
+        let sampleAttached = ElementFactory.create(withSymbol: .H)
+        sampleFormula.setCenter(element: sampleCenter)
+        sampleFormula.addAttached(element: sampleAttached)
+        sampleFormula.updateAttached(element: sampleAttached, value: 4)
         enteredFormula = sampleFormula
         manager = RulesViewManager(withFormula: enteredFormula)
     }

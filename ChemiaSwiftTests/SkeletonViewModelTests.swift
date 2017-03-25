@@ -30,9 +30,9 @@ class SkeletonViewModelTests: XCTestCase {
         let testFormula = Formula()
         let centerAtom = ElementFactory.create(withSymbol: .C)
         let attachedAtom = ElementFactory.create(withSymbol: .H)
-        testFormula.add(element: centerAtom)
-        testFormula.add(element: attachedAtom)
-        testFormula.updateElement(element: attachedAtom, value: 4)
+        testFormula.setCenter(element: centerAtom)
+        testFormula.addAttached(element: attachedAtom)
+        testFormula.updateAttached(element: attachedAtom, value: 4)
         let testBondManager = BondManager(withFormula: testFormula)
         
         
