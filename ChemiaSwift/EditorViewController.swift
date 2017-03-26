@@ -90,6 +90,7 @@ final class EditorViewController: UIViewController {
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         viewController.didMove(toParentViewController: self)
+        navigationController?.view.setNeedsLayout()
     }
     
     private func addSegmentForRule( _ rule: RuleName) {
