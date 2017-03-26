@@ -10,40 +10,67 @@ import Foundation
 
 class SkeletonRule {
     
-    let currentStructure: BondManager
-    var symbols: [String] = []
+    private let currentStructure: BondManager
+    private var symbols = [ReuseIdentifiers : [String]]()
+    private var currentElements: [Element]
     
     init(withManager manager: BondManager) {
         currentStructure = manager
+        let currentFormula = currentStructure.designatedFormula
+        currentElements = currentFormula.elementsArray()
+        setSymbols()
     }
     
-    convenience init() {
-        self.init(withManager: BondManager())
+    private func setSymbols() {
+        setCenterSymbols()
+        setAttachedSymbols()
     }
     
-    func getPossibleAnswers() -> [String] {
-        let results: [String] = []
+    private func setCenterSymbols() {
+        var results: [String] = []
         defer {
-            symbols = results
+            symbols[.center] = results
         }
         
-        let numButtonsToGenerate = currentStructure.designatedFormula.numberOfAtoms()
-        var formulaElements = currentStructure.designatedFormula.elementsArray()
+        results.append("")
+        let centerElement = currentElements.removeFirst()
+        results.append(centerElement.getSymbol())
         
-        let centerElement = formulaElements.removeFirst()
-        
-        for _ in 2...numButtonsToGenerate {
-
+        let otherPossibleCenters = currentElements.filter {$0 != ElementList.hydrogen}
+        for i in 0..<otherPossibleCenters.count {
+            let sym = otherPossibleCenters[i].getSymbol()
+            if !results.contains(sym) {
+                results.append(sym)
+            }
         }
-        
-        return results
     }
     
-    func nextDisplayTitle (from sym: String) -> String {
+    private func setAttachedSymbols() {
+        var results: [String] = []
+        defer {
+            symbols[.attached] = results
+        }
         
+        results.append("")
+        for i in 0..<currentElements.count {
+            let sym = currentElements[i].getSymbol()
+            if !results.contains(sym) {
+                results.append(sym)
+            }
+        }
         
-        
-        return ""
+    }
+    
+    func nextDisplayTitle (from title: String, at identifier: ReuseIdentifiers) -> String {
+        let choices: [String] = symbols[identifier]!
+        let nextTitleIndex = choices.index(of: title)! + 1
+        let nextTitle = choices[nextTitleIndex % choices.count]
+        return nextTitle
+    }
+    
+    enum ReuseIdentifiers: String {
+        case center = "centerAtomButton"
+        case attached = "attachedAtomButton"
     }
     
     

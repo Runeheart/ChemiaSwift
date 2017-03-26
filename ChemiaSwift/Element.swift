@@ -81,7 +81,7 @@ extension Element: Hashable {
 }
 
 enum ElementList {
-    private static let hydrogen = ElementFactory.create(withSymbol: .H)
+    static let hydrogen = ElementFactory.create(withSymbol: .H)
     private static let boron = ElementFactory.create(withSymbol: .B)
     private static let carbon = ElementFactory.create(withSymbol: .C)
     private static let nitrogen = ElementFactory.create(withSymbol: .N)
