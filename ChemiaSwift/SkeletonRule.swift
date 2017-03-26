@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SkeletonRule {
+class SkeletonRule : LewisRule {
     
     private let currentStructure: BondManager
     private var symbols = [ReuseIdentifiers : [String]]()
@@ -18,10 +18,9 @@ class SkeletonRule {
         currentStructure = manager
         let currentFormula = currentStructure.designatedFormula
         currentElements = currentFormula.elementsArray()
-        setSymbols()
     }
     
-    private func setSymbols() {
+    func setSymbols() {
         setCenterSymbols()
         setAttachedSymbols()
     }
@@ -66,6 +65,10 @@ class SkeletonRule {
         let nextTitleIndex = choices.index(of: title)! + 1
         let nextTitle = choices[nextTitleIndex % choices.count]
         return nextTitle
+    }
+    
+    override func description() -> String {
+        return "Place each Element in the buttons provided by tapping each until you think it displays the correct symbol.\n\n Your guess will be checked upon hitting Submit."
     }
     
     enum ReuseIdentifiers: String {

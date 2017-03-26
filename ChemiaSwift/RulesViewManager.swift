@@ -31,6 +31,8 @@ final class RulesViewManager {
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "SkeletonTableViewController") as! SkeletonTableViewController
         
+        viewController.ruleViewModel = SkeletonRule(withManager: self.studentStruct.getManager())
+        
         return viewController
     }()
     
@@ -54,6 +56,7 @@ final class RulesViewManager {
     }
     
     func setStructure(_ struc: LewisStructure) {
+        struc.setBondManagerTo(BondManager(withFormula: enteredFormula))
         self.studentStruct = struc
     }
     

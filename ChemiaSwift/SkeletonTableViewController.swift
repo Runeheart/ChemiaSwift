@@ -9,6 +9,8 @@
 import UIKit
 
 class SkeletonTableViewController: UITableViewController {
+    
+    var ruleViewModel = SkeletonRule(withManager: BondManager())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,8 @@ class SkeletonTableViewController: UITableViewController {
         }
         
     }
+    
+    @IBAction func close(segue:UIStoryboardSegue) {}
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,14 +90,19 @@ class SkeletonTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "skeletonRule" {
+            let destination = segue.destination as! RulePopupViewController
+            destination.ruleToDisplay = ruleViewModel
+            
+        }
     }
-    */
+    
 
 }

@@ -13,6 +13,8 @@
 		3F306DE81E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
 		3F306DE91E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
 		3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DEA1E822ED50051AACB /* BondTests.swift */; };
+		3F35698C1E875C3600926F49 /* LewisRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35698B1E875C3500926F49 /* LewisRule.swift */; };
+		3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35698B1E875C3500926F49 /* LewisRule.swift */; };
 		3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */; };
 		3F43DAC31E78E88C00AAD144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC11E78E88C00AAD144 /* Main.storyboard */; };
 		3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC41E78E88C00AAD144 /* Assets.xcassets */; };
@@ -73,6 +75,7 @@
 		3F306DE41E8208920051AACB /* BondManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondManager.swift; sourceTree = "<group>"; };
 		3F306DE71E8209BE0051AACB /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
 		3F306DEA1E822ED50051AACB /* BondTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BondTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F35698B1E875C3500926F49 /* LewisRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LewisRule.swift; sourceTree = "<group>"; };
 		3F43DABA1E78E88C00AAD144 /* ChemiaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemiaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F43DAC21E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -216,6 +219,7 @@
 				3F43DB1E1E7A2AF600AAD144 /* Answer.swift */,
 				3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */,
 				3FD57D801E8370CF00332369 /* SkeletonRule.swift */,
+				3F35698B1E875C3500926F49 /* LewisRule.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -360,6 +364,7 @@
 				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
 				3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */,
+				3F35698C1E875C3600926F49 /* LewisRule.swift in Sources */,
 				3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */,
 				3F306DE81E8209BE0051AACB /* Bond.swift in Sources */,
 				3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */,
@@ -388,6 +393,7 @@
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
 				3F306DE61E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
+				3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */,
 				3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */,
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,

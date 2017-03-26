@@ -21,8 +21,12 @@ class LewisStructure {
         self.init(withFormula: Formula())
     }
     
-//    func setBondManagerTo(_ manager: BondManager) {
-//        bondManager = manager
-//    }
+    func getManager() -> BondManager {
+        return bondManager
+    }
+    
+    func setBondManagerTo(_ manager: BondManager) {
+        bondManager = manager
+    }
     
 }

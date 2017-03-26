@@ -35,6 +35,7 @@ class SkeletonViewModelTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let rule = SkeletonRule(withManager: testBondManager)
+        rule.setSymbols()
         
         let startingTitle = ""
         let nextTitle = "C"
@@ -45,6 +46,7 @@ class SkeletonViewModelTests: XCTestCase {
     
     func testNextDisplayTitleOneAttached() {
         let rule = SkeletonRule(withManager: testBondManager)
+        rule.setSymbols()
         
         let startingTitle = ""
         let nextTitle = "H"
@@ -61,6 +63,7 @@ class SkeletonViewModelTests: XCTestCase {
         testFormula.updateAttached(element: attachedAtom, value: 4)
         let bondManager = BondManager(withFormula: testFormula)
         let rule = SkeletonRule(withManager: bondManager)
+        rule.setSymbols()
         
         let startingTitle = ""
         let nextTitle = "C"
@@ -80,6 +83,7 @@ class SkeletonViewModelTests: XCTestCase {
         testFormula.addAttached(element: attachedNitrogen)
         let bondManager = BondManager(withFormula: testFormula)
         let rule = SkeletonRule(withManager: bondManager)
+        rule.setSymbols()
         
         let startingCenter = ""
         let nextCenter = "C"
