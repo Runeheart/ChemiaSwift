@@ -12,6 +12,8 @@ class SkeletonTableViewController: UITableViewController {
     
     var ruleViewModel = SkeletonRule(withManager: BondManager())
 
+    @IBOutlet weak var formulaLBL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +23,18 @@ class SkeletonTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        setupTableView()
+        initializeFormula()
+        
+    }
+    
+    private func setupTableView() {
         tableView.estimatedRowHeight = 50.0
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func initializeFormula() {
+        formulaLBL.attributedText = ruleViewModel.subscriptedFormula()
     }
 
     override func didReceiveMemoryWarning() {

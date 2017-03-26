@@ -11,12 +11,13 @@ import Foundation
 class SkeletonRule : LewisRule {
     
     private let currentStructure: BondManager
+    private let currentFormula: Formula
     private var symbols = [ReuseIdentifiers : [String]]()
     private var currentElements: [Element]
     
     init(withManager manager: BondManager) {
         currentStructure = manager
-        let currentFormula = currentStructure.designatedFormula
+        currentFormula = currentStructure.designatedFormula
         currentElements = currentFormula.elementsArray()
     }
     
@@ -74,6 +75,11 @@ class SkeletonRule : LewisRule {
     enum ReuseIdentifiers: String {
         case center = "centerAtomButton"
         case attached = "attachedAtomButton"
+    }
+    
+    func subscriptedFormula() -> NSAttributedString {
+        let formatter = FormulaFormatter()
+        return formatter.subscriptedFormulaFrom(inputString: currentFormula.simpleForm())
     }
     
     
