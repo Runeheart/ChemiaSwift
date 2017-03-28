@@ -259,7 +259,7 @@
 			children = (
 				3F43DAC91E78E88C00AAD144 /* Supporting Files */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3FC045351E8B1A6500AA033C /* App Delegate */ = {
