@@ -10,6 +10,8 @@ import Foundation
 
 class ValenceRule : LewisRule {
     
+    let numAnswers: Int = 5
+    
     var formula: Formula = Formula()
     var correctValence: Int = 0
     
@@ -21,7 +23,7 @@ class ValenceRule : LewisRule {
     }
     
     func getPossibleAnswers() -> [Answer] {
-        var possibleValues: [Int] = Array(repeating: 0, count: 5)
+        var possibleValues: [Int] = Array(repeating: 0, count: numAnswers)
         possibleValues[0] = correctValence // correct answer
         var wrongValueAttempt = 0
         for index in 1...4 {

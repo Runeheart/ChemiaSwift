@@ -35,15 +35,15 @@ class ValenceViewModelTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        XCTAssertEqual(answers[0].content as! Int, 10)
+        XCTAssertEqual(answers[0].content, 10)
     }
     
     func testIncorrectAnswersAreGenerated() {
         
-        let correctChoice = answers[0].content as! Int
+        let correctChoice = answers[0].content
         var wrongAnswerCount = 0
         for choice in answers {
-            let givenValue = choice.content as! Int
+            let givenValue = choice.content
             if givenValue != correctChoice {
                 wrongAnswerCount += 1
             }
