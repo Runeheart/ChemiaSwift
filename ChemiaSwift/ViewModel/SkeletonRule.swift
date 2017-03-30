@@ -11,7 +11,7 @@ import Foundation
 class SkeletonRule : LewisRule {
     
     private let currentStructure: BondManager
-    private let currentFormula: Formula
+    let currentFormula: Formula
     private var symbols = [ReuseIdentifiers : [String]]()
     private var currentElements: [Element]
     
@@ -66,6 +66,10 @@ class SkeletonRule : LewisRule {
         let nextTitleIndex = choices.index(of: title)! + 1
         let nextTitle = choices[nextTitleIndex % choices.count]
         return nextTitle
+    }
+    
+    func numAtoms() -> Int {
+        return currentFormula.numberOfAtoms()
     }
     
     override func description() -> String {

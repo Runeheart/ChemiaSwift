@@ -11,8 +11,6 @@ import UIKit
 class SkeletonTableViewController: UITableViewController {
     
     var ruleViewModel = SkeletonRule(withManager: BondManager())
-
-    @IBOutlet weak var formulaLBL: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +21,6 @@ class SkeletonTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        setupTableView()
-        initializeFormula()
-        
-    }
-    
-    private func setupTableView() {
-        tableView.estimatedRowHeight = 50.0
-        tableView.rowHeight = UITableViewAutomaticDimension
-    }
-    
-    private func initializeFormula() {
-        formulaLBL.attributedText = ruleViewModel.subscriptedFormula()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,18 +31,72 @@ class SkeletonTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if section == 0 {
-            return 2
-        } else {
-            return 1
+        switch section {
+        case 0: return 2
+        case 1: return 1
+        case 2: return ruleViewModel.numAtoms()-1
+        default: return 0
         }
-        
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let result = Section(rawValue: section) else {fatalError("Unimplemented Section")}
+        return result.heading
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = configureCellBasedOn(path: indexPath)
+        return cell
+    }
+    
+    private func configureCellBasedOn(path: IndexPath) -> UITableViewCell {
+        guard let group: Section = Section(rawValue: path.section) else {fatalError("Unimplemented Section")}
+        guard let row: Row = Row(rawValue: path.row) else {fatalError("Unimplemented Row")}
+        return cellForPosition((group, row), at: path)
+    }
+    
+    private func cellForPosition(_ position: (Section, Row), at path: IndexPath) -> UITableViewCell {
+        switch position {
+        case (.info, .formula):
+            guard let formulaCell = tableView.dequeueReusableCell(withIdentifier: FormulaCell.identifier, for: path) as? FormulaCell else {fatalError("Something very strange occurred")}
+            
+            formulaCell.enteredFormula = ruleViewModel.currentFormula
+            return formulaCell
+        case (.info, .submit):
+            guard let submitCell = tableView.dequeueReusableCell(withIdentifier: HintSubmitCell.identifier, for: path) as? HintSubmitCell else {fatalError("Something very strange occurred")}
+            
+            return submitCell
+        case (.center, _):
+            break
+        case (.attached, _):
+            break
+        default: break
+        }
+        return UITableViewCell()
+    }
+    
+    // MARK: - Enums
+    enum Section : Int {
+        case info = 0, center, attached
+        
+        var heading: String {
+            switch self {
+            case .info: return "Information:"
+            case .center: return "Center Atom"
+            case .attached: return "Attached Atoms"
+            }
+        }
+    }
+    
+    enum Row : Int {
+        case formula = 0, submit, attached1, attached2, attached3, attached4
+    }
+    
+    // MARK: - IBActions
     
     @IBAction func close(segue:UIStoryboardSegue) {}
 
