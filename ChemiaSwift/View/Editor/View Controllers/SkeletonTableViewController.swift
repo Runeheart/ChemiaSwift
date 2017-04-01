@@ -21,6 +21,14 @@ class SkeletonTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        ruleViewModel.setSymbols()
+        
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 105
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +79,9 @@ class SkeletonTableViewController: UITableViewController {
             
             return submitCell
         case (.center, _):
-            break
+            guard let centerAtomCell = tableView.dequeueReusableCell(withIdentifier: CenterElementCell.identifier, for: path) as? CenterElementCell else {fatalError("Something very strange occurred")}
+            
+            return centerAtomCell
         case (.attached, _):
             break
         default: break
@@ -100,6 +110,16 @@ class SkeletonTableViewController: UITableViewController {
     
     @IBAction func close(segue:UIStoryboardSegue) {}
 
+    @IBAction func placeCenter(_ sender: UIButton) {
+        if let currentTitle = sender.currentTitle {
+            sender.setTitle(ruleViewModel.nextDisplayTitle(from: currentTitle, at: .center), for: .normal)
+        } else {
+            sender.setTitle(ruleViewModel.nextDisplayTitle(from: "", at: .center), for: .normal)
+        }
+        
+    }
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

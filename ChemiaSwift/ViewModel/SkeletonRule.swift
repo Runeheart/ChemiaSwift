@@ -77,8 +77,8 @@ class SkeletonRule : LewisRule {
     }
     
     enum ReuseIdentifiers: String {
-        case center = "centerAtomButton"
-        case attached = "attachedAtomButton"
+        case center = "center"
+        case attached = "attached"
     }
     
     func subscriptedFormula() -> NSAttributedString {

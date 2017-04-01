@@ -36,10 +36,6 @@ class Element : CustomStringConvertible {
         return group
     }
     
-    static func valenceFor(symbol: String) -> Int {
-        return 0
-    }
-    
     enum ChemSymbol: String {
         case H,B,C,N,O,F,Si,P,S,Cl,As,Se,Br,Kr,Te,I,Xe,At
         

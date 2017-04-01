@@ -12,6 +12,8 @@
 		3F1E8D861E8B6897001DD963 /* FormulaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0453F1E8B37C500AA033C /* FormulaCell.swift */; };
 		3F1E8D871E8B689A001DD963 /* HintSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC045451E8B409200AA033C /* HintSubmitCell.swift */; };
 		3F1E8D881E8B689D001DD963 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC045411E8B3A8B00AA033C /* QuestionCell.swift */; };
+		3F26F6BC1E8C9CD800F95062 /* CenterElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */; };
+		3F26F6BD1E8C9CD800F95062 /* CenterElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */; };
 		3F306DE31E8204590051AACB /* BondManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE21E8204590051AACB /* BondManagerTests.swift */; };
 		3F306DE51E8208920051AACB /* BondManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE41E8208920051AACB /* BondManager.swift */; };
 		3F306DE61E8208920051AACB /* BondManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE41E8208920051AACB /* BondManager.swift */; };
@@ -81,6 +83,7 @@
 
 /* Begin PBXFileReference section */
 		3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceCell.swift; sourceTree = "<group>"; };
+		3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterElementCell.swift; sourceTree = "<group>"; };
 		3F306DE21E8204590051AACB /* BondManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BondManagerTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3F306DE41E8208920051AACB /* BondManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondManager.swift; sourceTree = "<group>"; };
 		3F306DE71E8209BE0051AACB /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
+				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -459,6 +463,7 @@
 				3F1E8D831E8B586F001DD963 /* ChoiceCell.swift in Sources */,
 				3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */,
 				3FC045421E8B3A8B00AA033C /* QuestionCell.swift in Sources */,
+				3F26F6BC1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
 				3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */,
 				3FC045461E8B409200AA033C /* HintSubmitCell.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
@@ -480,6 +485,7 @@
 				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
 				3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
+				3F26F6BD1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
 				3F306DE61E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */,

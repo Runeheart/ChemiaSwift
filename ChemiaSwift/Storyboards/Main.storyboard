@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dAg-Z9-QqQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dAg-Z9-QqQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -228,7 +230,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="formulaCell" id="p4V-dJ-YSs" customClass="FormulaCell" customModule="ChemiaSwift" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="formulaCell" id="p4V-dJ-YSs" userLabel="Formula" customClass="FormulaCell" customModule="ChemiaSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p4V-dJ-YSs" id="xfx-hn-L5a">
@@ -255,7 +257,7 @@
                                     <outlet property="formulaLBL" destination="JaC-72-zwE" id="iac-lO-p3m"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="hintSubmitCell" id="eKh-JN-mAf" customClass="HintSubmitCell" customModule="ChemiaSwift" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="hintSubmitCell" id="eKh-JN-mAf" userLabel="Submit" customClass="HintSubmitCell" customModule="ChemiaSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKh-JN-mAf" id="G0A-Bo-cOP">
@@ -272,6 +274,87 @@
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="VRa-U0-Baj" kind="presentation" identifier="skeletonRule" trigger="accessoryAction" id="CUr-xZ-gOZ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="centerElementCell" rowHeight="105" id="RS0-66-s9W" userLabel="Center Atom" customClass="CenterElementCell" customModule="ChemiaSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="144" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RS0-66-s9W" id="YlS-ra-Da5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="centerAtomButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crA-cV-UNi">
+                                            <rect key="frame" x="172" y="25" width="30" height="30"/>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <connections>
+                                                <action selector="placeCenter:" destination="3oO-Ib-2Vh" eventType="touchUpInside" id="BFb-yw-kgY"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="topPair" text=".." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfN-NV-3wk" userLabel="Top Pair">
+                                            <rect key="frame" x="181" y="3" width="13" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="13" id="INV-hS-8kY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="bottomPair" text=".." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUT-yx-pTY" userLabel="Bottom Pair">
+                                            <rect key="frame" x="181" y="44" width="13" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qnn-sp-QQ2">
+                                            <rect key="frame" x="127" y="69" width="121" height="28"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="121" id="beJ-wJ-ecY"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="0"/>
+                                                <segment title="1"/>
+                                                <segment title="2"/>
+                                                <segment title="3"/>
+                                            </segments>
+                                        </segmentedControl>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="leftPair" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66R-Oc-A1A" userLabel="Left Pair">
+                                            <rect key="frame" x="160" y="28" width="5" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="5" id="bap-f9-f6J"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Qnn-sp-QQ2" firstAttribute="bottom" secondItem="YlS-ra-Da5" secondAttribute="bottomMargin" id="3Yf-YR-SJG"/>
+                                        <constraint firstItem="66R-Oc-A1A" firstAttribute="baseline" secondItem="crA-cV-UNi" secondAttribute="firstBaseline" id="4rb-ZZ-IY1"/>
+                                        <constraint firstItem="66R-Oc-A1A" firstAttribute="centerY" secondItem="crA-cV-UNi" secondAttribute="centerY" id="6Hf-i2-can"/>
+                                        <constraint firstItem="Qnn-sp-QQ2" firstAttribute="top" secondItem="rUT-yx-pTY" secondAttribute="bottom" constant="4" id="9AP-MM-MFd"/>
+                                        <constraint firstItem="rUT-yx-pTY" firstAttribute="top" secondItem="WfN-NV-3wk" secondAttribute="bottom" constant="19" id="9sN-aI-7YW"/>
+                                        <constraint firstItem="rUT-yx-pTY" firstAttribute="centerX" secondItem="Qnn-sp-QQ2" secondAttribute="centerX" id="A2v-iS-7Wl"/>
+                                        <constraint firstItem="crA-cV-UNi" firstAttribute="top" secondItem="WfN-NV-3wk" secondAttribute="bottom" id="PYE-au-Opr"/>
+                                        <constraint firstItem="WfN-NV-3wk" firstAttribute="leading" secondItem="rUT-yx-pTY" secondAttribute="leading" id="SWp-MZ-afi"/>
+                                        <constraint firstItem="WfN-NV-3wk" firstAttribute="trailing" secondItem="rUT-yx-pTY" secondAttribute="trailing" id="V6J-t0-7Md"/>
+                                        <constraint firstItem="WfN-NV-3wk" firstAttribute="top" secondItem="YlS-ra-Da5" secondAttribute="topMargin" constant="-5" id="ev4-B0-RP7"/>
+                                        <constraint firstItem="66R-Oc-A1A" firstAttribute="top" secondItem="YlS-ra-Da5" secondAttribute="topMargin" constant="20" id="h7B-Hf-44g"/>
+                                        <constraint firstItem="crA-cV-UNi" firstAttribute="centerX" secondItem="rUT-yx-pTY" secondAttribute="centerX" id="klb-2w-r5E"/>
+                                        <constraint firstItem="Qnn-sp-QQ2" firstAttribute="top" secondItem="crA-cV-UNi" secondAttribute="bottom" constant="14" id="pEi-8v-5RD"/>
+                                        <constraint firstItem="crA-cV-UNi" firstAttribute="leading" secondItem="66R-Oc-A1A" secondAttribute="trailing" constant="7" id="pb3-5r-DIa"/>
+                                        <constraint firstItem="66R-Oc-A1A" firstAttribute="baseline" secondItem="crA-cV-UNi" secondAttribute="baseline" id="utl-Ww-Hfc"/>
+                                        <constraint firstItem="crA-cV-UNi" firstAttribute="centerX" secondItem="YlS-ra-Da5" secondAttribute="centerX" id="ww2-iv-eKm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="bottomPair" destination="rUT-yx-pTY" id="uTf-4m-OcK"/>
+                                    <outlet property="centerBTN" destination="crA-cV-UNi" id="zSp-H8-bS1"/>
+                                    <outlet property="leftPair" destination="66R-Oc-A1A" id="tfg-JL-MQj"/>
+                                    <outlet property="lonePairCount" destination="Qnn-sp-QQ2" id="lh3-zb-vOs"/>
+                                    <outlet property="topPair" destination="WfN-NV-3wk" id="gYY-Cj-EBF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
