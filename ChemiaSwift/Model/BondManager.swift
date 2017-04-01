@@ -62,6 +62,6 @@ class BondManager {
     
 }
 
-enum BondType {
-    case single, double, triple, null
+enum BondType : Int {
+    case null = 0, single, double, triple
 }

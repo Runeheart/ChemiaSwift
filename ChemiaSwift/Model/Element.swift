@@ -13,19 +13,25 @@ class Element : CustomStringConvertible {
     private var chemSymbol: ChemSymbol = .H
     private var group = 0
     private var period = 0
+    private var octetNum = 0
     
     var description: String {
-        return "\(chemSymbol) ; hash \(hashValue)\n\tgroup \(PTableGroup(rawValue: group)!) \n\t \(PTablePeriod(rawValue: period)!) period"
+        return "\(chemSymbol) ; hash \(hashValue)\n\tgroup \(PTableGroup(rawValue: group)!) \n\t \(PTablePeriod(rawValue: period)!) period \n\t # of Octet Electrons: \(octetNum)"
     }
     
-    fileprivate init(chemSymbol: ChemSymbol, group: PTableGroup, period: PTablePeriod) {
+    fileprivate init(chemSymbol: ChemSymbol, group: PTableGroup, period: PTablePeriod, octetNum: OctetNum) {
         self.chemSymbol = chemSymbol
         self.group = group.rawValue
         self.period = period.rawValue
+        self.octetNum = octetNum.rawValue
     }
     
     convenience init() {
-        self.init(chemSymbol: .H, group: .one, period: .first)
+        self.init(chemSymbol: .H, group: .one, period: .first, octetNum: .two)
+    }
+    
+    convenience init(chemSymbol: ChemSymbol, group: PTableGroup, period: PTablePeriod) {
+        self.init(chemSymbol: chemSymbol, group: group, period: period, octetNum: .eight)
     }
     
     func getSymbol() -> String {
@@ -35,6 +41,12 @@ class Element : CustomStringConvertible {
     func numValElectrons() -> Int {
         return group
     }
+    
+    func numOctetElectrons() -> Int {
+        return octetNum
+    }
+    
+    // MARK: - Enums 
     
     enum ChemSymbol: String {
         case H,B,C,N,O,F,Si,P,S,Cl,As,Se,Br,Kr,Te,I,Xe,At
@@ -48,6 +60,12 @@ class Element : CustomStringConvertible {
     
     enum PTablePeriod: Int {
         case first = 1, second, third, fourth, fifth, sixth
+    }
+    
+    enum OctetNum: Int {
+        case two = 2
+        case six = 6
+        case eight = 8
     }
     
 }
@@ -110,9 +128,9 @@ class ElementFactory : ElementCreator {
     internal static func create(withSymbol sym: Element.ChemSymbol) -> Element {
         switch sym {
         case .H:
-            return Element(chemSymbol: .H, group: .one, period: .first)
+            return Element(chemSymbol: .H, group: .one, period: .first, octetNum: .two)
         case .B:
-            return Element(chemSymbol: .B, group: .three, period: .second)
+            return Element(chemSymbol: .B, group: .three, period: .second, octetNum: .six)
         case .C:
             return Element(chemSymbol: .C, group: .four, period: .second)
         case .N:
