@@ -81,6 +81,7 @@ class SkeletonTableViewController: UITableViewController {
         case (.center, _):
             guard let centerAtomCell = tableView.dequeueReusableCell(withIdentifier: CenterElementCell.identifier, for: path) as? CenterElementCell else {fatalError("Something very strange occurred")}
             
+            centerAtomCell.skeletonRule = ruleViewModel
             return centerAtomCell
         case (.attached, _):
             break
@@ -109,15 +110,6 @@ class SkeletonTableViewController: UITableViewController {
     // MARK: - IBActions
     
     @IBAction func close(segue:UIStoryboardSegue) {}
-
-    @IBAction func placeCenter(_ sender: UIButton) {
-        if let currentTitle = sender.currentTitle {
-            sender.setTitle(ruleViewModel.nextDisplayTitle(from: currentTitle, at: .center), for: .normal)
-        } else {
-            sender.setTitle(ruleViewModel.nextDisplayTitle(from: "", at: .center), for: .normal)
-        }
-        
-    }
     
     
     /*
