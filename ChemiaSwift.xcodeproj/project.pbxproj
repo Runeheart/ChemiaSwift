@@ -65,6 +65,8 @@
 		3FFD71971E9018A8008D8A78 /* ElementStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */; };
 		3FFD71991E902752008D8A78 /* ElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71981E902752008D8A78 /* ElementState.swift */; };
 		3FFD719A1E902752008D8A78 /* ElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71981E902752008D8A78 /* ElementState.swift */; };
+		3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */; };
+		3FFD719E1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,7 @@
 		3FD57D801E8370CF00332369 /* SkeletonRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SkeletonRule.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementStateTests.swift; sourceTree = "<group>"; };
 		3FFD71981E902752008D8A78 /* ElementState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementState.swift; sourceTree = "<group>"; };
+		3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachedElementCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +325,7 @@
 				3FC045451E8B409200AA033C /* HintSubmitCell.swift */,
 				3FC045411E8B3A8B00AA033C /* QuestionCell.swift */,
 				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
+				3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -481,6 +485,7 @@
 				3FC045421E8B3A8B00AA033C /* QuestionCell.swift in Sources */,
 				3F26F6BC1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
 				3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */,
+				3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
 				3FC045461E8B409200AA033C /* HintSubmitCell.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
@@ -499,6 +504,7 @@
 				3F43DB281E7B688600AAD144 /* Element.swift in Sources */,
 				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,
 				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
+				3FFD719E1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
 				3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
 				3F26F6BD1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,

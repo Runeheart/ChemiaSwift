@@ -84,7 +84,10 @@ class SkeletonTableViewController: UITableViewController {
             centerAtomCell.skeletonRule = ruleViewModel
             return centerAtomCell
         case (.attached, _):
-            break
+            guard let attachedAtomCell = tableView.dequeueReusableCell(withIdentifier: AttachedElementCell.identifier, for: path) as? AttachedElementCell else {fatalError("Something very strange occurred")}
+            
+            attachedAtomCell.skeletonRule = ruleViewModel
+            return attachedAtomCell
         default: break
         }
         return UITableViewCell()
