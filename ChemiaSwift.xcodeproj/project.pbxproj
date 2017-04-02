@@ -241,6 +241,7 @@
 		3FC045301E8B168700AA033C /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				3FFD719B1E907EFD008D8A78 /* Custom Cells */,
 				3FC045311E8B16EE00AA033C /* View Controllers */,
 				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
 			);
@@ -250,15 +251,10 @@
 		3FC045311E8B16EE00AA033C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */,
 				3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */,
-				3FC0453F1E8B37C500AA033C /* FormulaCell.swift */,
-				3FC045451E8B409200AA033C /* HintSubmitCell.swift */,
-				3FC045411E8B3A8B00AA033C /* QuestionCell.swift */,
 				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
-				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -316,6 +312,18 @@
 				3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3FFD719B1E907EFD008D8A78 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */,
+				3FC0453F1E8B37C500AA033C /* FormulaCell.swift */,
+				3FC045451E8B409200AA033C /* HintSubmitCell.swift */,
+				3FC045411E8B3A8B00AA033C /* QuestionCell.swift */,
+				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
