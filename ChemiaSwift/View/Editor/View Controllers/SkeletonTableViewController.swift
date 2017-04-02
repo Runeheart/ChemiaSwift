@@ -11,6 +11,8 @@ import UIKit
 class SkeletonTableViewController: UITableViewController {
     
     var ruleViewModel = SkeletonRule(withManager: BondManager())
+    var centerAtomState: CenterElementState = CenterElementState()
+    var attachedStates: [AttachedElementState] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,12 +83,18 @@ class SkeletonTableViewController: UITableViewController {
         case (.center, _):
             guard let centerAtomCell = tableView.dequeueReusableCell(withIdentifier: CenterElementCell.identifier, for: path) as? CenterElementCell else {fatalError("Something very strange occurred")}
             
+            centerAtomState = CenterElementState(of: ruleViewModel.centerAtom())
+            
             centerAtomCell.skeletonRule = ruleViewModel
+            centerAtomCell.elementState = centerAtomState
             return centerAtomCell
         case (.attached, _):
             guard let attachedAtomCell = tableView.dequeueReusableCell(withIdentifier: AttachedElementCell.identifier, for: path) as? AttachedElementCell else {fatalError("Something very strange occurred")}
             
             attachedAtomCell.skeletonRule = ruleViewModel
+            let nextAttachedState = AttachedElementState(of: ruleViewModel.elementAt(index: path.row + 1), withTarget: centerAtomState)
+            attachedAtomCell.elementState = nextAttachedState
+            attachedStates.append(nextAttachedState)
             return attachedAtomCell
         default: break
         }

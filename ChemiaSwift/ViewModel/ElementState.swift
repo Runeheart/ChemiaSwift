@@ -22,6 +22,8 @@ class ElementState {
         element = el
     }
     
+    init() {}
+    
     func setNumberOfBonds(to num: Int) {
         bondNumSuggested = num
     }

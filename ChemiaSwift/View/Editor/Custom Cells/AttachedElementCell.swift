@@ -17,6 +17,8 @@ class AttachedElementCell: UITableViewCell {
             self.configureForSkeleton()
         }
     }
+    
+    var elementState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: CenterElementState())
 
     @IBOutlet weak var attachedBTN: UIButton!
     

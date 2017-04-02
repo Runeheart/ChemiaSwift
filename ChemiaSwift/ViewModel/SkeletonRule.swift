@@ -72,6 +72,14 @@ class SkeletonRule : LewisRule {
         return currentFormula.numberOfAtoms()
     }
     
+    func centerAtom() -> Element {
+        return currentElements[0]
+    }
+    
+    func elementAt(index i: Int) -> Element {
+        return currentElements[i]
+    }
+    
     override func description() -> String {
         return "Place each Element in the buttons provided by tapping each until you think it displays the correct symbol.\n\n Your guess will be checked upon hitting Submit."
     }

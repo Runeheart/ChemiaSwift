@@ -20,7 +20,7 @@ class CenterElementCell: UITableViewCell {
     // Octets Rule
     // Bonds Rule
     
-    var elementState: CenterElementState = CenterElementState(of: ElementFactory.create(withSymbol: .H))
+    var elementState: CenterElementState = CenterElementState()
 
     @IBOutlet weak var centerBTN: UIButton!
     @IBOutlet weak var topPair: UILabel!
@@ -45,7 +45,6 @@ class CenterElementCell: UITableViewCell {
                 sender.setTitle(ruleViewModel.nextDisplayTitle(from: "", at: .center), for: .normal)
             }
         }
-        
     }
     
     override func awakeFromNib() {
