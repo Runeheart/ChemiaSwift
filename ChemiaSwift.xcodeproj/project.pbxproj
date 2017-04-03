@@ -67,6 +67,9 @@
 		3FFD719A1E902752008D8A78 /* ElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71981E902752008D8A78 /* ElementState.swift */; };
 		3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */; };
 		3FFD719E1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */; };
+		3FFD71A01E91A9AF008D8A78 /* SkeletonValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */; };
+		3FFD71A21E91C39C008D8A78 /* FormulaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A11E91C39C008D8A78 /* FormulaState.swift */; };
+		3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A11E91C39C008D8A78 /* FormulaState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +131,8 @@
 		3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementStateTests.swift; sourceTree = "<group>"; };
 		3FFD71981E902752008D8A78 /* ElementState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementState.swift; sourceTree = "<group>"; };
 		3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachedElementCell.swift; sourceTree = "<group>"; };
+		3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonValidationTests.swift; sourceTree = "<group>"; };
+		3FFD71A11E91C39C008D8A78 /* FormulaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +242,7 @@
 				3FD57D801E8370CF00332369 /* SkeletonRule.swift */,
 				3F35698B1E875C3500926F49 /* LewisRule.swift */,
 				3FFD71981E902752008D8A78 /* ElementState.swift */,
+				3FFD71A11E91C39C008D8A78 /* FormulaState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 		3FC045391E8B1C5E00AA033C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */,
 				3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */,
 				3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */,
 				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
@@ -469,6 +476,7 @@
 				3F306DE51E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
 				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
+				3FFD71A21E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */,
 				3F35698C1E875C3600926F49 /* LewisRule.swift in Sources */,
@@ -498,6 +506,7 @@
 				3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */,
 				3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */,
 				3F306DE31E8204590051AACB /* BondManagerTests.swift in Sources */,
+				3FFD71A01E91A9AF008D8A78 /* SkeletonValidationTests.swift in Sources */,
 				3F1E8D861E8B6897001DD963 /* FormulaCell.swift in Sources */,
 				3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */,
 				3FD57D7F1E836C7000332369 /* SkeletonViewModelTests.swift in Sources */,
@@ -516,6 +525,7 @@
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
 				3F306DE91E8209BE0051AACB /* Bond.swift in Sources */,
+				3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */,
 				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 				3FD57D821E8370CF00332369 /* SkeletonRule.swift in Sources */,

@@ -13,7 +13,7 @@ class ElementState {
     fileprivate var element: Element = ElementFactory.create(withSymbol: .H)
     
     private var bondNumSuggested: Int = 0
-    private var lonePairNumSuggested: Int = 0
+    fileprivate var lonePairNumSuggested: Int = 0
     private lazy var octetElectronsSuggested: Int = {
         return self.bondNumSuggested*2 + self.lonePairNumSuggested*2
     }()
@@ -32,6 +32,18 @@ class ElementState {
         return octetElectronsSuggested == element.numOctetElectrons()
     }
     
+    func octet() -> Int {
+        return element.numOctetElectrons()
+    }
+    
+    func valence() -> Int {
+        return element.numValElectrons()
+    }
+    
+    func suggestedValence() -> Int {
+        return 0
+    }
+    
 }
 
 class CenterElementState: ElementState {
@@ -42,6 +54,7 @@ class CenterElementState: ElementState {
     fileprivate func add(_ bond: Bond, ofType type: BondType) {
         bonds.append(bond)
         bondTypes[bond] = type
+        setNumberOfBonds(to: bonds.count)
     }
     
     func typeOf(bond: Bond) -> BondType {
@@ -49,6 +62,15 @@ class CenterElementState: ElementState {
             return type
         }
         return .null
+    }
+    
+    override func suggestedValence() -> Int {
+        var sum = 0
+        for (_, val) in bondTypes.enumerated() {
+            let cardinality = val.value.rawValue
+            sum += (2*cardinality)
+        }
+        return sum
     }
     
 }
@@ -63,10 +85,6 @@ class AttachedElementState: ElementState {
         super.init(of: el)
     }
     
-    func setCenterTarget(to state: CenterElementState) {
-        centerTarget = state
-    }
-    
     override func setNumberOfBonds(to num: Int) {
         super.setNumberOfBonds(to: num)
     
@@ -74,4 +92,9 @@ class AttachedElementState: ElementState {
         let bondType = BondType(rawValue: num)
         centerTarget.add(bond!, ofType: bondType!)
     }
+    
+    override func suggestedValence() -> Int {
+        return (lonePairNumSuggested * 2)
+    }
+    
 }

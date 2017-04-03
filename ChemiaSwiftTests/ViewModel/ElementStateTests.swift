@@ -40,12 +40,10 @@ class ElementStateTests: XCTestCase {
         testAttached.setNumberOfBonds(to: 1)
         
         let testAttachedBond: Bond = testAttached.bond!
-        XCTAssertEqual(testAttachedBond.source, attachedElement)
-        XCTAssertEqual(testAttachedBond.destination, centerElement)
-        
         let testCenterBond: Bond = testCenter.bonds[0]
-        XCTAssertEqual(testCenterBond.source, attachedElement)
-        XCTAssertEqual(testCenterBond.destination, centerElement)
+        
+        XCTAssertTrue(testAttachedBond == testCenterBond)
+        XCTAssertTrue(testAttachedBond === testCenterBond)
         XCTAssertEqual(testCenter.typeOf(bond: testCenterBond), .single)
         
     }
