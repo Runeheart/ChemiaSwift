@@ -18,7 +18,11 @@ class AttachedElementCell: UITableViewCell {
         }
     }
     
-    var elementState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: CenterElementState())
+    var elementState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: CenterElementState()) {
+        didSet {
+            configureBondLabelsFor(numberOfBonds: elementState.bondNumSuggested)
+        }
+    }
 
     @IBOutlet weak var attachedBTN: UIButton!
     
@@ -41,6 +45,27 @@ class AttachedElementCell: UITableViewCell {
         lonePairCount.isHidden = true
     }
     
+    private func configureBondLabelsFor(numberOfBonds num: Int) {
+        switch num {
+        case 0,1:
+            topBond.isEnabled = true
+            middleBond.isEnabled = false
+            bottomBond.isEnabled = false
+        case 2:
+            topBond.isEnabled = true
+            middleBond.isEnabled = true
+            bottomBond.isEnabled = false
+        case 3:
+            topBond.isEnabled = true
+            middleBond.isEnabled = true
+            bottomBond.isEnabled = true
+        default:
+            break
+        }
+    }
+    
+    // MARK: - IBActions
+    
     @IBAction func placeAttached(_ sender: UIButton) {
         if let ruleViewModel = skeletonRule {
             if let currentTitle = sender.currentTitle {
@@ -50,6 +75,16 @@ class AttachedElementCell: UITableViewCell {
             }
         }
     }
+    
+    @IBAction func bondNumChanged(_ sender: UISegmentedControl) {
+        let suggestedBondNum = Int(sender.titleForSegment(at: sender.selectedSegmentIndex)!)!
+        
+        elementState.bondNumSuggested = suggestedBondNum
+        configureBondLabelsFor(numberOfBonds: suggestedBondNum)
+    }
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,10 +12,12 @@ class ElementState {
     
     fileprivate var element: Element = ElementFactory.create(withSymbol: .H)
     
-    private var bondNumSuggested: Int = 0
-    fileprivate var lonePairNumSuggested: Int = 0
-    private lazy var octetElectronsSuggested: Int = {
-        return self.bondNumSuggested*2 + self.lonePairNumSuggested*2
+    var bondNumSuggested: Int = 0
+    
+    private var bondNum: Int = 0
+    fileprivate var lonePairNum: Int = 0
+    private lazy var octetElectrons: Int = {
+        return self.bondNum*2 + self.lonePairNum*2
     }()
     
     init(of el: Element) {
@@ -25,11 +27,11 @@ class ElementState {
     init() {}
     
     func setNumberOfBonds(to num: Int) {
-        bondNumSuggested = num
+        bondNum = num
     }
     
     func hasFullOctet() -> Bool {
-        return octetElectronsSuggested == element.numOctetElectrons()
+        return octetElectrons == element.numOctetElectrons()
     }
     
     func octet() -> Int {
@@ -94,7 +96,7 @@ class AttachedElementState: ElementState {
     }
     
     override func suggestedValence() -> Int {
-        return (lonePairNumSuggested * 2)
+        return (lonePairNum * 2)
     }
     
 }

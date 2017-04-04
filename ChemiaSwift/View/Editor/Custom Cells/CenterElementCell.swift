@@ -47,6 +47,11 @@ class CenterElementCell: UITableViewCell {
         }
     }
     
+    @IBAction func lonePairChanged(_ sender: UISegmentedControl) {
+        
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

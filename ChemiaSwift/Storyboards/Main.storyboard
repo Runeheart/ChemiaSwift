@@ -318,6 +318,9 @@
                                                 <segment title="2"/>
                                                 <segment title="3"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="lonePairChanged:" destination="RS0-66-s9W" eventType="valueChanged" id="1fY-il-ASJ"/>
+                                            </connections>
                                         </segmentedControl>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="leftPair" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66R-Oc-A1A" userLabel="Left Pair">
                                             <rect key="frame" x="161" y="28" width="5" height="23"/>
@@ -422,6 +425,9 @@
                                                 <segment title="2"/>
                                                 <segment title="3"/>
                                             </segments>
+                                            <connections>
+                                                <action selector="bondNumChanged:" destination="hpH-c8-pU9" eventType="valueChanged" id="zRP-5h-guG"/>
+                                            </connections>
                                         </segmentedControl>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dk-0M-ae7">
                                             <rect key="frame" x="315" y="16" width="44" height="47"/>
