@@ -73,7 +73,7 @@ class SkeletonRule : LewisRule {
     }
     
     func centerAtom() -> Element {
-        return currentElements[0]
+        return currentFormula.centerAtom()
     }
     
     func elementAt(index i: Int) -> Element {

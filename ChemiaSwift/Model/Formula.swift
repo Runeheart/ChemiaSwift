@@ -25,6 +25,10 @@ class Formula {
         }
     }
     
+    func centerAtom() -> Element {
+        return centerElement
+    }
+    
     func addAttached(element: Element) {
         let givenSymbol = element.getSymbol()
         attachedElements[givenSymbol] = 1

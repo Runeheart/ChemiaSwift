@@ -11,8 +11,11 @@ import UIKit
 class SkeletonTableViewController: UITableViewController {
     
     var ruleViewModel = SkeletonRule(withManager: BondManager())
-    var centerAtomState: [CenterElementState] = []
+    var centerAtomState: CenterElementState? = nil
     var attachedStates: [AttachedElementState] = []
+    
+    var formulaState: FormulaState? = nil
+    var alreadyDone: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,10 +86,11 @@ class SkeletonTableViewController: UITableViewController {
         case (.center, _):
             guard let centerAtomCell = tableView.dequeueReusableCell(withIdentifier: CenterElementCell.identifier, for: path) as? CenterElementCell else {fatalError("Something very strange occurred")}
             
-            if centerAtomState.count == 0 {
-                centerAtomState.append(CenterElementState(of: ruleViewModel.centerAtom()))
+            if centerAtomState != nil {
+                centerAtomCell.elementState = centerAtomState!
             } else {
-                centerAtomCell.elementState = centerAtomState[0]
+                centerAtomState = CenterElementState(of: ruleViewModel.centerAtom())
+                centerAtomCell.elementState = centerAtomState!
             }
             
             centerAtomCell.skeletonRule = ruleViewModel
@@ -98,7 +102,7 @@ class SkeletonTableViewController: UITableViewController {
             attachedAtomCell.skeletonRule = ruleViewModel
             
             if attachedStates.count != (ruleViewModel.numAtoms() - 1) {
-                let nextAttachedState = AttachedElementState(of: ruleViewModel.elementAt(index: path.row), withTarget: centerAtomState[0])
+                let nextAttachedState = AttachedElementState(of: ruleViewModel.elementAt(index: path.row), withTarget: centerAtomState!)
                 attachedAtomCell.elementState = nextAttachedState
                 attachedStates.append(nextAttachedState)
             } else if attachedStates.count == (ruleViewModel.numAtoms() - 1) {
@@ -129,6 +133,32 @@ class SkeletonTableViewController: UITableViewController {
     }
     
     // MARK: - IBActions
+    
+    @IBAction func enableContinue(_ sender: UIButton) {
+        if !alreadyDone {
+            if formulaState != nil { } else {
+                for attached in attachedStates {
+                    attached.setNumberOfBonds(to: attached.bondNumSuggested)
+                }
+                formulaState = FormulaState(center: centerAtomState!, attached: attachedStates)
+                checkCompletion(forState: formulaState!)
+            }
+        }
+    }
+    
+    private func checkCompletion(forState state: FormulaState) {
+        state.checkCompletion(forRule: .skeleton)
+        if state.isCompleted() {
+            alreadyDone = true
+            print("All done")
+        } else if state.ruleCompleted() {
+            alreadyDone = true
+            print("Rule done")
+        } else {
+            print("Mistakes were made")
+            formulaState = nil
+        }
+    }
     
     @IBAction func close(segue:UIStoryboardSegue) {}
     

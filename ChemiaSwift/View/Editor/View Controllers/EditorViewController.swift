@@ -65,7 +65,6 @@ final class EditorViewController: UIViewController {
         case 1:
             remove(asChildViewController: self.childViewControllers.last!)
             add(asChildViewController: manager.makeViewForRule(rule: .skeleton))
-            addSegmentForRule(.octets)
         default:
             break
         }

@@ -37,6 +37,8 @@ class FormulaState {
         ruleComplete = verifyFor(.skeleton)
         if ruleComplete {
             isComplete = checkOverallCompletion()
+        } else {
+            isComplete = false
         }
     }
     
@@ -44,16 +46,26 @@ class FormulaState {
         switch rule {
         case .valence: fatalError("Should never verify for valence")
         case .skeleton:
-            configureForSkeleton()
-            return true
+            return verifyForSkeleton()
         case .octets: break
         case .bonds: break
         }
         return false
     }
     
-    private func configureForSkeleton() {
+    private func verifyForSkeleton() -> Bool {
+        let centerSymbolCheck = centerAtom.verifyTitle()
+        var attachedSymbolCheck = true
+        var attachedBondCheck = true
+        for attached in attachedAtoms {
+            attachedSymbolCheck = attached.verifyTitle()
+            attachedBondCheck = attached.verifySingleBondPlaced()
+            if !(attachedSymbolCheck && attachedBondCheck) {
+                return false
+            }
+        }
         
+        return centerSymbolCheck && attachedSymbolCheck && attachedBondCheck
     }
     
     private func checkOverallCompletion() -> Bool {
@@ -68,9 +80,12 @@ class FormulaState {
     
     private func checkEachAtomFullOctet() -> Bool {
         let centerCheck = centerAtom.hasFullOctet()
-        var octetCheck = false
+        var octetCheck = true
         for attached in attachedAtoms {
             octetCheck = attached.hasFullOctet()
+            if !octetCheck {
+                return false 
+            }
         }
         return centerCheck && octetCheck
     }
@@ -100,6 +115,10 @@ class FormulaState {
     private func allBondsPlaced() -> Bool {
         let bondsCurrentlyPlaced = centerAtom.bonds.count
         return bondsCurrentlyPlaced == expectedNumBonds
+    }
+    
+    func ruleCompleted() -> Bool {
+        return ruleComplete
     }
     
     func isCompleted() -> Bool {

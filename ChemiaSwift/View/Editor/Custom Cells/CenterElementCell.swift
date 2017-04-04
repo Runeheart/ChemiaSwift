@@ -39,11 +39,14 @@ class CenterElementCell: UITableViewCell {
     
     @IBAction func placeCenter(_ sender: UIButton) {
         if let ruleViewModel = skeletonRule {
+            var nextTitle: String = ""
             if let currentTitle = sender.currentTitle {
-                sender.setTitle(ruleViewModel.nextDisplayTitle(from: currentTitle, at: .center), for: .normal)
+                nextTitle = ruleViewModel.nextDisplayTitle(from: currentTitle, at: .center)
             } else {
-                sender.setTitle(ruleViewModel.nextDisplayTitle(from: "", at: .center), for: .normal)
+                nextTitle = ruleViewModel.nextDisplayTitle(from: "", at: .center)
             }
+            sender.setTitle(nextTitle, for: .normal)
+            elementState.suggestedElementSymbol = nextTitle
         }
     }
     

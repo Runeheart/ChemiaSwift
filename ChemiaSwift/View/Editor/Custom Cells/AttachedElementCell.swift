@@ -47,7 +47,11 @@ class AttachedElementCell: UITableViewCell {
     
     private func configureBondLabelsFor(numberOfBonds num: Int) {
         switch num {
-        case 0,1:
+        case 0:
+            topBond.isEnabled = false
+            middleBond.isEnabled = false
+            bottomBond.isEnabled = false
+        case 1:
             topBond.isEnabled = true
             middleBond.isEnabled = false
             bottomBond.isEnabled = false
@@ -68,11 +72,14 @@ class AttachedElementCell: UITableViewCell {
     
     @IBAction func placeAttached(_ sender: UIButton) {
         if let ruleViewModel = skeletonRule {
+            var nextTitle: String = ""
             if let currentTitle = sender.currentTitle {
-                sender.setTitle(ruleViewModel.nextDisplayTitle(from: currentTitle, at: .attached), for: .normal)
+                nextTitle = ruleViewModel.nextDisplayTitle(from: currentTitle, at: .attached)
             } else {
-                sender.setTitle(ruleViewModel.nextDisplayTitle(from: "", at: .attached), for: .normal)
+                nextTitle = ruleViewModel.nextDisplayTitle(from: "", at: .attached)
             }
+            sender.setTitle(nextTitle, for: .normal)
+            elementState.suggestedElementSymbol = nextTitle
         }
     }
     

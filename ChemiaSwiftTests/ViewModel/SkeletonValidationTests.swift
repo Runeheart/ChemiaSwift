@@ -26,10 +26,13 @@ class SkeletonValidationTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let centerAtom: Element = ElementFactory.create(withSymbol: .C)
         let centerElementState: CenterElementState = CenterElementState(of: centerAtom)
+        centerElementState.suggestedElementSymbol = "C"
         var attachedElementStates: [AttachedElementState] = []
         for _ in 1...4 {
             let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: centerElementState)
             nextAttachedState.setNumberOfBonds(to: 1)
+            nextAttachedState.suggestedElementSymbol = "H"
+            nextAttachedState.bondNumSuggested = 1
             attachedElementStates.append(nextAttachedState)
         }
         
