@@ -115,4 +115,8 @@ class AttachedElementState: ElementState {
         return bondNumSuggested == 1
     }
     
+    func destinationSymbol() -> String {
+        return centerTarget.element.getSymbol()
+    }
+    
 }

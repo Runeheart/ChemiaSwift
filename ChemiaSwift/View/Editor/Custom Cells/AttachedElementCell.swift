@@ -17,10 +17,19 @@ class AttachedElementCell: UITableViewCell {
             self.configureForSkeleton()
         }
     }
+    var octetsRule: OctetsRule? = nil {
+        didSet {
+            self.configureForOctets()
+        }
+    }
     
     var elementState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: CenterElementState()) {
         didSet {
             configureBondLabelsFor(numberOfBonds: elementState.bondNumSuggested)
+            if octetsRule != nil {
+                attachedBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
+                destinationLBL.text = elementState.destinationSymbol()
+            }
         }
     }
 
@@ -43,6 +52,11 @@ class AttachedElementCell: UITableViewCell {
         bottomPair.isHidden = true
         leftPair.isHidden = true
         lonePairCount.isHidden = true
+    }
+    
+    private func configureForOctets() {
+        attachedBTN.isEnabled = false
+        bondCount.isHidden = true
     }
     
     private func configureBondLabelsFor(numberOfBonds num: Int) {
@@ -96,7 +110,6 @@ class AttachedElementCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        lonePairCount.isEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -124,4 +124,13 @@ class FormulaState {
     func isCompleted() -> Bool {
         return isComplete
     }
+    
+    func getCenterState() -> CenterElementState {
+        return centerAtom
+    }
+    
+    func attachedStateAt(index: Int) -> AttachedElementState {
+        return attachedAtoms[index]
+    }
+    
 }

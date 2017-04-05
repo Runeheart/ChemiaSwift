@@ -17,10 +17,21 @@ class CenterElementCell: UITableViewCell {
             self.configureForSkeleton()
         }
     }
+    var octetsRule: OctetsRule? = nil {
+        didSet {
+            self.configureForOctets()
+        }
+    }
     // Octets Rule
     // Bonds Rule
     
-    var elementState: CenterElementState = CenterElementState()
+    var elementState: CenterElementState = CenterElementState() {
+        didSet {
+            if octetsRule != nil {
+                centerBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
+            }
+        }
+    }
 
     @IBOutlet weak var centerBTN: UIButton!
     @IBOutlet weak var topPair: UILabel!
@@ -33,6 +44,10 @@ class CenterElementCell: UITableViewCell {
         bottomPair.isHidden = true
         leftPair.isHidden = true
         lonePairCount.isHidden = true
+    }
+    
+    private func configureForOctets() {
+        centerBTN.isEnabled = false
     }
     
     // MARK: - IBActions

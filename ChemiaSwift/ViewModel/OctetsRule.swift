@@ -10,15 +10,34 @@ import Foundation
 
 class OctetsRule: LewisRule {
     
-    var currentStructure: LewisStructure
+    private var currentStructure: LewisStructure
     
     init(withStructure struc: LewisStructure) {
         currentStructure = struc
     }
     
-    override func description() -> String {
-        return "Now, you'll want to place any lone pairs on your atoms."
+    convenience override init() {
+        self.init(withStructure: LewisStructure())
     }
     
+    override func description() -> String {
+        return "Now, you'll want to place any lone pairs on your atoms. \n The goal is for all atoms to have their full octet."
+    }
+    
+    func numberOfAtoms() -> Int {
+        return currentStructure.numAtoms()
+    }
+    
+    func formula() -> Formula {
+        return currentStructure.getFormula()
+    }
+    
+    func getCenterState() -> CenterElementState {
+        return currentStructure.getFormulaState().getCenterState()
+    }
+    
+    func getAttachedState(atIndex ind: Int) -> AttachedElementState {
+        return currentStructure.getFormulaState().attachedStateAt(index:ind)
+    }
     
 }

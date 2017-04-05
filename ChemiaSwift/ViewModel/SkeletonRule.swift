@@ -81,7 +81,7 @@ class SkeletonRule : LewisRule {
     }
     
     override func description() -> String {
-        return "Place each Element in the buttons provided by tapping each until you think it displays the correct symbol.\n\n Your guess will be checked upon hitting Submit."
+        return "Place each Element in the buttons provided by tapping each until you think it displays the correct symbol.\n Also, you'll want to add a single bond between each attached atom and the center atom. \n Your guess will be checked upon hitting Submit."
     }
     
     enum ReuseIdentifiers: String {

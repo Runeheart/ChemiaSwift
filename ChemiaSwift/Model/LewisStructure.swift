@@ -10,7 +10,7 @@ import Foundation
 
 class LewisStructure {
     
-    private var chemFormula: Formula
+    private let chemFormula: Formula
     private var bondManager: BondManager = BondManager()
     private var formulaState: FormulaState? = nil
     
@@ -22,6 +22,10 @@ class LewisStructure {
         self.init(withFormula: Formula())
     }
     
+    func getFormula() -> Formula {
+        return chemFormula
+    }
+    
     func getManager() -> BondManager {
         return bondManager
     }
@@ -30,8 +34,16 @@ class LewisStructure {
         bondManager = manager
     }
     
+    func getFormulaState() -> FormulaState {
+        return formulaState!
+    }
+    
     func setFormulaStateTo(_ state: FormulaState) {
         formulaState = state
+    }
+    
+    func numAtoms() -> Int {
+        return chemFormula.numberOfAtoms()
     }
     
 }
