@@ -36,6 +36,17 @@ final class RulesViewManager {
         return viewController
     }()
     
+    private lazy var octetsViewController: OctetsTableViewController = {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        var viewController = storyboard.instantiateViewController(withIdentifier: "OctetsTableViewController") as! OctetsTableViewController
+        
+        viewController.ruleViewModel = OctetsRule(withStructure: self.studentStruct)
+        
+        return viewController
+    }()
+    
     init() {}
     
     init(withFormula form: Formula) {
@@ -48,7 +59,8 @@ final class RulesViewManager {
             return valenceViewController
         case .skeleton:
             return skeletonViewController
-        case .octets: break
+        case .octets:
+            return octetsViewController
         case .bonds: break
         }
         

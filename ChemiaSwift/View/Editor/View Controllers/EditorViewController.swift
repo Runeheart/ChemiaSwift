@@ -65,6 +65,9 @@ final class EditorViewController: UIViewController {
         case 1:
             remove(asChildViewController: self.childViewControllers.last!)
             add(asChildViewController: manager.makeViewForRule(rule: .skeleton))
+        case 2:
+            remove(asChildViewController: self.childViewControllers.last!)
+            add(asChildViewController: manager.makeViewForRule(rule: .octets))
         default:
             break
         }
@@ -109,6 +112,13 @@ final class EditorViewController: UIViewController {
         ruleSC.setEnabled(true, forSegmentAt: 1)
         studentStructure = LewisStructure(withFormula: enteredFormula)
         manager.setStructure(studentStructure)
+    }
+    
+    func skeletonComplete(_ currentState: FormulaState) {
+        addSegmentForRule(.octets)
+        ruleSC.setEnabled(true, forSegmentAt: 2)
+        studentStructure.setFormulaStateTo(currentState)
+        
     }
 
     override func didReceiveMemoryWarning() {

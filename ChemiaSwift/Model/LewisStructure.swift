@@ -12,6 +12,7 @@ class LewisStructure {
     
     private var chemFormula: Formula
     private var bondManager: BondManager = BondManager()
+    private var formulaState: FormulaState? = nil
     
     init(withFormula form: Formula) {
         self.chemFormula = form
@@ -27,6 +28,10 @@ class LewisStructure {
     
     func setBondManagerTo(_ manager: BondManager) {
         bondManager = manager
+    }
+    
+    func setFormulaStateTo(_ state: FormulaState) {
+        formulaState = state
     }
     
 }

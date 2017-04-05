@@ -51,6 +51,11 @@
 		3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
 		3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
 		3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
+		3F752EF91E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
+		3F752EFA1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
+		3F752EFB1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
+		3F752EFD1E949B7E006EC12C /* OctetsRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EFC1E949B7E006EC12C /* OctetsRule.swift */; };
+		3F752EFE1E949B7E006EC12C /* OctetsRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EFC1E949B7E006EC12C /* OctetsRule.swift */; };
 		3FC045381E8B1B0600AA033C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC045371E8B1B0600AA033C /* Default-568h@2x.png */; };
 		3FC0453D1E8B1DEB00AA033C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */; };
 		3FC0453E1E8B1DEB00AA033C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0453C1E8B1DEB00AA033C /* Main.storyboard */; };
@@ -120,6 +125,8 @@
 		3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceRule.swift; sourceTree = "<group>"; };
 		3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFormatter.swift; sourceTree = "<group>"; };
 		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
+		3F752EF81E949971006EC12C /* OctetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsTableViewController.swift; sourceTree = "<group>"; };
+		3F752EFC1E949B7E006EC12C /* OctetsRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsRule.swift; sourceTree = "<group>"; };
 		3FC045371E8B1B0600AA033C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC0453C1E8B1DEB00AA033C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -228,12 +235,12 @@
 		3F43DAEC1E78F23D00AAD144 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F306DE71E8209BE0051AACB /* Bond.swift */,
+				3F306DE41E8208920051AACB /* BondManager.swift */,
 				3F43DB141E79EB3300AAD144 /* Element.swift */,
 				3F43DB161E7A11ED00AAD144 /* Formula.swift */,
 				3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */,
 				3FC708281E7E0B7700407A83 /* LewisStructure.swift */,
-				3F306DE41E8208920051AACB /* BondManager.swift */,
-				3F306DE71E8209BE0051AACB /* Bond.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,11 +249,12 @@
 			isa = PBXGroup;
 			children = (
 				3F43DB1E1E7A2AF600AAD144 /* Answer.swift */,
-				3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */,
-				3FD57D801E8370CF00332369 /* SkeletonRule.swift */,
-				3F35698B1E875C3500926F49 /* LewisRule.swift */,
 				3FFD71981E902752008D8A78 /* ElementState.swift */,
 				3FFD71A11E91C39C008D8A78 /* FormulaState.swift */,
+				3F35698B1E875C3500926F49 /* LewisRule.swift */,
+				3F752EFC1E949B7E006EC12C /* OctetsRule.swift */,
+				3FD57D801E8370CF00332369 /* SkeletonRule.swift */,
+				3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */,
+				3F752EF81E949971006EC12C /* OctetsTableViewController.swift */,
 				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
 				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
 				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
@@ -309,8 +318,8 @@
 		3FC045391E8B1C5E00AA033C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */,
 				3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */,
+				3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */,
 				3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */,
 				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
 			);
@@ -331,12 +340,12 @@
 		3FFD719B1E907EFD008D8A78 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */,
+				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
 				3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */,
 				3FC0453F1E8B37C500AA033C /* FormulaCell.swift */,
 				3FC045451E8B409200AA033C /* HintSubmitCell.swift */,
 				3FC045411E8B3A8B00AA033C /* QuestionCell.swift */,
-				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
-				3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -479,6 +488,7 @@
 				3F43DAF71E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F306DE51E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
+				3F752EFD1E949B7E006EC12C /* OctetsRule.swift in Sources */,
 				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
 				3FFD71A21E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */,
@@ -499,6 +509,7 @@
 				3F26F6BC1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
 				3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */,
 				3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
+				3F752EF91E949971006EC12C /* OctetsTableViewController.swift in Sources */,
 				3FC045461E8B409200AA033C /* HintSubmitCell.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
@@ -519,6 +530,7 @@
 				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,
 				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
 				3FFD719E1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
+				3F752EFA1E949971006EC12C /* OctetsTableViewController.swift in Sources */,
 				3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
 				3F26F6BD1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
@@ -540,6 +552,7 @@
 				3FFD71971E9018A8008D8A78 /* ElementStateTests.swift in Sources */,
 				3F43DB291E7B688600AAD144 /* Formula.swift in Sources */,
 				3F1E8D881E8B689D001DD963 /* QuestionCell.swift in Sources */,
+				3F752EFE1E949B7E006EC12C /* OctetsRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F43DAF91E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
+				3F752EFB1E949971006EC12C /* OctetsTableViewController.swift in Sources */,
 				3F43DADE1E78E88D00AAD144 /* ChemiaSwiftUITests.swift in Sources */,
 				3F43DAF51E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAF11E78F37F00AAD144 /* EditorViewController.swift in Sources */,
