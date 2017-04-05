@@ -10,7 +10,7 @@ import UIKit
 
 class RulePopupViewController: UIViewController {
     
-    var ruleToDisplay = ValenceRule()
+    var ruleToDisplay: LewisRule = ValenceRule()
 
     @IBOutlet weak var descriptionTV: UITextView!
     

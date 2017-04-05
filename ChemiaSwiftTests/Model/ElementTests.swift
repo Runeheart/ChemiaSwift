@@ -22,45 +22,52 @@ class ElementTests: XCTestCase {
     }
     
     func testHydrogen() {
-        let hydrogen = ElementList.hydrogen
+        let hydrogen = ElementFactory.create(withSymbol: .H)
         XCTAssertEqual(hydrogen.getSymbol(), "H")
         XCTAssertEqual(hydrogen.numValElectrons(), 1)
     }
     
     func testBoron() {
-        let boron = ElementList.boron
+        let boron = ElementFactory.create(withSymbol: .B)
         XCTAssertEqual(boron.getSymbol(), "B")
         XCTAssertEqual(boron.numValElectrons(), 3)
     }
     
     func testCarbon() {
-        let carbon = ElementList.carbon
+        let carbon = ElementFactory.create(withSymbol: .C)
         XCTAssertEqual(carbon.getSymbol(), "C")
         XCTAssertEqual(carbon.numValElectrons(), 4)
     }
     
     func testNitrogen() {
-        let nitrogen = ElementList.nitrogen
+        let nitrogen = ElementFactory.create(withSymbol: .N)
         XCTAssertEqual(nitrogen.getSymbol(), "N")
         XCTAssertEqual(nitrogen.numValElectrons(), 5)
     }
     
     func testOxygen() {
-        let oxygen = ElementList.oxygen
+        let oxygen = ElementFactory.create(withSymbol: .O)
         XCTAssertEqual(oxygen.getSymbol(), "O")
         XCTAssertEqual(oxygen.numValElectrons(), 6)
     }
     
     func testFluorine() {
-        let fluorine = ElementList.fluorine
+        let fluorine = ElementFactory.create(withSymbol: .F)
         XCTAssertEqual(fluorine.getSymbol(), "F")
         XCTAssertEqual(fluorine.numValElectrons(), 7)
     }
     
     func testXenon() {
-        let xenon = ElementList.xenon
+        let xenon = ElementFactory.create(withSymbol: .Xe)
         XCTAssertEqual(xenon.getSymbol(), "Xe")
         XCTAssertEqual(xenon.numValElectrons(), 8)
+    }
+    
+    func testElementInstancesUnique() {
+        let carbon1 = ElementFactory.create(withSymbol: .C)
+        let carbon2 = ElementFactory.create(withSymbol: .C)
+        
+        XCTAssertFalse(carbon1 === carbon2)
     }
     
     

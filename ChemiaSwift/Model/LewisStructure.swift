@@ -11,13 +11,22 @@ import Foundation
 class LewisStructure {
     
     private var chemFormula: Formula
-    
-    init() {
-        self.chemFormula = Formula()
-    }
+    private var bondManager: BondManager = BondManager()
     
     init(withFormula form: Formula) {
         self.chemFormula = form
+    }
+    
+    convenience init() {
+        self.init(withFormula: Formula())
+    }
+    
+    func getManager() -> BondManager {
+        return bondManager
+    }
+    
+    func setBondManagerTo(_ manager: BondManager) {
+        bondManager = manager
     }
     
 }

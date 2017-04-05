@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1E8D831E8B586F001DD963 /* ChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */; };
+		3F1E8D851E8B6894001DD963 /* ChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */; };
+		3F1E8D861E8B6897001DD963 /* FormulaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0453F1E8B37C500AA033C /* FormulaCell.swift */; };
+		3F1E8D871E8B689A001DD963 /* HintSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC045451E8B409200AA033C /* HintSubmitCell.swift */; };
+		3F1E8D881E8B689D001DD963 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC045411E8B3A8B00AA033C /* QuestionCell.swift */; };
+		3F26F6BC1E8C9CD800F95062 /* CenterElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */; };
+		3F26F6BD1E8C9CD800F95062 /* CenterElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */; };
+		3F306DE31E8204590051AACB /* BondManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE21E8204590051AACB /* BondManagerTests.swift */; };
+		3F306DE51E8208920051AACB /* BondManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE41E8208920051AACB /* BondManager.swift */; };
+		3F306DE61E8208920051AACB /* BondManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE41E8208920051AACB /* BondManager.swift */; };
+		3F306DE81E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
+		3F306DE91E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
+		3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DEA1E822ED50051AACB /* BondTests.swift */; };
+		3F35698C1E875C3600926F49 /* LewisRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35698B1E875C3500926F49 /* LewisRule.swift */; };
+		3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35698B1E875C3500926F49 /* LewisRule.swift */; };
 		3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */; };
-		3F43DAC31E78E88C00AAD144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC11E78E88C00AAD144 /* Main.storyboard */; };
 		3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC41E78E88C00AAD144 /* Assets.xcassets */; };
-		3F43DAC81E78E88C00AAD144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43DAC61E78E88C00AAD144 /* LaunchScreen.storyboard */; };
 		3F43DADE1E78E88D00AAD144 /* ChemiaSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DADD1E78E88D00AAD144 /* ChemiaSwiftUITests.swift */; };
 		3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
 		3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */; };
@@ -25,7 +38,6 @@
 		3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */; };
 		3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */; };
 		3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */; };
-		3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
 		3F43DB151E79EB3300AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
 		3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
 		3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */; };
@@ -34,14 +46,32 @@
 		3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
 		3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB1E1E7A2AF600AAD144 /* Answer.swift */; };
 		3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */; };
-		3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB121E79E8C600AAD144 /* ElementList.swift */; };
 		3F43DB281E7B688600AAD144 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB141E79EB3300AAD144 /* Element.swift */; };
 		3F43DB291E7B688600AAD144 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB161E7A11ED00AAD144 /* Formula.swift */; };
 		3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */; };
 		3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
 		3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
+		3FC045381E8B1B0600AA033C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC045371E8B1B0600AA033C /* Default-568h@2x.png */; };
+		3FC0453D1E8B1DEB00AA033C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */; };
+		3FC0453E1E8B1DEB00AA033C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0453C1E8B1DEB00AA033C /* Main.storyboard */; };
+		3FC045401E8B37C500AA033C /* FormulaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0453F1E8B37C500AA033C /* FormulaCell.swift */; };
+		3FC045421E8B3A8B00AA033C /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC045411E8B3A8B00AA033C /* QuestionCell.swift */; };
+		3FC045461E8B409200AA033C /* HintSubmitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC045451E8B409200AA033C /* HintSubmitCell.swift */; };
 		3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC708281E7E0B7700407A83 /* LewisStructure.swift */; };
 		3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC708281E7E0B7700407A83 /* LewisStructure.swift */; };
+		3FD57D7F1E836C7000332369 /* SkeletonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */; };
+		3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D801E8370CF00332369 /* SkeletonRule.swift */; };
+		3FD57D821E8370CF00332369 /* SkeletonRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD57D801E8370CF00332369 /* SkeletonRule.swift */; };
+		3FFD71971E9018A8008D8A78 /* ElementStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */; };
+		3FFD71991E902752008D8A78 /* ElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71981E902752008D8A78 /* ElementState.swift */; };
+		3FFD719A1E902752008D8A78 /* ElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71981E902752008D8A78 /* ElementState.swift */; };
+		3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */; };
+		3FFD719E1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */; };
+		3FFD71A01E91A9AF008D8A78 /* SkeletonValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */; };
+		3FFD71A21E91C39C008D8A78 /* FormulaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A11E91C39C008D8A78 /* FormulaState.swift */; };
+		3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A11E91C39C008D8A78 /* FormulaState.swift */; };
+		3FFD71A51E947C98008D8A78 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A41E947C98008D8A78 /* Alerts.swift */; };
+		3FFD71A61E947C98008D8A78 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A41E947C98008D8A78 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,32 +92,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceCell.swift; sourceTree = "<group>"; };
+		3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterElementCell.swift; sourceTree = "<group>"; };
+		3F306DE21E8204590051AACB /* BondManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BondManagerTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F306DE41E8208920051AACB /* BondManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondManager.swift; sourceTree = "<group>"; };
+		3F306DE71E8209BE0051AACB /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
+		3F306DEA1E822ED50051AACB /* BondTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BondTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F35698B1E875C3500926F49 /* LewisRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LewisRule.swift; sourceTree = "<group>"; };
 		3F43DABA1E78E88C00AAD144 /* ChemiaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemiaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F43DAC21E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F43DAC41E78E88C00AAD144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3F43DAC71E78E88C00AAD144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3F43DAC91E78E88C00AAD144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F43DACE1E78E88D00AAD144 /* ChemiaSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemiaSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DAD41E78E88D00AAD144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F43DAD91E78E88D00AAD144 /* ChemiaSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemiaSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DADD1E78E88D00AAD144 /* ChemiaSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemiaSwiftUITests.swift; sourceTree = "<group>"; };
 		3F43DADF1E78E88D00AAD144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = EditorViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceTableViewController.swift; sourceTree = "<group>"; };
 		3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonTableViewController.swift; sourceTree = "<group>"; };
 		3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewManager.swift; sourceTree = "<group>"; };
-		3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaTests.swift; sourceTree = "<group>"; };
-		3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementTests.swift; sourceTree = "<group>"; };
-		3F43DB121E79E8C600AAD144 /* ElementList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementList.swift; sourceTree = "<group>"; };
-		3F43DB141E79EB3300AAD144 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
-		3F43DB161E7A11ED00AAD144 /* Formula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
-		3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceViewModelTests.swift; sourceTree = "<group>"; };
+		3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FormulaTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ElementTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F43DB141E79EB3300AAD144 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Element.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F43DB161E7A11ED00AAD144 /* Formula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Formula.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ValenceViewModelTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3F43DB1E1E7A2AF600AAD144 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValenceRule.swift; sourceTree = "<group>"; };
 		3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFormatter.swift; sourceTree = "<group>"; };
 		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
+		3FC045371E8B1B0600AA033C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FC0453C1E8B1DEB00AA033C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3FC0453F1E8B37C500AA033C /* FormulaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaCell.swift; sourceTree = "<group>"; };
+		3FC045411E8B3A8B00AA033C /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		3FC045431E8B3CB600AA033C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC045451E8B409200AA033C /* HintSubmitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintSubmitCell.swift; sourceTree = "<group>"; };
 		3FC708281E7E0B7700407A83 /* LewisStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LewisStructure.swift; sourceTree = "<group>"; };
+		3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SkeletonViewModelTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3FD57D801E8370CF00332369 /* SkeletonRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SkeletonRule.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementStateTests.swift; sourceTree = "<group>"; };
+		3FFD71981E902752008D8A78 /* ElementState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementState.swift; sourceTree = "<group>"; };
+		3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachedElementCell.swift; sourceTree = "<group>"; };
+		3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonValidationTests.swift; sourceTree = "<group>"; };
+		3FFD71A11E91C39C008D8A78 /* FormulaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaState.swift; sourceTree = "<group>"; };
+		3FFD71A41E947C98008D8A78 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,14 +186,13 @@
 		3F43DABC1E78E88C00AAD144 /* ChemiaSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3FC045351E8B1A6500AA033C /* App Delegate */,
+				3F43DAEC1E78F23D00AAD144 /* Model */,
+				3FC045331E8B1A3D00AA033C /* Resources */,
+				3FC045361E8B1A6F00AA033C /* Storyboards */,
+				3FC045341E8B1A5600AA033C /* Supporting Files */,
 				3F43DAEB1E78F23100AAD144 /* View */,
 				3F43DAED1E78F24F00AAD144 /* ViewModel */,
-				3F43DAEC1E78F23D00AAD144 /* Model */,
-				3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */,
-				3F43DAC11E78E88C00AAD144 /* Main.storyboard */,
-				3F43DAC41E78E88C00AAD144 /* Assets.xcassets */,
-				3F43DAC61E78E88C00AAD144 /* LaunchScreen.storyboard */,
-				3F43DAC91E78E88C00AAD144 /* Info.plist */,
 			);
 			path = ChemiaSwift;
 			sourceTree = "<group>";
@@ -153,9 +200,8 @@
 		3F43DAD11E78E88D00AAD144 /* ChemiaSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
-				3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */,
-				3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */,
+				3FC0453A1E8B1C7E00AA033C /* Model */,
+				3FC045391E8B1C5E00AA033C /* ViewModel */,
 				3F43DAD41E78E88D00AAD144 /* Info.plist */,
 			);
 			path = ChemiaSwiftTests;
@@ -173,25 +219,23 @@
 		3F43DAEB1E78F23100AAD144 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */,
-				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
-				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
-				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
-				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
+				3FC045301E8B168700AA033C /* Editor */,
+				3FFD71A41E947C98008D8A78 /* Alerts.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3F43DAEC1E78F23D00AAD144 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3F43DB121E79E8C600AAD144 /* ElementList.swift */,
 				3F43DB141E79EB3300AAD144 /* Element.swift */,
 				3F43DB161E7A11ED00AAD144 /* Formula.swift */,
 				3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */,
 				3FC708281E7E0B7700407A83 /* LewisStructure.swift */,
+				3F306DE41E8208920051AACB /* BondManager.swift */,
+				3F306DE71E8209BE0051AACB /* Bond.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3F43DAED1E78F24F00AAD144 /* ViewModel */ = {
@@ -199,8 +243,102 @@
 			children = (
 				3F43DB1E1E7A2AF600AAD144 /* Answer.swift */,
 				3F43DB201E7A2B5400AAD144 /* ValenceRule.swift */,
+				3FD57D801E8370CF00332369 /* SkeletonRule.swift */,
+				3F35698B1E875C3500926F49 /* LewisRule.swift */,
+				3FFD71981E902752008D8A78 /* ElementState.swift */,
+				3FFD71A11E91C39C008D8A78 /* FormulaState.swift */,
 			);
-			name = ViewModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3FC045301E8B168700AA033C /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				3FFD719B1E907EFD008D8A78 /* Custom Cells */,
+				3FC045311E8B16EE00AA033C /* View Controllers */,
+				3F43DAFA1E78FAFC00AAD144 /* RulesViewManager.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		3FC045311E8B16EE00AA033C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F43DAEE1E78F37F00AAD144 /* EditorViewController.swift */,
+				3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */,
+				3F43DAF61E78F58400AAD144 /* SkeletonTableViewController.swift */,
+				3F43DAF21E78F53A00AAD144 /* ValenceTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3FC045331E8B1A3D00AA033C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F43DAC41E78E88C00AAD144 /* Assets.xcassets */,
+				3FC045371E8B1B0600AA033C /* Default-568h@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3FC045341E8B1A5600AA033C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC045431E8B3CB600AA033C /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FC045351E8B1A6500AA033C /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		3FC045361E8B1A6F00AA033C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */,
+				3FC0453C1E8B1DEB00AA033C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3FC045391E8B1C5E00AA033C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */,
+				3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */,
+				3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */,
+				3F43DB1C1E7A297B00AAD144 /* ValenceViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3FC0453A1E8B1C7E00AA033C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F306DE21E8204590051AACB /* BondManagerTests.swift */,
+				3F306DEA1E822ED50051AACB /* BondTests.swift */,
+				3F43DB0E1E79E6FE00AAD144 /* ElementTests.swift */,
+				3F43DB0B1E79E33500AAD144 /* FormulaTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3FFD719B1E907EFD008D8A78 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E8D821E8B586F001DD963 /* ChoiceCell.swift */,
+				3FC0453F1E8B37C500AA033C /* FormulaCell.swift */,
+				3FC045451E8B409200AA033C /* HintSubmitCell.swift */,
+				3FC045411E8B3A8B00AA033C /* QuestionCell.swift */,
+				3F26F6BB1E8C9CD800F95062 /* CenterElementCell.swift */,
+				3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +448,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F43DAC81E78E88C00AAD144 /* LaunchScreen.storyboard in Resources */,
+				3FC0453D1E8B1DEB00AA033C /* LaunchScreen.storyboard in Resources */,
+				3FC045381E8B1B0600AA033C /* Default-568h@2x.png in Resources */,
 				3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */,
-				3F43DAC31E78E88C00AAD144 /* Main.storyboard in Resources */,
+				3FC0453E1E8B1DEB00AA033C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,18 +476,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F43DB131E79E8C600AAD144 /* ElementList.swift in Sources */,
 				3F43DAF71E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
+				3F306DE51E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */,
 				3F43DB231E7B5FEE00AAD144 /* FormulaFormatter.swift in Sources */,
+				3FFD71A21E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3FC708291E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB1F1E7A2AF600AAD144 /* Answer.swift in Sources */,
+				3F35698C1E875C3600926F49 /* LewisRule.swift in Sources */,
 				3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */,
+				3F306DE81E8209BE0051AACB /* Bond.swift in Sources */,
 				3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */,
+				3FFD71A51E947C98008D8A78 /* Alerts.swift in Sources */,
 				3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
+				3FFD71991E902752008D8A78 /* ElementState.swift in Sources */,
+				3FC045401E8B37C500AA033C /* FormulaCell.swift in Sources */,
 				3F43DB151E79EB3300AAD144 /* Element.swift in Sources */,
+				3F1E8D831E8B586F001DD963 /* ChoiceCell.swift in Sources */,
 				3F43DB171E7A11ED00AAD144 /* Formula.swift in Sources */,
+				3FC045421E8B3A8B00AA033C /* QuestionCell.swift in Sources */,
+				3F26F6BC1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
+				3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */,
+				3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
+				3FC045461E8B409200AA033C /* HintSubmitCell.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,19 +510,36 @@
 			files = (
 				3F43DB0F1E79E6FE00AAD144 /* ElementTests.swift in Sources */,
 				3F43DB1D1E7A297B00AAD144 /* ValenceViewModelTests.swift in Sources */,
+				3F306DE31E8204590051AACB /* BondManagerTests.swift in Sources */,
+				3FFD71A01E91A9AF008D8A78 /* SkeletonValidationTests.swift in Sources */,
+				3F1E8D861E8B6897001DD963 /* FormulaCell.swift in Sources */,
+				3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */,
+				3FD57D7F1E836C7000332369 /* SkeletonViewModelTests.swift in Sources */,
 				3F43DB281E7B688600AAD144 /* Element.swift in Sources */,
-				3F43DB271E7B688600AAD144 /* ElementList.swift in Sources */,
 				3F43DB261E7B688200AAD144 /* ValenceRule.swift in Sources */,
 				3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */,
+				3FFD719E1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
 				3FC7082A1E7E0B7700407A83 /* LewisStructure.swift in Sources */,
 				3F43DB2A1E7B688600AAD144 /* FormulaFormatter.swift in Sources */,
+				3F26F6BD1E8C9CD800F95062 /* CenterElementCell.swift in Sources */,
+				3F306DE61E8208920051AACB /* BondManager.swift in Sources */,
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
+				3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */,
+				3F1E8D871E8B689A001DD963 /* HintSubmitCell.swift in Sources */,
+				3FFD71A61E947C98008D8A78 /* Alerts.swift in Sources */,
 				3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */,
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
+				3F306DE91E8209BE0051AACB /* Bond.swift in Sources */,
+				3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */,
 				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,
+				3FD57D821E8370CF00332369 /* SkeletonRule.swift in Sources */,
+				3F1E8D851E8B6894001DD963 /* ChoiceCell.swift in Sources */,
+				3FFD719A1E902752008D8A78 /* ElementState.swift in Sources */,
+				3FFD71971E9018A8008D8A78 /* ElementStateTests.swift in Sources */,
 				3F43DB291E7B688600AAD144 /* Formula.swift in Sources */,
+				3F1E8D881E8B689D001DD963 /* QuestionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,25 +568,6 @@
 			targetProxy = 3F43DADA1E78E88D00AAD144 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3F43DAC11E78E88C00AAD144 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F43DAC21E78E88C00AAD144 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3F43DAC61E78E88C00AAD144 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F43DAC71E78E88C00AAD144 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3F43DAE01E78E88D00AAD144 /* Debug */ = {
@@ -516,7 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ChemiaSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChemiaSwift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.bsu.capstone.ChemiaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +677,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ChemiaSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChemiaSwift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.bsu.capstone.ChemiaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

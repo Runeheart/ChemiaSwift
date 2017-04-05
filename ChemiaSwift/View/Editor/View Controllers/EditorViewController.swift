@@ -32,9 +32,11 @@ final class EditorViewController: UIViewController {
     
     private func setupManager() {
         let sampleFormula = Formula()
-        sampleFormula.add(element: ElementList.carbon)
-        sampleFormula.add(element: ElementList.hydrogen)
-        sampleFormula.updateElement(element: ElementList.hydrogen, value: 4)
+        let sampleCenter = ElementFactory.create(withSymbol: .C)
+        let sampleAttached = ElementFactory.create(withSymbol: .Cl)
+        sampleFormula.setCenter(element: sampleCenter)
+        sampleFormula.addAttached(element: sampleAttached)
+        sampleFormula.updateAttached(element: sampleAttached, value: 4)
         enteredFormula = sampleFormula
         manager = RulesViewManager(withFormula: enteredFormula)
     }
@@ -63,7 +65,6 @@ final class EditorViewController: UIViewController {
         case 1:
             remove(asChildViewController: self.childViewControllers.last!)
             add(asChildViewController: manager.makeViewForRule(rule: .skeleton))
-            addSegmentForRule(.octets)
         default:
             break
         }
@@ -88,6 +89,7 @@ final class EditorViewController: UIViewController {
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         viewController.didMove(toParentViewController: self)
+        navigationController?.view.setNeedsLayout()
     }
     
     private func addSegmentForRule( _ rule: RuleName) {

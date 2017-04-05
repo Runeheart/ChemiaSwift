@@ -12,13 +12,18 @@ import XCTest
 class ValenceViewModelTests: XCTestCase {
     
     var formula: Formula = Formula()
+    var rule: ValenceRule = ValenceRule()
+    var answers: [Answer] = []
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         formula = Formula()
-        formula.add(element: ElementList.carbon)
-        formula.add(element: ElementList.oxygen)
+        formula.setCenter(element: ElementFactory.create(withSymbol: .C))
+        formula.addAttached(element: ElementFactory.create(withSymbol: .O))
+        
+        rule = ValenceRule(withFormula: formula)
+        answers = rule.getPossibleAnswers()
     }
     
     override func tearDown() {
@@ -30,20 +35,15 @@ class ValenceViewModelTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let rule = ValenceRule(withFormula: formula)
-        let answers: [Answer] = rule.getPossibleAnswers()
-        XCTAssertEqual(answers[0].content as! Int, 10)
+        XCTAssertEqual(answers[0].content, 10)
     }
     
     func testIncorrectAnswersAreGenerated() {
         
-        let rule = ValenceRule(withFormula: formula)
-        let answers: [Answer] = rule.getPossibleAnswers()
-        
-        let correctChoice = answers[0].content as! Int
+        let correctChoice = answers[0].content
         var wrongAnswerCount = 0
         for choice in answers {
-            let givenValue = choice.content as! Int
+            let givenValue = choice.content
             if givenValue != correctChoice {
                 wrongAnswerCount += 1
             }

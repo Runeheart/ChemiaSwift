@@ -9,12 +9,17 @@
 import Foundation
 
 struct Answer {
-    var content: Any
+    var content: Int
     var isCorrect: Bool
     
-    init(choice: Any, parity: AnswerParity) {
-        self.content = choice
-        self.isCorrect = parity == .correct ? true : false
+    init(choice: Int, parity: AnswerParity) {
+        content = choice
+        isCorrect = parity == .correct ? true : false
+    }
+    
+    init() {
+        self.content = -1
+        self.isCorrect = false
     }
 }
 

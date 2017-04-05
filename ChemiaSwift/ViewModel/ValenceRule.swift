@@ -8,12 +8,14 @@
 
 import Foundation
 
-class ValenceRule {
+class ValenceRule : LewisRule {
+    
+    let numAnswers: Int = 5
     
     var formula: Formula = Formula()
     var correctValence: Int = 0
     
-    required init() {}
+    required override init() {}
     
     init(withFormula form:Formula) {
         self.formula = form
@@ -21,7 +23,7 @@ class ValenceRule {
     }
     
     func getPossibleAnswers() -> [Answer] {
-        var possibleValues: [Int] = Array(repeating: 0, count: 5)
+        var possibleValues: [Int] = Array(repeating: 0, count: numAnswers)
         possibleValues[0] = correctValence // correct answer
         var wrongValueAttempt = 0
         for index in 1...4 {
@@ -104,7 +106,7 @@ class ValenceRule {
         return result
     }
     
-    func description() -> String {
+    override func description() -> String {
         return "Remember: the group number of an atom determines its number of valence electrons, and you want the sum of all the atoms in your formula."
     }
     
