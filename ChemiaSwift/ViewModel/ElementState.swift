@@ -82,6 +82,11 @@ class CenterElementState: ElementState {
         return sum
     }
     
+    func clearBonds() {
+        bonds.removeAll()
+        bondTypes.removeAll()
+    }
+    
 }
 
 class AttachedElementState: ElementState {

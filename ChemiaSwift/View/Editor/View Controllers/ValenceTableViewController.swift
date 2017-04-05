@@ -118,11 +118,9 @@ class ValenceTableViewController: UITableViewController {
         if correctAnswerFound {
             let parent = self.parent as! EditorViewController
             parent.valenceComplete(ruleViewModel.formula)
+            self.present(Alerts.ruleComplete, animated: true, completion: nil)
         } else {
-            let wrongAnswer = UIAlertController(title: "Incorrect", message: "You haven't found the correct answer. Check the hint if you need to.", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            wrongAnswer.addAction(cancel)
-            self.present(wrongAnswer, animated: true, completion: nil)
+            self.present(Alerts.wrongAnswer, animated: true, completion: nil)
         }
     }
     

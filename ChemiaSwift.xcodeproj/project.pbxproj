@@ -70,6 +70,8 @@
 		3FFD71A01E91A9AF008D8A78 /* SkeletonValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */; };
 		3FFD71A21E91C39C008D8A78 /* FormulaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A11E91C39C008D8A78 /* FormulaState.swift */; };
 		3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A11E91C39C008D8A78 /* FormulaState.swift */; };
+		3FFD71A51E947C98008D8A78 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A41E947C98008D8A78 /* Alerts.swift */; };
+		3FFD71A61E947C98008D8A78 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A41E947C98008D8A78 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,7 @@
 		3FFD719C1E9081A4008D8A78 /* AttachedElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachedElementCell.swift; sourceTree = "<group>"; };
 		3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonValidationTests.swift; sourceTree = "<group>"; };
 		3FFD71A11E91C39C008D8A78 /* FormulaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaState.swift; sourceTree = "<group>"; };
+		3FFD71A41E947C98008D8A78 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC045301E8B168700AA033C /* Editor */,
+				3FFD71A41E947C98008D8A78 /* Alerts.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -483,6 +487,7 @@
 				3F43DB2C1E7B6FDA00AAD144 /* RulePopupViewController.swift in Sources */,
 				3F306DE81E8209BE0051AACB /* Bond.swift in Sources */,
 				3F43DB211E7A2B5400AAD144 /* ValenceRule.swift in Sources */,
+				3FFD71A51E947C98008D8A78 /* Alerts.swift in Sources */,
 				3F43DAF31E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFB1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
 				3FFD71991E902752008D8A78 /* ElementState.swift in Sources */,
@@ -521,6 +526,7 @@
 				3F43DAF81E78F58400AAD144 /* SkeletonTableViewController.swift in Sources */,
 				3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */,
 				3F1E8D871E8B689A001DD963 /* HintSubmitCell.swift in Sources */,
+				3FFD71A61E947C98008D8A78 /* Alerts.swift in Sources */,
 				3F43DB251E7B687E00AAD144 /* Answer.swift in Sources */,
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,

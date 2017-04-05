@@ -137,6 +137,7 @@ class SkeletonTableViewController: UITableViewController {
     @IBAction func enableContinue(_ sender: UIButton) {
         if !alreadyDone {
             if formulaState != nil { } else {
+                centerAtomState!.clearBonds()
                 for attached in attachedStates {
                     attached.setNumberOfBonds(to: attached.bondNumSuggested)
                 }
@@ -150,13 +151,12 @@ class SkeletonTableViewController: UITableViewController {
         state.checkCompletion(forRule: .skeleton)
         if state.isCompleted() {
             alreadyDone = true
-            print("All done")
+            self.present(Alerts.fullyComplete, animated: true, completion: nil)
         } else if state.ruleCompleted() {
-            alreadyDone = true
-            print("Rule done")
+            self.present(Alerts.ruleComplete, animated: true, completion: nil)
         } else {
-            print("Mistakes were made")
             formulaState = nil
+            self.present(Alerts.wrongAnswer, animated: true, completion: nil)
         }
     }
     
