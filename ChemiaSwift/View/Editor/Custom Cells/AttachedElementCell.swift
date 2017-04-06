@@ -27,6 +27,7 @@ class AttachedElementCell: UITableViewCell {
         didSet {
             configureBondLabelsFor(numberOfBonds: elementState.bondNumSuggested)
             if octetsRule != nil {
+                configureLonePairLabelsFor(numberOfPairs: elementState.lonePairNumSuggested)
                 attachedBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
                 destinationLBL.text = elementState.destinationSymbol()
             }
@@ -77,8 +78,29 @@ class AttachedElementCell: UITableViewCell {
             topBond.isEnabled = true
             middleBond.isEnabled = true
             bottomBond.isEnabled = true
-        default:
-            break
+        default: break
+        }
+    }
+    
+    private func configureLonePairLabelsFor(numberOfPairs num: Int) {
+        switch num {
+        case 0:
+            topPair.isEnabled = false
+            leftPair.isEnabled = false
+            bottomPair.isEnabled = false
+        case 1:
+            topPair.isEnabled = true
+            leftPair.isEnabled = false
+            bottomPair.isEnabled = false
+        case 2:
+            topPair.isEnabled = true
+            leftPair.isEnabled = true
+            bottomPair.isEnabled = false
+        case 3:
+            topPair.isEnabled = true
+            leftPair.isEnabled = true
+            bottomPair.isEnabled = true
+        default: break
         }
     }
     
@@ -104,6 +126,12 @@ class AttachedElementCell: UITableViewCell {
         configureBondLabelsFor(numberOfBonds: suggestedBondNum)
     }
     
+    @IBAction func lonePairNumChanged(_ sender: UISegmentedControl) {
+        let suggestedLonePairNum = Int(sender.titleForSegment(at: sender.selectedSegmentIndex)!)!
+        
+        elementState.lonePairNumSuggested = suggestedLonePairNum
+        configureLonePairLabelsFor(numberOfPairs: suggestedLonePairNum)
+    }
     
     
     

@@ -14,6 +14,7 @@ class ElementState {
     
     var suggestedElementSymbol: String = ""
     var bondNumSuggested: Int = 0
+    var lonePairNumSuggested: Int = 0
     
     private var bondNum: Int = 0
     fileprivate var lonePairNum: Int = 0

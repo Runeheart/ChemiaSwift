@@ -112,6 +112,10 @@ class OctetsTableViewController: UITableViewController {
     enum Row : Int {
         case formula = 0, submit, attached1, attached2, attached3, attached4
     }
+    
+    // MARK: - IBActions
+    
+    @IBAction func close(segue:UIStoryboardSegue) {}
 
     /*
     // Override to support conditional editing of the table view.
@@ -153,8 +157,11 @@ class OctetsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "octetsRule" {
+            let destination = segue.destination as! RulePopupViewController
+            destination.ruleToDisplay = ruleViewModel
+            
+        }
     }
 
 }
