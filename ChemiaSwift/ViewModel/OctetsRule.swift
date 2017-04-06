@@ -40,4 +40,8 @@ class OctetsRule: LewisRule {
         return currentStructure.getFormulaState().attachedStateAt(index:ind)
     }
     
+    func currentState() -> FormulaState {
+        return currentStructure.getFormulaState()
+    }
+    
 }

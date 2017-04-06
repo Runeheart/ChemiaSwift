@@ -269,7 +269,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Submit"/>
                                             <connections>
-                                                <action selector="enableContinue:" destination="3oO-Ib-2Vh" eventType="touchUpInside" id="pp7-IR-jz6"/>
+                                                <action selector="enableContinue:" destination="1gA-Cy-Gd5" eventType="touchUpInside" id="cdr-Uc-YpE"/>
                                             </connections>
                                         </button>
                                     </subviews>
