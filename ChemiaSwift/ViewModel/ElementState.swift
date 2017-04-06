@@ -32,6 +32,10 @@ class ElementState {
         bondNum = num
     }
     
+    func setNumberOfLonePairs(to num: Int) {
+        lonePairNum = num
+    }
+    
     func hasFullOctet() -> Bool {
         return octetElectrons == element.numOctetElectrons()
     }

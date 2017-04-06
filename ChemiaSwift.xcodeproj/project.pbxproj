@@ -56,6 +56,7 @@
 		3F752EFB1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
 		3F752EFD1E949B7E006EC12C /* OctetsRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EFC1E949B7E006EC12C /* OctetsRule.swift */; };
 		3F752EFE1E949B7E006EC12C /* OctetsRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EFC1E949B7E006EC12C /* OctetsRule.swift */; };
+		3F752F001E95C716006EC12C /* OctetsValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EFF1E95C716006EC12C /* OctetsValidationTests.swift */; };
 		3FC045381E8B1B0600AA033C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FC045371E8B1B0600AA033C /* Default-568h@2x.png */; };
 		3FC0453D1E8B1DEB00AA033C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */; };
 		3FC0453E1E8B1DEB00AA033C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC0453C1E8B1DEB00AA033C /* Main.storyboard */; };
@@ -127,6 +128,7 @@
 		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
 		3F752EF81E949971006EC12C /* OctetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsTableViewController.swift; sourceTree = "<group>"; };
 		3F752EFC1E949B7E006EC12C /* OctetsRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsRule.swift; sourceTree = "<group>"; };
+		3F752EFF1E95C716006EC12C /* OctetsValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsValidationTests.swift; sourceTree = "<group>"; };
 		3FC045371E8B1B0600AA033C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC0453C1E8B1DEB00AA033C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		3FC045391E8B1C5E00AA033C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3F752EFF1E95C716006EC12C /* OctetsValidationTests.swift */,
 				3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */,
 				3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */,
 				3FD57D7E1E836C7000332369 /* SkeletonViewModelTests.swift */,
@@ -543,6 +546,7 @@
 				3F43DAF41E78F53A00AAD144 /* ValenceTableViewController.swift in Sources */,
 				3F43DAFC1E78FAFC00AAD144 /* RulesViewManager.swift in Sources */,
 				3F306DE91E8209BE0051AACB /* Bond.swift in Sources */,
+				3F752F001E95C716006EC12C /* OctetsValidationTests.swift in Sources */,
 				3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */,
 				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,
