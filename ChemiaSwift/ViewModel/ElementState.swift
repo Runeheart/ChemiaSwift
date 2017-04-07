@@ -14,12 +14,13 @@ class ElementState {
     
     var suggestedElementSymbol: String = ""
     var bondNumSuggested: Int = 0
+    var lonePairNumSuggested: Int = 0
     
     private var bondNum: Int = 0
     fileprivate var lonePairNum: Int = 0
-    private lazy var octetElectrons: Int = {
-        return self.bondNum*2 + self.lonePairNum*2
-    }()
+    private func octetElectrons() -> Int {
+        return bondNum*2 + lonePairNum*2
+    }
     
     init(of el: Element) {
         element = el
@@ -31,8 +32,12 @@ class ElementState {
         bondNum = num
     }
     
+    func setNumberOfLonePairs(to num: Int) {
+        lonePairNum = num
+    }
+    
     func hasFullOctet() -> Bool {
-        return octetElectrons == element.numOctetElectrons()
+        return self.octetElectrons() == element.numOctetElectrons()
     }
     
     func verifyTitle() -> Bool {
@@ -47,7 +52,7 @@ class ElementState {
         return element.numValElectrons()
     }
     
-    func suggestedValence() -> Int {
+    fileprivate func suggestedValence() -> Int {
         return 0
     }
     

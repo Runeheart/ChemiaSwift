@@ -26,7 +26,7 @@ struct Alerts {
     }()
     
     static let wrongAnswer: UIAlertController = {
-        let wrongAnswer = UIAlertController(title: "Incorrect", message: "You haven't found the correct answer. Check the hint if you need to.", preferredStyle: .alert)
+        let wrongAnswer = UIAlertController(title: "Incorrect", message: "You haven't found the correct answer. Check the hint under the Info button if you need to.", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         wrongAnswer.addAction(cancel)
         return wrongAnswer

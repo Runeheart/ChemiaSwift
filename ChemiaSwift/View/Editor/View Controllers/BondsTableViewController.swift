@@ -1,17 +1,16 @@
 //
-//  OctetsTableViewController.swift
+//  BondsTableViewController.swift
 //  ChemiaSwift
 //
-//  Created by Jonah Austin on 4/4/17.
+//  Created by Jonah Austin on 4/7/17.
 //  Copyright © 2017 edu.bsu. All rights reserved.
 //
 
 import UIKit
 
-class OctetsTableViewController: UITableViewController {
+class BondsTableViewController: UITableViewController {
     
-    var ruleViewModel = OctetsRule()
-    var alreadyDone: Bool = false
+    var ruleViewModel = BondsRule()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +48,13 @@ class OctetsTableViewController: UITableViewController {
         default: return 0
         }
     }
+
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let result = Section(rawValue: section) else {fatalError("Unimplemented Section")}
         return result.heading
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = configureCellBasedOn(path: indexPath)
@@ -81,23 +81,23 @@ class OctetsTableViewController: UITableViewController {
         case (.center, _):
             guard let centerAtomCell = tableView.dequeueReusableCell(withIdentifier: CenterElementCell.identifier, for: path) as? CenterElementCell else {fatalError("Something very strange occurred")}
             
-            centerAtomCell.octetsRule = ruleViewModel
+            centerAtomCell.bondsRule = ruleViewModel
             centerAtomCell.elementState = ruleViewModel.getCenterState()
             return centerAtomCell
         case (.attached, _):
             guard let attachedAtomCell = tableView.dequeueReusableCell(withIdentifier: AttachedElementCell.identifier, for: path) as? AttachedElementCell else {fatalError("Something very strange occurred")}
             
-            attachedAtomCell.octetsRule = ruleViewModel
+            attachedAtomCell.bondsRule = ruleViewModel
             attachedAtomCell.elementState = ruleViewModel.getAttachedState(atIndex: path.row)
             return attachedAtomCell
         default: break
         }
         return UITableViewCell()
     }
-    
-    
+
     
     // MARK: - Enums
+    
     enum Section : Int {
         case info = 0, center, attached
         
@@ -113,62 +113,16 @@ class OctetsTableViewController: UITableViewController {
     enum Row : Int {
         case formula = 0, submit, attached1, attached2, attached3, attached4
     }
-    
+
     // MARK: - IBActions
-    
-    @IBAction func enableContinue(_ sender: UIButton) {
-        if !alreadyDone {
-            let currentState = ruleViewModel.currentState()
-            setLonePairs(of: currentState)
-            checkCompletion(forState: currentState)
-            
-            
-            
-        }
-    }
-    
-    private func setLonePairs(of state: FormulaState, to specific: Int? = nil) {
-        if let index = specific {
-            let center = state.getCenterState()
-            center.setNumberOfLonePairs(to: index)
-            for i in 0..<ruleViewModel.numberOfAtoms()-1 {
-                let attached = state.attachedStateAt(index: i)
-                attached.setNumberOfLonePairs(to: index)
-            }
-        } else {
-            let center = state.getCenterState()
-            center.setNumberOfLonePairs(to: center.lonePairNumSuggested)
-            for i in 0..<ruleViewModel.numberOfAtoms()-1 {
-                let attached = state.attachedStateAt(index: i)
-                attached.setNumberOfLonePairs(to: attached.lonePairNumSuggested)
-            }
-        }
-    }
-    
-    private func checkCompletion(forState state: FormulaState) {
-        state.checkCompletion(forRule: .octets)
-        if state.isCompleted() {
-            alreadyDone = true
-            self.present(Alerts.fullyComplete, animated: true, completion: nil)
-        } else if state.ruleCompleted() {
-            let parent = self.parent as! EditorViewController
-            parent.octetsComplete()
-            self.present(Alerts.ruleComplete, animated: true, completion: nil)
-        } else {
-            setLonePairs(of: state, to: 0)
-            self.present(Alerts.wrongAnswer, animated: true, completion: nil)
-        }
-    }
-    
     
     @IBAction func close(segue:UIStoryboardSegue) {}
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "octetsRule" {
+        if segue.identifier == "bondsRule" {
             let destination = segue.destination as! RulePopupViewController
             destination.ruleToDisplay = ruleViewModel
         }

@@ -47,6 +47,17 @@ final class RulesViewManager {
         return viewController
     }()
     
+    private lazy var bondsViewController: BondsTableViewController = {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        var viewController = storyboard.instantiateViewController(withIdentifier: "BondsTableViewController") as! BondsTableViewController
+        
+        viewController.ruleViewModel = BondsRule(withStructure: self.studentStruct)
+        
+        return viewController
+    }()
+    
     init() {}
     
     init(withFormula form: Formula) {
@@ -61,10 +72,9 @@ final class RulesViewManager {
             return skeletonViewController
         case .octets:
             return octetsViewController
-        case .bonds: break
+        case .bonds:
+            return bondsViewController
         }
-        
-        return UITableViewController()
     }
     
     func setStructure(_ struc: LewisStructure) {

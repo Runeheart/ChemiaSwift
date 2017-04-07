@@ -33,10 +33,10 @@ final class EditorViewController: UIViewController {
     private func setupManager() {
         let sampleFormula = Formula()
         let sampleCenter = ElementFactory.create(withSymbol: .C)
-        let sampleAttached = ElementFactory.create(withSymbol: .Cl)
+        let sampleAttached = ElementFactory.create(withSymbol: .O)
         sampleFormula.setCenter(element: sampleCenter)
         sampleFormula.addAttached(element: sampleAttached)
-        sampleFormula.updateAttached(element: sampleAttached, value: 4)
+        sampleFormula.updateAttached(element: sampleAttached, value: 2)
         enteredFormula = sampleFormula
         manager = RulesViewManager(withFormula: enteredFormula)
     }
@@ -68,6 +68,9 @@ final class EditorViewController: UIViewController {
         case 2:
             remove(asChildViewController: self.childViewControllers.last!)
             add(asChildViewController: manager.makeViewForRule(rule: .octets))
+        case 3:
+            remove(asChildViewController: self.childViewControllers.last!)
+            add(asChildViewController: manager.makeViewForRule(rule: .bonds))
         default:
             break
         }
@@ -103,6 +106,10 @@ final class EditorViewController: UIViewController {
                 ruleSC.setEnabled(false, forSegmentAt: 2)
                 // ruleSC.sizeToFit()   // might be necessary later if the segments look off
             }
+        case .bonds:
+            if ruleSC.numberOfSegments == 3 {
+                ruleSC.insertSegment(withTitle: "Bonds", at: 3, animated: true)
+            }
         default:
             break
         }
@@ -118,7 +125,11 @@ final class EditorViewController: UIViewController {
         addSegmentForRule(.octets)
         ruleSC.setEnabled(true, forSegmentAt: 2)
         studentStructure.setFormulaStateTo(currentState)
-        
+    }
+    
+    func octetsComplete() {
+        addSegmentForRule(.bonds)
+        ruleSC.setEnabled(true, forSegmentAt: 3)
     }
 
     override func didReceiveMemoryWarning() {
