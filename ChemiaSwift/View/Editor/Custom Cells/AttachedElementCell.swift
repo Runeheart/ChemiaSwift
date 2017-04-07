@@ -31,12 +31,24 @@ class AttachedElementCell: UITableViewCell {
     var elementState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: CenterElementState()) {
         didSet {
             configureBondLabelsFor(numberOfBonds: elementState.bondNumSuggested)
-            if octetsRule != nil || bondsRule != nil {
+            if notInSkeletonView() {
                 configureLonePairLabelsFor(numberOfPairs: elementState.lonePairNumSuggested)
                 attachedBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
                 destinationLBL.text = elementState.destinationSymbol()
+                if inBondsView() {
+                    lonePairCount.selectedSegmentIndex = elementState.lonePairNumSuggested
+                    bondCount.selectedSegmentIndex = elementState.bondNumSuggested
+                }
             }
         }
+    }
+    
+    private func notInSkeletonView() -> Bool {
+        return octetsRule != nil || bondsRule != nil
+    }
+    
+    private func inBondsView() -> Bool {
+        return bondsRule != nil
     }
 
     @IBOutlet weak var attachedBTN: UIButton!
