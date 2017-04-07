@@ -22,11 +22,16 @@ class AttachedElementCell: UITableViewCell {
             self.configureForOctets()
         }
     }
+    var bondsRule: BondsRule? = nil {
+        didSet {
+            self.configureForBonds()
+        }
+    }
     
     var elementState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: CenterElementState()) {
         didSet {
             configureBondLabelsFor(numberOfBonds: elementState.bondNumSuggested)
-            if octetsRule != nil {
+            if octetsRule != nil || bondsRule != nil {
                 configureLonePairLabelsFor(numberOfPairs: elementState.lonePairNumSuggested)
                 attachedBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
                 destinationLBL.text = elementState.destinationSymbol()
@@ -58,6 +63,10 @@ class AttachedElementCell: UITableViewCell {
     private func configureForOctets() {
         attachedBTN.isEnabled = false
         bondCount.isHidden = true
+    }
+    
+    private func configureForBonds() {
+        attachedBTN.isEnabled = false
     }
     
     private func configureBondLabelsFor(numberOfBonds num: Int) {

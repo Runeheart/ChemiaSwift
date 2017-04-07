@@ -22,12 +22,15 @@ class CenterElementCell: UITableViewCell {
             self.configureForOctets()
         }
     }
-    // Octets Rule
-    // Bonds Rule
+    var bondsRule: BondsRule? = nil {
+        didSet {
+            self.configureForOctets()
+        }
+    }
     
     var elementState: CenterElementState = CenterElementState() {
         didSet {
-            if octetsRule != nil {
+            if octetsRule != nil || bondsRule != nil {
                 configureLonePairLabelsFor(numberOfPairs: elementState.lonePairNumSuggested)
                 centerBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
             }

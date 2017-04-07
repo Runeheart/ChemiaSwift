@@ -52,7 +52,7 @@ class ElementState {
         return element.numValElectrons()
     }
     
-    func suggestedValence() -> Int {
+    fileprivate func suggestedValence() -> Int {
         return 0
     }
     
