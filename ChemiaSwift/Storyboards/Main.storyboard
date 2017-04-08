@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fle-k8-Nab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aJp-9m-4Rl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Formula Entry View Controller-->
+        <!--Chemia-->
+        <scene sceneID="jMe-f6-82L">
+            <objects>
+                <viewController storyboardIdentifier="mainMenu" id="yDA-fC-Bl5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LUL-j2-nac"/>
+                        <viewControllerLayoutGuide type="bottom" id="MaQ-HH-bC0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b38-jU-TDP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="sxC-SB-8gE">
+                                <rect key="frame" x="92" y="205" width="191" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZZ-Oi-KO2">
+                                        <rect key="frame" x="43" y="0.0" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="105" id="QCv-2d-4a1"/>
+                                        </constraints>
+                                        <state key="normal" title="Enter a formula">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="N1r-mp-YCx" kind="show" id="Ldk-7W-4s6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npm-zH-WtZ">
+                                        <rect key="frame" x="0.0" y="130" width="191" height="30"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Choose an example formula">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fle-k8-Nab" kind="show" id="qWX-i3-ah7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PZZ-Oi-KO2" firstAttribute="top" secondItem="sxC-SB-8gE" secondAttribute="top" id="P3o-K8-ERc"/>
+                                    <constraint firstItem="npm-zH-WtZ" firstAttribute="top" secondItem="PZZ-Oi-KO2" secondAttribute="bottom" constant="100" id="jMq-zc-Wr3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sxC-SB-8gE" secondAttribute="trailing" constant="76" id="0Ej-Ef-d2f"/>
+                            <constraint firstItem="sxC-SB-8gE" firstAttribute="leading" secondItem="b38-jU-TDP" secondAttribute="leadingMargin" constant="76" id="S8d-e5-8IM"/>
+                            <constraint firstItem="sxC-SB-8gE" firstAttribute="top" secondItem="LUL-j2-nac" secondAttribute="bottom" constant="141" id="cuV-LR-c9g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chemia" id="YFF-dj-fuw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWV-Qq-boP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1108" y="170.46476761619192"/>
+        </scene>
+        <!--Formula Entry-->
         <scene sceneID="uEQ-VF-eiT">
             <objects>
-                <tableViewController storyboardIdentifier="FormulaEntryController" id="N1r-mp-YCx" customClass="FormulaEntryViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FormulaEntryController" title="Formula Entry" id="N1r-mp-YCx" customClass="FormulaEntryViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="72" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ue4-FD-6na">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHY-jb-Mri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-935" y="-63"/>
+            <point key="canvasLocation" x="4" y="-63.418290854572717"/>
         </scene>
         <!--EditorNavigationController-->
         <scene sceneID="ybj-Ib-zKE">
@@ -145,7 +204,7 @@
                 <viewControllerPlaceholder storyboardName="Editor" referencedIdentifier="EditorNavigationController" id="Shr-9k-2eX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAU-SY-9JX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="99"/>
+            <point key="canvasLocation" x="963.20000000000005" y="98.950524737631198"/>
         </scene>
         <!--Example Selection Table View Controller-->
         <scene sceneID="B8S-RJ-Rm2">
@@ -186,10 +245,28 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdm-f9-yUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-932" y="631"/>
+            <point key="canvasLocation" x="7.2000000000000002" y="630.13493253373315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fl2-Wk-dUi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aJp-9m-4Rl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="69G-uh-cxN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yDA-fC-Bl5" kind="relationship" relationship="rootViewController" id="fJ8-ia-rhB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWO-qz-dPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2047.2" y="170.46476761619192"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dzg-Ua-0rP"/>
+        <segue reference="dXb-8u-94C"/>
     </inferredMetricsTieBreakers>
 </document>

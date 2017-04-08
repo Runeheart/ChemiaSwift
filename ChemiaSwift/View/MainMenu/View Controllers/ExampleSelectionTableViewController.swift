@@ -24,6 +24,7 @@ class ExampleSelectionTableViewController: UITableViewController {
     private func setupTableView() {
         tableView.estimatedRowHeight = 72.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        title = "Choose an Example"
     }
     
     private func setExamples() {
