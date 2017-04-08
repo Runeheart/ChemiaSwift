@@ -11,6 +11,7 @@ import UIKit
 class BondsTableViewController: UITableViewController {
     
     var ruleViewModel = BondsRule()
+    var alreadyDone: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +116,61 @@ class BondsTableViewController: UITableViewController {
     }
 
     // MARK: - IBActions
+    
+    @IBAction func enableContinue(_ sender: UIButton) {
+        if !alreadyDone {
+            let currentState = ruleViewModel.currentState()
+            setLonePairs(of: currentState)
+            setBonds(of: currentState)
+            checkCompletion(forState: currentState)
+        }
+    }
+    
+    private func setLonePairs(of state: FormulaState, to specific: Int? = nil) {
+        if let index = specific {
+            let center = state.getCenterState()
+            center.setNumberOfLonePairs(to: index)
+            for i in 0..<ruleViewModel.numberOfAtoms()-1 {
+                let attached = state.attachedStateAt(index: i)
+                attached.setNumberOfLonePairs(to: index)
+            }
+        } else {
+            let center = state.getCenterState()
+            center.setNumberOfLonePairs(to: center.lonePairNumSuggested)
+            for i in 0..<ruleViewModel.numberOfAtoms()-1 {
+                let attached = state.attachedStateAt(index: i)
+                attached.setNumberOfLonePairs(to: attached.lonePairNumSuggested)
+            }
+        }
+    }
+    
+    private func setBonds(of state: FormulaState, to specific: Int? = nil) {
+        if let index = specific {
+            for i in 0..<ruleViewModel.numberOfAtoms()-1 {
+                let attached = state.attachedStateAt(index: i)
+                attached.setNumberOfBonds(to: index, ofType: .null)
+            }
+        } else {
+            let center = ruleViewModel.getCenterState()
+            center.clearBonds()
+            for i in 0..<ruleViewModel.numberOfAtoms()-1 {
+                let attached = state.attachedStateAt(index: i)
+                attached.setNumberOfBonds(to: 1, ofType: BondType(rawValue: attached.bondNumSuggested)!)
+            }
+        }
+    }
+    
+    private func checkCompletion(forState state: FormulaState) {
+        state.checkCompletion(forRule: .bonds)
+        if state.isCompleted() {
+            alreadyDone = true
+            self.present(Alerts.fullyComplete, animated: true, completion: nil)
+        } else {
+            setLonePairs(of: state, to: 0)
+            setBonds(of: state, to: 0)
+            self.present(Alerts.wrongAnswer, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func close(segue:UIStoryboardSegue) {}
 

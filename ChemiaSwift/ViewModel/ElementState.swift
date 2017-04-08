@@ -16,7 +16,7 @@ class ElementState {
     var bondNumSuggested: Int = 0
     var lonePairNumSuggested: Int = 0
     
-    private var bondNum: Int = 0
+    fileprivate var bondNum: Int = 0
     fileprivate var lonePairNum: Int = 0
     private func octetElectrons() -> Int {
         return bondNum*2 + lonePairNum*2
@@ -28,8 +28,8 @@ class ElementState {
     
     init() {}
     
-    func setNumberOfBonds(to num: Int) {
-        bondNum = num
+    func setNumberOfBonds(to num: Int, ofType type: BondType) {
+        bondNum = num * type.rawValue
     }
     
     func setNumberOfLonePairs(to num: Int) {
@@ -63,33 +63,42 @@ class ElementState {
 class CenterElementState: ElementState {
     
     var bonds: [Bond] = []
-    private var bondTypes: [BondType] = []
+    private var bondElements = [Bond : Element]()
     
-    fileprivate func add(_ bond: Bond, ofType type: BondType) {
+    fileprivate func add(_ bond: Bond, toElement el: Element) {
         bonds.append(bond)
-        bondTypes.append(type)
-        setNumberOfBonds(to: bonds.count)
+        bondElements[bond] = bond.source
+        bondNum = numBonds()
     }
     
     func typeOf(bond: Bond) -> BondType {
         if let index = bonds.index(where: {$0 == bond}) {
-            return bondTypes[index]
+            return bonds[index].type
         }
         return .null
     }
     
     override func suggestedValence() -> Int {
         var sum = 0
-        for i in 0..<bonds.count {
-            let cardinality = bondTypes[i].rawValue
+        for bond in bonds {
+            let cardinality = bond.type.rawValue
             sum += (2*cardinality)
         }
-        return sum
+        return sum + (2*lonePairNum)
     }
     
     func clearBonds() {
         bonds.removeAll()
-        bondTypes.removeAll()
+        bondElements.removeAll()
+    }
+    
+    func numBonds() -> Int {
+        var sum = 0
+        for bond in bonds {
+            let cardinality = bond.type.rawValue
+            sum += cardinality
+        }
+        return sum
     }
     
 }
@@ -104,12 +113,13 @@ class AttachedElementState: ElementState {
         super.init(of: el)
     }
     
-    override func setNumberOfBonds(to num: Int) {
-        super.setNumberOfBonds(to: num)
-    
-        bond = Bond.between(element).and(centerTarget.element)
-        let bondType = BondType(rawValue: num)
-        centerTarget.add(bond!, ofType: bondType!)
+    override func setNumberOfBonds(to num: Int, ofType type: BondType) {
+        super.setNumberOfBonds(to: num, ofType: type)
+        
+        if type != .null { 
+            bond = Bond.between(element).and(centerTarget.element, withType: type)
+            centerTarget.add(bond!, toElement: self.element)
+        }
     }
     
     override func suggestedValence() -> Int {

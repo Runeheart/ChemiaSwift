@@ -44,11 +44,15 @@ class Formula {
         var result = centerElement.getSymbol()
         var sub = 0
         for element in formulaOrder.suffix(from: 1) where element != "" {
-            sub = attachedElements[element] ?? 0
-            if sub == 1 {
-                result.append("\(element)")
-            } else if sub > 1 {
-                result.append("\(element)\(sub)")
+            if element == result {
+                result.append("2")
+            } else {
+                sub = attachedElements[element] ?? 0
+                if sub == 1 {
+                    result.append("\(element)")
+                } else if sub > 1 {
+                    result.append("\(element)\(sub)")
+                }
             }
         }
         return result

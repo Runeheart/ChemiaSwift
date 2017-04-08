@@ -30,11 +30,22 @@ class CenterElementCell: UITableViewCell {
     
     var elementState: CenterElementState = CenterElementState() {
         didSet {
-            if octetsRule != nil || bondsRule != nil {
+            if notInSkeletonView() {
                 configureLonePairLabelsFor(numberOfPairs: elementState.lonePairNumSuggested)
                 centerBTN.setTitle(elementState.suggestedElementSymbol, for: .disabled)
+                if inBondsView() {
+                    lonePairCount.selectedSegmentIndex = elementState.lonePairNumSuggested
+                }
             }
         }
+    }
+    
+    private func notInSkeletonView() -> Bool {
+        return octetsRule != nil || bondsRule != nil
+    }
+    
+    private func inBondsView() -> Bool {
+        return bondsRule != nil
     }
 
     @IBOutlet weak var centerBTN: UIButton!

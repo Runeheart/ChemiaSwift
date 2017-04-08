@@ -27,7 +27,7 @@ class ElementStateTests: XCTestCase {
         let centerElement: Element = ElementFactory.create(withSymbol: .C)
         let testState: ElementState = ElementState(of: centerElement)
         
-        testState.setNumberOfBonds(to: 4)
+        testState.setNumberOfBonds(to: 4, ofType: .single)
         XCTAssertTrue(testState.hasFullOctet())
     }
     
@@ -37,7 +37,7 @@ class ElementStateTests: XCTestCase {
         let attachedElement: Element = ElementFactory.create(withSymbol: .H)
         let testAttached: AttachedElementState = AttachedElementState(of: attachedElement, withTarget: testCenter)
         
-        testAttached.setNumberOfBonds(to: 1)
+        testAttached.setNumberOfBonds(to: 1, ofType: .single)
         
         let testAttachedBond: Bond = testAttached.bond!
         let testCenterBond: Bond = testCenter.bonds[0]

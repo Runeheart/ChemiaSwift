@@ -28,7 +28,7 @@ class SkeletonValidationTests: XCTestCase {
         
         var attachedElementStates: [AttachedElementState] = []
         let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: centerElementState)
-        nextAttachedState.setNumberOfBonds(to: 1)
+        nextAttachedState.setNumberOfBonds(to: 1, ofType: .single)
         nextAttachedState.suggestedElementSymbol = "H"
         nextAttachedState.bondNumSuggested = 1
         attachedElementStates.append(nextAttachedState)
@@ -46,7 +46,7 @@ class SkeletonValidationTests: XCTestCase {
         var attachedElementStates: [AttachedElementState] = []
         for _ in 1...4 {
             let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .H), withTarget: centerElementState)
-            nextAttachedState.setNumberOfBonds(to: 1)
+            nextAttachedState.setNumberOfBonds(to: 1, ofType: .single)
             nextAttachedState.suggestedElementSymbol = "H"
             nextAttachedState.bondNumSuggested = 1
             attachedElementStates.append(nextAttachedState)
@@ -67,7 +67,7 @@ class SkeletonValidationTests: XCTestCase {
         var attachedElementStates: [AttachedElementState] = []
         for _ in 1...4 {
             let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .Cl), withTarget: centerElementState)
-            nextAttachedState.setNumberOfBonds(to: 1)
+            nextAttachedState.setNumberOfBonds(to: 1, ofType: .single)
             nextAttachedState.suggestedElementSymbol = "Cl"
             nextAttachedState.bondNumSuggested = 1
             attachedElementStates.append(nextAttachedState)

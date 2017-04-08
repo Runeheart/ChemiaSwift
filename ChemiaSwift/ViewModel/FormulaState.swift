@@ -18,13 +18,18 @@ class FormulaState {
     private var suggestedValenceSum: Int = 0
     
     private lazy var expectedNumBonds: Int = {
-        return (self.octetSum - self.valenceSum)/2
+        let initial = (self.octetSum - self.valenceSum)/2
+        if initial < self.attachedAtoms.count {
+            return self.attachedAtoms.count
+        }
+        return initial
     }()
     
     private lazy var expectedNumLonePairs: Int = {
         return (self.valenceSum - (self.expectedNumBonds * 2))/2
     }()
     
+    private var currentRule: RuleName = .valence
     private var ruleComplete: Bool = false
     private var isComplete: Bool = false
     
@@ -34,6 +39,8 @@ class FormulaState {
     }
     
     func checkCompletion(forRule rule: RuleName) {
+        currentRule = rule
+        initializeSums()
         ruleComplete = verifyFor(rule)
         if ruleComplete {
             isComplete = checkOverallCompletion()
@@ -49,7 +56,8 @@ class FormulaState {
             return verifyForSkeleton()
         case .octets:
             return verifyForOctets()
-        case .bonds: break
+        case .bonds:
+            return true
         }
         return false
     }
@@ -76,15 +84,19 @@ class FormulaState {
     private func checkOverallCompletion() -> Bool {
         let firstCondition = checkEachAtomFullOctet()
         // set/append error(s)
-        initializeSums()
         let secondCondition = checkCorrectValenceElectronTotal()
-        let thirdCondition = allLonePairsPlaced()
-        let fourthCondition = allBondsPlaced()
+        let thirdCondition = allBondsPlaced()
+        let fourthCondition = allLonePairsPlaced()
         return firstCondition && secondCondition && thirdCondition && fourthCondition
     }
     
     private func checkEachAtomFullOctet() -> Bool {
-        let centerCheck = centerAtom.hasFullOctet()
+        var centerCheck: Bool = false
+        if centerHasExpandedOctet() {
+            centerCheck = true
+        } else {
+            centerCheck = centerAtom.hasFullOctet()
+        }
         var octetCheck = true
         for attached in attachedAtoms {
             octetCheck = attached.hasFullOctet()
@@ -93,6 +105,10 @@ class FormulaState {
             }
         }
         return centerCheck && octetCheck
+    }
+    
+    private func centerHasExpandedOctet() -> Bool {
+        return (attachedAtoms.count + 1) > expectedNumBonds
     }
     
     private func initializeSums() {
@@ -122,8 +138,15 @@ class FormulaState {
     }
     
     private func allBondsPlaced() -> Bool {
-        let bondsCurrentlyPlaced = centerAtom.bonds.count
-        return bondsCurrentlyPlaced == expectedNumBonds
+        let bondsCurrentlyPlaced = centerAtom.numBonds()
+        var result = bondsCurrentlyPlaced == expectedNumBonds
+        if currentRule == .bonds {
+            if result == false {
+                expectedNumBonds = octetSum - valenceSum
+                result = bondsCurrentlyPlaced == expectedNumBonds
+            }
+        }
+        return result
     }
     
     func ruleCompleted() -> Bool {
