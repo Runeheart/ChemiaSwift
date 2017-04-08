@@ -56,6 +56,7 @@ class FormulaEntryViewController: UITableViewController, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        submitBTN.isEnabled = true
         var currentIndex = 0
         let chosenCenterElement = elementsList[row]
         switch pickerView.restorationIdentifier! {
@@ -82,7 +83,7 @@ class FormulaEntryViewController: UITableViewController, UIPickerViewDelegate {
     }
     
     func updateFormulaLabel() {
-        let formulaString = builder.assembleFormula()
+        let formulaString = builder.formulaString()
         formattedFormulaLBL.attributedText = scribe.subscriptedFormulaFrom(inputString: formulaString)
     }
     
@@ -110,6 +111,7 @@ class FormulaEntryViewController: UITableViewController, UIPickerViewDelegate {
         }
         setQuantityTo(val: 1.0)
         builder.resetSelection()
+        submitBTN.isEnabled = false
         updateFormulaLabel()
     }
     
@@ -127,15 +129,18 @@ class FormulaEntryViewController: UITableViewController, UIPickerViewDelegate {
      return cell
      }
      */
-    
-    
-    
-    /*
+
      // MARK: - Navigation
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+        if segue.identifier == "formula-Editor" {
+            let destination = segue.destination as! UINavigationController
+            let targetController = destination.topViewController as! EditorViewController
+            targetController.enteredFormula = builder.finalFormula()
+        }
+        
      }
-     */
+    
 }

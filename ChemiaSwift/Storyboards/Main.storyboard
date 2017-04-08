@@ -1110,7 +1110,7 @@
                                                         <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="submitPushed:" destination="N1r-mp-YCx" eventType="touchUpInside" id="cWE-FU-Eei"/>
+                                                        <segue destination="dAg-Z9-QqQ" kind="showDetail" identifier="formula-Editor" id="dXb-8u-94C"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-Uy-Cxr">
@@ -1209,6 +1209,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Q1y-PS-qMx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9RA-kW-a2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dAg-Z9-QqQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Udt-c3-6gE">
@@ -1220,7 +1221,6 @@
                         <segue destination="RVS-Sr-mJb" kind="relationship" relationship="rootViewController" id="nJz-iS-g1Q"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9RA-kW-a2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36" y="96.7016491754123"/>
         </scene>

@@ -31,13 +31,13 @@ final class EditorViewController: UIViewController {
     }
     
     private func setupManager() {
-        let sampleFormula = Formula()
-        let sampleCenter = ElementFactory.create(withSymbol: .C)
-        let sampleAttached = ElementFactory.create(withSymbol: .O)
-        sampleFormula.setCenter(element: sampleCenter)
-        sampleFormula.addAttached(element: sampleAttached)
-        sampleFormula.updateAttached(element: sampleAttached, value: 2)
-        enteredFormula = sampleFormula
+//        let sampleFormula = Formula()
+//        let sampleCenter = ElementFactory.create(withSymbol: .C)
+//        let sampleAttached = ElementFactory.create(withSymbol: .O)
+//        sampleFormula.setCenter(element: sampleCenter)
+//        sampleFormula.addAttached(element: sampleAttached)
+//        sampleFormula.updateAttached(element: sampleAttached, value: 2)
+//        enteredFormula = sampleFormula
         manager = RulesViewManager(withFormula: enteredFormula)
     }
     

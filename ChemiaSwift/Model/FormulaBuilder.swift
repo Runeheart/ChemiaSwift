@@ -11,6 +11,8 @@ import Foundation
 class FormulaBuilder {
     
     private var orderSize = FormulaConstants.MostDistinctElementsPossible
+    private var currentFormula = Formula()
+    
     var currentSelection = [String : Int]()
     var formulaOrder: [String] = Array(repeating: "", count: FormulaConstants.MostDistinctElementsPossible)
     var formulaIndex = 0
@@ -46,14 +48,19 @@ class FormulaBuilder {
         return formulaIndex
     }
     
-    func assembleFormula() -> String {
-        var formula = ""
-        for element in formulaOrder where element != "" {
+    func formulaString() -> String {
+        currentFormula = Formula()
+        var formula = formulaOrder[0]
+        currentFormula.setCenter(element: ElementFactory.create(withSymbol: Element.ChemSymbol(rawValue: formula)!))
+        for element in formulaOrder.suffix(from: 1) where element != "" {
             let sub = currentSelection[element] ?? 0
+            let attachedElement = ElementFactory.create(withSymbol: Element.ChemSymbol(rawValue: element)!)
+            currentFormula.addAttached(element: attachedElement)
             if sub == 1 {
                 formula.append("\(element)")
             } else if sub > 1 {
                 formula.append("\(element)\(sub)")
+                currentFormula.updateAttached(element: attachedElement, value: sub)
             }
         }
 //        print(formula + " : formula index is \(formulaIndex+1)")
@@ -89,10 +96,14 @@ class FormulaBuilder {
         formulaOrder = Array(repeating: "", count: orderSize)
         currentSelection.removeAll()
         formulaIndex = 0
-        //        print(formulaOrder.debugDescription)
-        //        print(currentSelection.debugDescription)
+        currentFormula = Formula()
+//      print(formulaOrder.debugDescription)
+//      print(currentSelection.debugDescription)
     }
     
+    func finalFormula() -> Formula {
+        return currentFormula
+    }
     
 }
 
