@@ -16,7 +16,7 @@ final class RulesViewManager {
     
     private lazy var valenceViewController: ValenceTableViewController = {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Editor", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "ValenceTableViewController") as! ValenceTableViewController
         
@@ -27,7 +27,7 @@ final class RulesViewManager {
     
     private lazy var skeletonViewController: SkeletonTableViewController = {
     
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Editor", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "SkeletonTableViewController") as! SkeletonTableViewController
         
@@ -38,7 +38,7 @@ final class RulesViewManager {
     
     private lazy var octetsViewController: OctetsTableViewController = {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Editor", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "OctetsTableViewController") as! OctetsTableViewController
         
@@ -49,7 +49,7 @@ final class RulesViewManager {
     
     private lazy var bondsViewController: BondsTableViewController = {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Editor", bundle: Bundle.main)
         
         var viewController = storyboard.instantiateViewController(withIdentifier: "BondsTableViewController") as! BondsTableViewController
         

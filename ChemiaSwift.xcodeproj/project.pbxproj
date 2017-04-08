@@ -54,6 +54,7 @@
 		3F43DB2D1E7B7C0500AAD144 /* RulePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */; };
 		3F6529491E9941D800167B4A /* FormulaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6529481E9941D800167B4A /* FormulaBuilder.swift */; };
 		3F65294A1E9941D800167B4A /* FormulaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6529481E9941D800167B4A /* FormulaBuilder.swift */; };
+		3F65294C1E9955CD00167B4A /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F65294B1E9955CD00167B4A /* Editor.storyboard */; };
 		3F752EF91E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
 		3F752EFA1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
 		3F752EFB1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
@@ -135,6 +136,7 @@
 		3F43DB221E7B5FEE00AAD144 /* FormulaFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFormatter.swift; sourceTree = "<group>"; };
 		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
 		3F6529481E9941D800167B4A /* FormulaBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaBuilder.swift; sourceTree = "<group>"; };
+		3F65294B1E9955CD00167B4A /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
 		3F752EF81E949971006EC12C /* OctetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsTableViewController.swift; sourceTree = "<group>"; };
 		3F752EFC1E949B7E006EC12C /* OctetsRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsRule.swift; sourceTree = "<group>"; };
 		3F752EFF1E95C716006EC12C /* OctetsValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsValidationTests.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 			children = (
 				3FC0453B1E8B1DEB00AA033C /* LaunchScreen.storyboard */,
 				3FC0453C1E8B1DEB00AA033C /* Main.storyboard */,
+				3F65294B1E9955CD00167B4A /* Editor.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			files = (
 				3FC0453D1E8B1DEB00AA033C /* LaunchScreen.storyboard in Resources */,
 				3FC045381E8B1B0600AA033C /* Default-568h@2x.png in Resources */,
+				3F65294C1E9955CD00167B4A /* Editor.storyboard in Resources */,
 				3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */,
 				3FC0453E1E8B1DEB00AA033C /* Main.storyboard in Resources */,
 			);
