@@ -55,6 +55,7 @@
 		3F6529491E9941D800167B4A /* FormulaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6529481E9941D800167B4A /* FormulaBuilder.swift */; };
 		3F65294A1E9941D800167B4A /* FormulaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6529481E9941D800167B4A /* FormulaBuilder.swift */; };
 		3F65294C1E9955CD00167B4A /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F65294B1E9955CD00167B4A /* Editor.storyboard */; };
+		3F65294E1E9957E100167B4A /* ExampleSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65294D1E9957E100167B4A /* ExampleSelectionTableViewController.swift */; };
 		3F752EF91E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
 		3F752EFA1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
 		3F752EFB1E949971006EC12C /* OctetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F752EF81E949971006EC12C /* OctetsTableViewController.swift */; };
@@ -137,6 +138,7 @@
 		3F43DB2B1E7B6FDA00AAD144 /* RulePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePopupViewController.swift; sourceTree = "<group>"; };
 		3F6529481E9941D800167B4A /* FormulaBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaBuilder.swift; sourceTree = "<group>"; };
 		3F65294B1E9955CD00167B4A /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
+		3F65294D1E9957E100167B4A /* ExampleSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSelectionTableViewController.swift; sourceTree = "<group>"; };
 		3F752EF81E949971006EC12C /* OctetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsTableViewController.swift; sourceTree = "<group>"; };
 		3F752EFC1E949B7E006EC12C /* OctetsRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsRule.swift; sourceTree = "<group>"; };
 		3F752EFF1E95C716006EC12C /* OctetsValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctetsValidationTests.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				3F41E2331E9939C0007B6C72 /* FormulaEntryViewController.swift */,
+				3F65294D1E9957E100167B4A /* ExampleSelectionTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				3FD57D811E8370CF00332369 /* SkeletonRule.swift in Sources */,
 				3FFD719D1E9081A4008D8A78 /* AttachedElementCell.swift in Sources */,
 				3F752EF91E949971006EC12C /* OctetsTableViewController.swift in Sources */,
+				3F65294E1E9957E100167B4A /* ExampleSelectionTableViewController.swift in Sources */,
 				3FC045461E8B409200AA033C /* HintSubmitCell.swift in Sources */,
 				3F752F021E98458A006EC12C /* BondsTableViewController.swift in Sources */,
 				3F43DAEF1E78F37F00AAD144 /* EditorViewController.swift in Sources */,

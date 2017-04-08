@@ -32,6 +32,10 @@ class FormulaEntryViewController: UITableViewController, UIPickerViewDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        setupTableView()
+    }
+    
+    private func setupTableView() {
         tableView.estimatedRowHeight = 72.0
         tableView.rowHeight = UITableViewAutomaticDimension
         title = "Enter Your Formula"
