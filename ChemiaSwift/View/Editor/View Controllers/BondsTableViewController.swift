@@ -151,6 +151,8 @@ class BondsTableViewController: UITableViewController {
                 attached.setNumberOfBonds(to: index, ofType: .null)
             }
         } else {
+            let center = ruleViewModel.getCenterState()
+            center.clearBonds()
             for i in 0..<ruleViewModel.numberOfAtoms()-1 {
                 let attached = state.attachedStateAt(index: i)
                 attached.setNumberOfBonds(to: 1, ofType: BondType(rawValue: attached.bondNumSuggested)!)

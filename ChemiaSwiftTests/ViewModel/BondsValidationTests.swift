@@ -30,7 +30,7 @@ class BondsValidationTests: XCTestCase {
         for _ in 1...2 {
             let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .O), withTarget: centerElementState)
             nextAttachedState.suggestedElementSymbol = "O"
-            nextAttachedState.bondNumSuggested = 1
+            nextAttachedState.bondNumSuggested = 2
             nextAttachedState.setNumberOfBonds(to: 1, ofType: .double)
             nextAttachedState.lonePairNumSuggested = 2
             nextAttachedState.setNumberOfLonePairs(to: 2)

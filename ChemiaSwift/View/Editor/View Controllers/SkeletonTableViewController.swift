@@ -139,7 +139,7 @@ class SkeletonTableViewController: UITableViewController {
             if formulaState != nil { } else {
                 centerAtomState!.clearBonds()
                 for attached in attachedStates {
-                    attached.setNumberOfBonds(to: attached.bondNumSuggested, ofType: .null)
+                    attached.setNumberOfBonds(to: attached.bondNumSuggested, ofType: .single)
                 }
                 formulaState = FormulaState(center: centerAtomState!, attached: attachedStates)
                 checkCompletion(forState: formulaState!)
