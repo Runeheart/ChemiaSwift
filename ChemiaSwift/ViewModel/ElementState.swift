@@ -16,7 +16,7 @@ class ElementState {
     var bondNumSuggested: Int = 0
     var lonePairNumSuggested: Int = 0
     
-    private var bondNum: Int = 0
+    fileprivate var bondNum: Int = 0
     fileprivate var lonePairNum: Int = 0
     private func octetElectrons() -> Int {
         return bondNum*2 + lonePairNum*2
@@ -68,7 +68,7 @@ class CenterElementState: ElementState {
     fileprivate func add(_ bond: Bond, toElement el: Element) {
         bonds.append(bond)
         bondElements[bond] = bond.source
-        setNumberOfBonds(to: bonds.count, ofType: bond.type)
+        bondNum = numBonds()
     }
     
     func typeOf(bond: Bond) -> BondType {
@@ -84,7 +84,7 @@ class CenterElementState: ElementState {
             let cardinality = bond.type.rawValue
             sum += (2*cardinality)
         }
-        return sum
+        return sum + (2*lonePairNum)
     }
     
     func clearBonds() {
