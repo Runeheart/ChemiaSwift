@@ -10,7 +10,7 @@ import UIKit
 
 class SkeletonTableViewController: UITableViewController {
     
-    var ruleViewModel = SkeletonRule(withManager: BondManager())
+    var ruleViewModel = SkeletonRule(withStructure: LewisStructure())
     var centerAtomState: CenterElementState? = nil
     var attachedStates: [AttachedElementState] = []
     

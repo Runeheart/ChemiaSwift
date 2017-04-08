@@ -42,6 +42,10 @@ class Bond {
     
 }
 
+enum BondType : Int {
+    case null = 0, single, double, triple
+}
+
 extension Bond : Hashable, Equatable {
     
     /// Returns a Boolean value indicating whether two values are equal.

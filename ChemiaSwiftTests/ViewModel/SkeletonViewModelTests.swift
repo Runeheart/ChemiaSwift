@@ -11,7 +11,7 @@ import XCTest
 
 class SkeletonViewModelTests: XCTestCase {
     
-    var testBondManager: BondManager = BondManager()
+    var testStructure: LewisStructure = LewisStructure()
     
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class SkeletonViewModelTests: XCTestCase {
         testFormula.setCenter(element: centerAtom)
         testFormula.addAttached(element: attachedAtom)
         testFormula.updateAttached(element: attachedAtom, value: 4)
-        testBondManager = BondManager(withFormula: testFormula)
+        testStructure = LewisStructure(withFormula: testFormula)
         
     }
     
@@ -34,7 +34,7 @@ class SkeletonViewModelTests: XCTestCase {
     func testNextDisplayTitleOneCenter() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let rule = SkeletonRule(withManager: testBondManager)
+        let rule = SkeletonRule(withStructure: testStructure)
         rule.setSymbols()
         
         let startingTitle = ""
@@ -45,7 +45,7 @@ class SkeletonViewModelTests: XCTestCase {
     }
     
     func testNextDisplayTitleOneAttached() {
-        let rule = SkeletonRule(withManager: testBondManager)
+        let rule = SkeletonRule(withStructure: testStructure)
         rule.setSymbols()
         
         let startingTitle = ""
@@ -61,8 +61,8 @@ class SkeletonViewModelTests: XCTestCase {
         testFormula.setCenter(element: centerAtom)
         testFormula.addAttached(element: attachedAtom)
         testFormula.updateAttached(element: attachedAtom, value: 4)
-        let bondManager = BondManager(withFormula: testFormula)
-        let rule = SkeletonRule(withManager: bondManager)
+        let lewisStructure = LewisStructure(withFormula: testFormula)
+        let rule = SkeletonRule(withStructure: lewisStructure)
         rule.setSymbols()
         
         let startingTitle = ""
@@ -81,8 +81,8 @@ class SkeletonViewModelTests: XCTestCase {
         testFormula.setCenter(element: centerAtom)
         testFormula.addAttached(element: attachedHydrogen)
         testFormula.addAttached(element: attachedNitrogen)
-        let bondManager = BondManager(withFormula: testFormula)
-        let rule = SkeletonRule(withManager: bondManager)
+        let lewisStructure = LewisStructure(withFormula: testFormula)
+        let rule = SkeletonRule(withStructure: lewisStructure)
         rule.setSymbols()
         
         let startingCenter = ""

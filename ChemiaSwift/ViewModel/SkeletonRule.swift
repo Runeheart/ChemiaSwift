@@ -10,14 +10,14 @@ import Foundation
 
 class SkeletonRule : LewisRule {
     
-    private let currentStructure: BondManager
+    private let currentStructure: LewisStructure
     let currentFormula: Formula
     private var symbols = [ReuseIdentifiers : [String]]()
     private var currentElements: [Element]
     
-    init(withManager manager: BondManager) {
-        currentStructure = manager
-        currentFormula = currentStructure.designatedFormula
+    init(withStructure struc: LewisStructure) {
+        currentStructure = struc
+        currentFormula = currentStructure.getFormula()
         currentElements = currentFormula.elementsArray()
     }
     
