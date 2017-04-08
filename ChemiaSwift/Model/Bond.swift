@@ -17,23 +17,27 @@ class Bond {
     class BondBuilder {
         var source: Element
         var dest: Element = ElementFactory.create(withSymbol: .H)
+        var type: BondType = .single
         
         init(_ source: Element) {
             self.source = source
         }
         
-        func and(_ destination: Element) -> Bond {
+        func and(_ destination: Element, withType type: BondType = .single) -> Bond {
             self.dest = destination
+            self.type = type
             return Bond(self)
         }
     }
     
     let source: Element
     let destination: Element
+    var type: BondType
     
     private init(_ builder: BondBuilder) {
         source = builder.source
         destination = builder.dest
+        type = builder.type
     }
     
 }

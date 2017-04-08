@@ -31,7 +31,7 @@ class OctetsValidationTests: XCTestCase {
             let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .Cl), withTarget: centerElementState)
             nextAttachedState.suggestedElementSymbol = "Cl"
             nextAttachedState.bondNumSuggested = 1
-            nextAttachedState.setNumberOfBonds(to: 1)
+            nextAttachedState.setNumberOfBonds(to: 1, ofType: .single)
             nextAttachedState.lonePairNumSuggested = 3
             nextAttachedState.setNumberOfLonePairs(to: 3)
             attachedElementStates.append(nextAttachedState)
@@ -54,7 +54,7 @@ class OctetsValidationTests: XCTestCase {
             let nextAttachedState: AttachedElementState = AttachedElementState(of: ElementFactory.create(withSymbol: .O), withTarget: centerElementState)
             nextAttachedState.suggestedElementSymbol = "O"
             nextAttachedState.bondNumSuggested = 1
-            nextAttachedState.setNumberOfBonds(to: 1)
+            nextAttachedState.setNumberOfBonds(to: 1, ofType: .single)
             nextAttachedState.lonePairNumSuggested = 3
             nextAttachedState.setNumberOfLonePairs(to: 3)
             attachedElementStates.append(nextAttachedState)

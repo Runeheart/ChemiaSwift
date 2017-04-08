@@ -49,7 +49,8 @@ class FormulaState {
             return verifyForSkeleton()
         case .octets:
             return verifyForOctets()
-        case .bonds: break
+        case .bonds:
+            return true
         }
         return false
     }
@@ -122,7 +123,7 @@ class FormulaState {
     }
     
     private func allBondsPlaced() -> Bool {
-        let bondsCurrentlyPlaced = centerAtom.bonds.count
+        let bondsCurrentlyPlaced = centerAtom.numBonds()
         return bondsCurrentlyPlaced == expectedNumBonds
     }
     

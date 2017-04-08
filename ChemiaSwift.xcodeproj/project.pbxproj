@@ -20,6 +20,7 @@
 		3F306DE81E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
 		3F306DE91E8209BE0051AACB /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DE71E8209BE0051AACB /* Bond.swift */; };
 		3F306DEB1E822ED50051AACB /* BondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F306DEA1E822ED50051AACB /* BondTests.swift */; };
+		3F33488A1E985E20002F5ADC /* BondsValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3348891E985E20002F5ADC /* BondsValidationTests.swift */; };
 		3F35698C1E875C3600926F49 /* LewisRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35698B1E875C3500926F49 /* LewisRule.swift */; };
 		3F35698D1E875C3600926F49 /* LewisRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35698B1E875C3500926F49 /* LewisRule.swift */; };
 		3F43DABE1E78E88C00AAD144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */; };
@@ -109,6 +110,7 @@
 		3F306DE41E8208920051AACB /* BondManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondManager.swift; sourceTree = "<group>"; };
 		3F306DE71E8209BE0051AACB /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
 		3F306DEA1E822ED50051AACB /* BondTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BondTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3F3348891E985E20002F5ADC /* BondsValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondsValidationTests.swift; sourceTree = "<group>"; };
 		3F35698B1E875C3500926F49 /* LewisRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LewisRule.swift; sourceTree = "<group>"; };
 		3F43DABA1E78E88C00AAD144 /* ChemiaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemiaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43DABD1E78E88C00AAD144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 		3FC045391E8B1C5E00AA033C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3F3348891E985E20002F5ADC /* BondsValidationTests.swift */,
 				3F752EFF1E95C716006EC12C /* OctetsValidationTests.swift */,
 				3FFD71961E9018A8008D8A78 /* ElementStateTests.swift */,
 				3FFD719F1E91A9AF008D8A78 /* SkeletonValidationTests.swift */,
@@ -562,6 +565,7 @@
 				3F752F001E95C716006EC12C /* OctetsValidationTests.swift in Sources */,
 				3FFD71A31E91C39C008D8A78 /* FormulaState.swift in Sources */,
 				3F43DB0D1E79E33500AAD144 /* FormulaTests.swift in Sources */,
+				3F33488A1E985E20002F5ADC /* BondsValidationTests.swift in Sources */,
 				3F43DAF01E78F37F00AAD144 /* EditorViewController.swift in Sources */,
 				3FD57D821E8370CF00332369 /* SkeletonRule.swift in Sources */,
 				3F1E8D851E8B6894001DD963 /* ChoiceCell.swift in Sources */,
