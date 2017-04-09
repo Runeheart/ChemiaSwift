@@ -13,7 +13,7 @@
         <!--Chemia-->
         <scene sceneID="jMe-f6-82L">
             <objects>
-                <viewController storyboardIdentifier="mainMenu" id="yDA-fC-Bl5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainMenu" id="yDA-fC-Bl5" customClass="MainScreenViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LUL-j2-nac"/>
                         <viewControllerLayoutGuide type="bottom" id="MaQ-HH-bC0"/>
@@ -23,14 +23,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="sxC-SB-8gE">
-                                <rect key="frame" x="92" y="205" width="191" height="160"/>
+                                <rect key="frame" x="46" y="205" width="283" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZZ-Oi-KO2">
-                                        <rect key="frame" x="43" y="0.0" width="105" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZZ-Oi-KO2">
+                                        <rect key="frame" x="86.5" y="0.0" width="110" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="QCv-2d-4a1"/>
+                                            <constraint firstAttribute="width" constant="110" id="QCv-2d-4a1"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Enter a formula">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -39,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npm-zH-WtZ">
-                                        <rect key="frame" x="0.0" y="130" width="191" height="30"/>
+                                        <rect key="frame" x="46" y="130" width="191" height="30"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Choose an example formula">
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,8 +58,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="sxC-SB-8gE" secondAttribute="trailing" constant="76" id="0Ej-Ef-d2f"/>
-                            <constraint firstItem="sxC-SB-8gE" firstAttribute="leading" secondItem="b38-jU-TDP" secondAttribute="leadingMargin" constant="76" id="S8d-e5-8IM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sxC-SB-8gE" secondAttribute="trailing" constant="30" id="0Ej-Ef-d2f"/>
+                            <constraint firstItem="sxC-SB-8gE" firstAttribute="leading" secondItem="b38-jU-TDP" secondAttribute="leadingMargin" constant="30" id="S8d-e5-8IM"/>
                             <constraint firstItem="sxC-SB-8gE" firstAttribute="top" secondItem="LUL-j2-nac" secondAttribute="bottom" constant="141" id="cuV-LR-c9g"/>
                         </constraints>
                     </view>
@@ -246,6 +247,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdm-f9-yUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7.2000000000000002" y="630.13493253373315"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="69p-Ft-Pp0">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Qj9-cX-LW8" customClass="WalkthroughPageViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UuQ-3m-pCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2841" y="174"/>
+        </scene>
+        <!--Walkthrough Content View Controller-->
+        <scene sceneID="F37-mx-2sf">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="Tgj-v9-MpC" customClass="WalkthroughContentViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gyq-Xh-k0K"/>
+                        <viewControllerLayoutGuide type="bottom" id="0wo-iu-GIS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hXU-dE-xRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Formula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt7-y3-o5F">
+                                <rect key="frame" x="125" y="38" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cv-mH-aUu">
+                                <rect key="frame" x="38" y="447" width="300" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="rSx-xX-o8p"/>
+                                </constraints>
+                                <string key="text">Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="YEv-J9-RQY">
+                                <rect key="frame" x="144" y="630" width="87" height="37"/>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gKW-I2-yhj">
+                                <rect key="frame" x="87" y="77" width="201" height="365"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="365" id="qDK-tS-Pj2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsB-Qv-wKF">
+                                <rect key="frame" x="275" y="618" width="84" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextButtonTappedWithSender:" destination="Tgj-v9-MpC" eventType="touchUpInside" id="8cO-ec-og8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21368151899999999" green="0.52452427150000003" blue="0.38070228699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Cv-mH-aUu" firstAttribute="top" secondItem="gKW-I2-yhj" secondAttribute="bottom" constant="22" id="0OH-eT-MCc"/>
+                            <constraint firstItem="gKW-I2-yhj" firstAttribute="centerX" secondItem="6Cv-mH-aUu" secondAttribute="centerX" id="3YJ-iI-dCo"/>
+                            <constraint firstItem="6Cv-mH-aUu" firstAttribute="centerX" secondItem="YEv-J9-RQY" secondAttribute="centerX" id="DgR-sB-iII"/>
+                            <constraint firstItem="6Cv-mH-aUu" firstAttribute="leading" secondItem="hXU-dE-xRb" secondAttribute="leadingMargin" constant="30" id="KEL-xp-AuC"/>
+                            <constraint firstItem="0wo-iu-GIS" firstAttribute="top" secondItem="YEv-J9-RQY" secondAttribute="bottom" id="Mal-YY-Lf2"/>
+                            <constraint firstItem="lt7-y3-o5F" firstAttribute="top" secondItem="gyq-Xh-k0K" secondAttribute="bottom" constant="18" id="Zhh-jQ-efZ"/>
+                            <constraint firstItem="YEv-J9-RQY" firstAttribute="centerX" secondItem="hXU-dE-xRb" secondAttribute="centerX" id="jWq-S7-KJj"/>
+                            <constraint firstItem="gKW-I2-yhj" firstAttribute="top" secondItem="hXU-dE-xRb" secondAttribute="top" constant="77" id="t5f-m3-dRL"/>
+                            <constraint firstItem="gKW-I2-yhj" firstAttribute="leading" secondItem="hXU-dE-xRb" secondAttribute="leadingMargin" constant="71" id="t8f-tE-UVi"/>
+                            <constraint firstItem="lt7-y3-o5F" firstAttribute="centerX" secondItem="YEv-J9-RQY" secondAttribute="centerX" id="vse-Ez-xxP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImageView" destination="gKW-I2-yhj" id="ZoM-Aa-nC2"/>
+                        <outlet property="contentLabel" destination="6Cv-mH-aUu" id="jsX-tX-xXX"/>
+                        <outlet property="forwardButton" destination="wsB-Qv-wKF" id="so6-DZ-pK5"/>
+                        <outlet property="headingLabel" destination="lt7-y3-o5F" id="9c6-Jg-5n4"/>
+                        <outlet property="pageControl" destination="YEv-J9-RQY" id="d1f-Ye-DT1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIc-ib-Hx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2836" y="858.62068965517244"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fl2-Wk-dUi">
