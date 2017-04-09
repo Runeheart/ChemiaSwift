@@ -457,6 +457,7 @@
 				TargetAttributes = {
 					3F43DAB91E78E88C00AAD144 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = R73S69TK2P;
 						ProvisioningStyle = Automatic;
 					};
 					3F43DACD1E78E88D00AAD144 = {
@@ -729,7 +730,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R73S69TK2P;
 				INFOPLIST_FILE = "$(SRCROOT)/ChemiaSwift/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.bsu.capstone.ChemiaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -741,7 +744,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R73S69TK2P;
 				INFOPLIST_FILE = "$(SRCROOT)/ChemiaSwift/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.bsu.capstone.ChemiaSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
