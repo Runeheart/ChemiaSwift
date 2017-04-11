@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,7 +108,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-Uy-Cxr">
-                                                    <rect key="frame" x="253" y="4" width="39" height="30"/>
+                                                    <rect key="frame" x="254" y="4" width="39" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <state key="normal" title="Reset">
@@ -271,7 +272,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Formula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt7-y3-o5F">
                                 <rect key="frame" x="125" y="38" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.90949917151741622" green="0.93233125298916075" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cv-mH-aUu">
@@ -281,7 +282,7 @@
                                 </constraints>
                                 <string key="text">Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.90949917151741622" green="0.93233125298916075" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="YEv-J9-RQY">
@@ -290,14 +291,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gKW-I2-yhj">
                                 <rect key="frame" x="87" y="77" width="201" height="365"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="gKW-I2-yhj" secondAttribute="height" multiplier="201:365" id="boP-9k-CNT"/>
                                     <constraint firstAttribute="height" constant="365" id="qDK-tS-Pj2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsB-Qv-wKF">
-                                <rect key="frame" x="275" y="618" width="84" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsB-Qv-wKF">
+                                <rect key="frame" x="291" y="619" width="84" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="NEXT"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.98214472195079439" green="1" blue="0.97066647832994335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="nextButtonTappedWithSender:" destination="Tgj-v9-MpC" eventType="touchUpInside" id="8cO-ec-og8"/>
                                 </connections>
@@ -307,10 +310,12 @@
                         <constraints>
                             <constraint firstItem="6Cv-mH-aUu" firstAttribute="top" secondItem="gKW-I2-yhj" secondAttribute="bottom" constant="22" id="0OH-eT-MCc"/>
                             <constraint firstItem="gKW-I2-yhj" firstAttribute="centerX" secondItem="6Cv-mH-aUu" secondAttribute="centerX" id="3YJ-iI-dCo"/>
+                            <constraint firstItem="0wo-iu-GIS" firstAttribute="top" secondItem="wsB-Qv-wKF" secondAttribute="bottom" id="Bbz-Zw-4Ay"/>
                             <constraint firstItem="6Cv-mH-aUu" firstAttribute="centerX" secondItem="YEv-J9-RQY" secondAttribute="centerX" id="DgR-sB-iII"/>
                             <constraint firstItem="6Cv-mH-aUu" firstAttribute="leading" secondItem="hXU-dE-xRb" secondAttribute="leadingMargin" constant="30" id="KEL-xp-AuC"/>
                             <constraint firstItem="0wo-iu-GIS" firstAttribute="top" secondItem="YEv-J9-RQY" secondAttribute="bottom" id="Mal-YY-Lf2"/>
                             <constraint firstItem="lt7-y3-o5F" firstAttribute="top" secondItem="gyq-Xh-k0K" secondAttribute="bottom" constant="18" id="Zhh-jQ-efZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wsB-Qv-wKF" secondAttribute="trailing" id="f6h-mv-7QR"/>
                             <constraint firstItem="YEv-J9-RQY" firstAttribute="centerX" secondItem="hXU-dE-xRb" secondAttribute="centerX" id="jWq-S7-KJj"/>
                             <constraint firstItem="gKW-I2-yhj" firstAttribute="top" secondItem="hXU-dE-xRb" secondAttribute="top" constant="77" id="t5f-m3-dRL"/>
                             <constraint firstItem="gKW-I2-yhj" firstAttribute="leading" secondItem="hXU-dE-xRb" secondAttribute="leadingMargin" constant="71" id="t8f-tE-UVi"/>

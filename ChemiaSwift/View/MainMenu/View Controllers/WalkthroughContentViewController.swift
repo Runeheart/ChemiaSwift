@@ -22,7 +22,7 @@ class WalkthroughContentViewController: UIViewController {
             let pageViewController = parent as! WalkthroughPageViewController
             pageViewController.forward(index: index)
         case 5:
-            UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough2")
+            UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
             dismiss(animated: true, completion: nil)
             
         default: break

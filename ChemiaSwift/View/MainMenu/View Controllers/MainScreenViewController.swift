@@ -15,7 +15,7 @@ class MainScreenViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough2"){
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough"){
             return
         }
         
