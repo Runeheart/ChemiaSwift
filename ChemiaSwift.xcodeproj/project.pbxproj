@@ -88,11 +88,6 @@
 		3FFD71A51E947C98008D8A78 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A41E947C98008D8A78 /* Alerts.swift */; };
 		3FFD71A61E947C98008D8A78 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD71A41E947C98008D8A78 /* Alerts.swift */; };
 		AB21DE171E9C52F80007D3C1 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB21DE161E9C52F80007D3C1 /* Icon-App-60x60@3x.png */; };
-		AB89F6271E9ACC280090BE08 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F6221E9ACC280090BE08 /* Default-568h@2x.png */; };
-		AB89F6281E9ACC280090BE08 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F6231E9ACC280090BE08 /* Default-667h@2x.png */; };
-		AB89F6291E9ACC280090BE08 /* Default-736@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F6241E9ACC280090BE08 /* Default-736@2x.png */; };
-		AB89F62A1E9ACC280090BE08 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F6251E9ACC280090BE08 /* Default.png */; };
-		AB89F62B1E9ACC280090BE08 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F6261E9ACC280090BE08 /* Default@2x.png */; };
 		AB89F62D1E9AD3340090BE08 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89F62C1E9AD3340090BE08 /* WalkthroughContentViewController.swift */; };
 		AB89F6341E9AD5040090BE08 /* walkthrough1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F62E1E9AD5040090BE08 /* walkthrough1.png */; };
 		AB89F6351E9AD5040090BE08 /* walkthrough2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB89F62F1E9AD5040090BE08 /* walkthrough2.png */; };
@@ -174,11 +169,6 @@
 		3FFD71A11E91C39C008D8A78 /* FormulaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaState.swift; sourceTree = "<group>"; };
 		3FFD71A41E947C98008D8A78 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		AB21DE161E9C52F80007D3C1 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-60x60@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
-		AB89F6221E9ACC280090BE08 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AB89F6231E9ACC280090BE08 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
-		AB89F6241E9ACC280090BE08 /* Default-736@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736@2x.png"; sourceTree = "<group>"; };
-		AB89F6251E9ACC280090BE08 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AB89F6261E9ACC280090BE08 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AB89F62C1E9AD3340090BE08 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughContentViewController.swift; path = "MainMenu/View Controllers/WalkthroughContentViewController.swift"; sourceTree = "<group>"; };
 		AB89F62E1E9AD5040090BE08 /* walkthrough1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkthrough1.png; sourceTree = "<group>"; };
 		AB89F62F1E9AD5040090BE08 /* walkthrough2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkthrough2.png; sourceTree = "<group>"; };
@@ -352,11 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				3F43DAC41E78E88C00AAD144 /* Assets.xcassets */,
-				AB89F6221E9ACC280090BE08 /* Default-568h@2x.png */,
-				AB89F6231E9ACC280090BE08 /* Default-667h@2x.png */,
-				AB89F6241E9ACC280090BE08 /* Default-736@2x.png */,
-				AB89F6251E9ACC280090BE08 /* Default.png */,
-				AB89F6261E9ACC280090BE08 /* Default@2x.png */,
 				AB89F62E1E9AD5040090BE08 /* walkthrough1.png */,
 				AB89F62F1E9AD5040090BE08 /* walkthrough2.png */,
 				AB89F6301E9AD5040090BE08 /* walkthrough3.png */,
@@ -556,19 +541,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC0453D1E8B1DEB00AA033C /* LaunchScreen.storyboard in Resources */,
-				AB89F6281E9ACC280090BE08 /* Default-667h@2x.png in Resources */,
 				3F65294C1E9955CD00167B4A /* Editor.storyboard in Resources */,
-				AB89F62B1E9ACC280090BE08 /* Default@2x.png in Resources */,
 				AB89F6391E9AD5040090BE08 /* walkthrough6.png in Resources */,
 				AB89F6341E9AD5040090BE08 /* walkthrough1.png in Resources */,
-				AB89F62A1E9ACC280090BE08 /* Default.png in Resources */,
 				AB89F6351E9AD5040090BE08 /* walkthrough2.png in Resources */,
 				3F43DAC51E78E88C00AAD144 /* Assets.xcassets in Resources */,
 				AB89F6381E9AD5040090BE08 /* walkthrough5.png in Resources */,
-				AB89F6291E9ACC280090BE08 /* Default-736@2x.png in Resources */,
 				AB21DE171E9C52F80007D3C1 /* Icon-App-60x60@3x.png in Resources */,
 				AB89F6371E9AD5040090BE08 /* walkthrough4.png in Resources */,
-				AB89F6271E9ACC280090BE08 /* Default-568h@2x.png in Resources */,
 				AB89F6361E9AD5040090BE08 /* walkthrough3.png in Resources */,
 				3FC0453E1E8B1DEB00AA033C /* Main.storyboard in Resources */,
 			);

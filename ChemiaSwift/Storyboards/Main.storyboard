@@ -275,8 +275,8 @@
                                 <color key="textColor" red="0.90949917151741622" green="0.93233125298916075" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cv-mH-aUu">
-                                <rect key="frame" x="38" y="447" width="300" height="170"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cv-mH-aUu">
+                                <rect key="frame" x="46" y="464" width="284" height="159"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="159" id="rSx-xX-o8p"/>
                                 </constraints>
@@ -292,11 +292,11 @@
                                 <rect key="frame" x="87" y="77" width="201" height="365"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gKW-I2-yhj" secondAttribute="height" multiplier="201:365" id="boP-9k-CNT"/>
-                                    <constraint firstAttribute="height" constant="365" id="qDK-tS-Pj2"/>
+                                    <constraint firstAttribute="height" constant="365" placeholder="YES" id="qDK-tS-Pj2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsB-Qv-wKF">
-                                <rect key="frame" x="291" y="619" width="84" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsB-Qv-wKF">
+                                <rect key="frame" x="300" y="627" width="59" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.98214472195079439" green="1" blue="0.97066647832994335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

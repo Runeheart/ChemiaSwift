@@ -51,6 +51,7 @@ class FormulaBuilder {
     func formulaString() -> String {
         currentFormula = Formula()
         var formula = formulaOrder[0]
+        guard formula != "" else {return ""}
         currentFormula.setCenter(element: ElementFactory.create(withSymbol: Element.ChemSymbol(rawValue: formula)!))
         for element in formulaOrder.suffix(from: 1) where element != "" {
             let sub = currentSelection[element] ?? 0
