@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChemiaSwift/View/MainMenu/View Controllers/MainScreenViewController.swift"
+            timestampString = "513467903.276139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChemiaSwift/View/MainMenu/View Controllers/MainScreenViewController.swift"
+            timestampString = "513467903.276139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChemiaSwift/View/MainMenu/View Controllers/WalkthroughContentViewController.swift"
+            timestampString = "513467554.819546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "nextButtonTapped(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChemiaSwift.WalkthroughContentViewController.index.getter : Swift.Int"
+                  moduleName = "ChemiaSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Chase/Documents/ChemiaSwift/ChemiaSwift/View/MainMenu/View%20Controllers/WalkthroughContentViewController.swift"
+                  timestampString = "513467555.467111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChemiaSwift.WalkthroughContentViewController.index.setter : Swift.Int"
+                  moduleName = "ChemiaSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Chase/Documents/ChemiaSwift/ChemiaSwift/View/MainMenu/View%20Controllers/WalkthroughContentViewController.swift"
+                  timestampString = "513467555.46902"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChemiaSwift.WalkthroughContentViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ChemiaSwift.WalkthroughContentViewController"
+                  moduleName = "ChemiaSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Chase/Documents/ChemiaSwift/ChemiaSwift/View/MainMenu/View%20Controllers/WalkthroughContentViewController.swift"
+                  timestampString = "513467555.470787"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChemiaSwift.WalkthroughContentViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ChemiaSwift.WalkthroughContentViewController&gt;"
+                  moduleName = "ChemiaSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Chase/Documents/ChemiaSwift/ChemiaSwift/View/MainMenu/View%20Controllers/WalkthroughContentViewController.swift"
+                  timestampString = "513467555.472231"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "150">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
