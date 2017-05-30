@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chemia-->
+        <!--Main Menu-->
         <scene sceneID="jMe-f6-82L">
             <objects>
-                <viewController storyboardIdentifier="mainMenu" id="yDA-fC-Bl5" customClass="MainScreenViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainMenu" title="Main Menu" id="yDA-fC-Bl5" customClass="MainScreenViewController" customModule="ChemiaSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LUL-j2-nac"/>
                         <viewControllerLayoutGuide type="bottom" id="MaQ-HH-bC0"/>
@@ -83,10 +83,10 @@
                             <tableViewSection headerTitle="Info:" id="IMC-UV-wzG">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="obd-OY-OQg">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="72"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="obd-OY-OQg" id="okj-hl-ap4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9As-QY-Dfl" userLabel="Formula">
@@ -126,10 +126,10 @@
                             <tableViewSection headerTitle="Center Atom" id="uCW-xN-l5M">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ssW-Mz-yyg">
-                                        <rect key="frame" x="0.0" y="183.5" width="375" height="72"/>
+                                        <rect key="frame" x="0.0" y="184" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ssW-Mz-yyg" id="E9M-lO-bx9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="center" translatesAutoresizingMaskIntoConstraints="NO" id="NJ2-fN-11V">
@@ -147,10 +147,10 @@
                             <tableViewSection headerTitle="Attached Atom(s)" id="ddH-2K-baT">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1RK-Nb-XkE">
-                                        <rect key="frame" x="0.0" y="311.5" width="375" height="72"/>
+                                        <rect key="frame" x="0.0" y="312" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1RK-Nb-XkE" id="U3S-YN-guT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="attached" translatesAutoresizingMaskIntoConstraints="NO" id="a81-hH-2r5">
@@ -219,7 +219,7 @@
                         <color key="separatorColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exampleCell" textLabel="qHd-4O-zxT" style="IBUITableViewCellStyleDefault" id="sow-aN-Rud">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sow-aN-Rud" id="Wwd-As-eLR">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
